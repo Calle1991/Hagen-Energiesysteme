@@ -51,15 +51,6 @@ class Fertig extends React.Component {
           <h1>Deine Angaben wurden übermittelt!</h1>
           <img src={pic}></img>
         </div>
-        <p>{this.props.location.state.email}</p>
-        <p>{this.props.location.state.tel}</p>
-        <p>{this.props.location.state.meter}</p>
-        <p>{this.props.location.state.stromverteilerChecked}</p>
-        <p>{this.props.location.state.tiefbauChecked}</p>
-        <p>{this.props.location.state.wanddurchbruchChecked}</p>
-        <p>{this.props.location.state.installationChecked}</p>
-        <p>{this.props.location.state.ladesaeuleChecked}</p>
-        <p>Response: {this.responseData}</p>
       </div>
     );
   }

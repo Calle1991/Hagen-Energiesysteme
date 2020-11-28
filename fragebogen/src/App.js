@@ -3,12 +3,14 @@ import Header from "./pages/header/header.js";
 import Fragebogen from "./pages/fragebogen/Fragebogen.js";
 import Kontaktdaten from "./pages/kontaktdaten/Kontaktdaten.js";
 import Fertig from "./pages/fertig/Fertig.js";
+import Datenschutz from "./pages/datenschutz/Datenschutz.js";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
           <Route path="/kontaktdaten">
             <Kontaktdaten />
           </Route>
+          <Route path="/datenschutz">
+            <Datenschutz />
+          </Route>
           <Route path="/fertig">
             <Fertig />
           </Route>
@@ -27,9 +32,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
-
-
     </div>
   );
 }

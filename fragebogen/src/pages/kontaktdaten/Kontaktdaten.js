@@ -32,7 +32,10 @@ class Kontaktdaten extends React.Component {
     this.routeChange = this.routeChange.bind(this);
     this.handlevalidation = this.handlevalidation.bind(this);
 
+    
   }
+
+
 
   routeChange = () => {
     let path = '/fertig';
@@ -113,7 +116,7 @@ class Kontaktdaten extends React.Component {
           </form>
           <div className='buttonArea__datenschutz'>
             <FormControlLabel control={<Checkbox name="datenschutz" />} />
-            <span id="datenschutztext">Ich habe die <Link to='/' target="_blank">Datenschutzerklärung</Link> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.</span>
+            <span id="datenschutztext">Ich habe die <Link to='/datenschutz' target="_blank">Datenschutzerklärung</Link> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.</span>
           </div>
           <div className="errorMessageEmail" id="f__message__datenschutz">
                 <div>
@@ -121,8 +124,11 @@ class Kontaktdaten extends React.Component {
                 </div>
               </div>
           <div className='buttonArea'>
-            <Button variant="contained" onClick={this.handlevalidation}>Absenden</Button>
-          </div>
+            <Button variant="contained" onClick={this.handlevalidation}>Absenden</Button>     
+        </div>
+
+          
+
         </div>
       </div>
     );
