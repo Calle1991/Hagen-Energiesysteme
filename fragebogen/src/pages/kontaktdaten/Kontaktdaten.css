@@ -213,3 +213,8 @@ visibility: hidden;
 #datenschutztext{
 font-size: 13px;
 }
+
+#hyperlink{
+  text-decoration: underline;
+  cursor: pointer;
+}

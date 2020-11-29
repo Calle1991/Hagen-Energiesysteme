@@ -7,6 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Modal from "../../elemente/modal/Modal.js"
+import Datenschutz from '../datenschutz/Datenschutz.js'
 import {
   BrowserRouter as Router,
   Switch,
@@ -33,7 +34,6 @@ class Kontaktdaten extends React.Component {
     this.routeChange = this.routeChange.bind(this);
     this.handlevalidation = this.handlevalidation.bind(this);
     this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
   }
 
 
@@ -79,30 +79,22 @@ class Kontaktdaten extends React.Component {
     this.routeChange()
   }
 
-
-  // Modal Handling
-
-  showModal() {
+  showModal = e => {
     this.setState({
-      show: "wrapperModal-show"
-    })
-  }
+      show: !this.state.show
+    });
+  };
 
-  hideModal() {
-    this.setState({
-      show: "rapperModal-hide"
-    })
-  }
+
 
   render() {
     return (
       <div className="wrapperKontaktdaten">
-        <Modal
-          show={this.state.show.toString()}
-          title="TEST"
-        />
-        <button type="button" onClick={this.showModal}>Öffnen</button>
-        <button type="button" onClick={this.hideModal}>Öffnen</button>
+        <div className="Modal">
+          <Modal onClose={this.showModal} show={this.state.show}>
+            <Datenschutz/>
+        </Modal>
+        </div>
         <div className="container">
           <form>
             <div className="kontaktdaten">
@@ -138,7 +130,7 @@ class Kontaktdaten extends React.Component {
           </form>
           <div className='buttonArea__datenschutz'>
             <FormControlLabel control={<Checkbox name="datenschutz" />} />
-            <span id="datenschutztext">Ich habe die <Link to='/datenschutz' target="_blank">Datenschutzerklärung</Link> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.</span>
+            <span id="datenschutztext">Ich habe die <span id="hyperlink" onClick={e => {this.showModal(e);}} >Datenschutzerklärung</span> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.</span>
           </div>
           <div className="errorMessageEmail" id="f__message__datenschutz">
             <div>
