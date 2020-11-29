@@ -1,0 +1,21 @@
+.wrapperModal-show{
+    display: flex;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    background-color: whitesmoke;
+    position: absolute;
+    z-index: 11;
+}
+
+.wrapperModal-hide{
+    display: none;
+}
+
+.modalContent{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    background-color: green;
+}
