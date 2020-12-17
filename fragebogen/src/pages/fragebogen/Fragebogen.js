@@ -22,7 +22,8 @@ class Fragebogen extends React.Component {
       tiefbau: '',
       wanddruchbruch: '',
       installation: '',
-      ladesaeule: ''
+      ladesaeule: '',
+      errorText: false
     }
     this.sendData = this.sendData.bind(this);
     this.handlevalidation = this.handlevalidation.bind(this);
@@ -55,6 +56,11 @@ class Fragebogen extends React.Component {
 
     if (document.getElementById('inputMeter').value === '') {
       document.getElementById('f__message').style.visibility = 'visible'
+      this.setState(
+        {
+        errorText: true
+        }
+      )
       formIsValid = false;
     }
 
@@ -94,7 +100,14 @@ class Fragebogen extends React.Component {
             <div className="f1">
               <p>Wie groß ist die Entfernung zum Stromverteiler?</p>
               <div className="auswahl__input">
-                <TextField variant="outlined" id="inputMeter" type="number" name="meter" label="Meter"/>
+                <TextField 
+                error = {this.state.errorText}
+                required 
+                 id="inputMeter"
+                  type="number"
+                   name="meter"
+                    label="Meter"
+                    />
               </div>
             </div>
             <div className="f2">
@@ -104,7 +117,7 @@ class Fragebogen extends React.Component {
               <RadioGroup>
                 <div className="auswahl">
                   <div>
-                    <Radio type="radio" name="stromverteiler" value="Ja"></Radio> <span>Ja</span>
+                    <Radio  type="radio" name="stromverteiler" value="Ja"></Radio> <span>Ja</span>
                   </div>
                   <div>
                     <Radio type="radio" name="stromverteiler" value="Nein"></Radio> <span>Nein</span>
@@ -157,7 +170,7 @@ class Fragebogen extends React.Component {
               <RadioGroup>
                 <div className="auswahl">
                   <div>
-                    <Radio type="radio" name="ladesaeule" value="Wandfuß"></Radio> <span>Wandmontage</span>
+                    <Radio type="radio" name="ladesaeule" value="Wandmontage"></Radio> <span>Wandmontage</span>
                   </div>
                   <div>
                     <Radio type="radio" name="ladesaeule" value="Standfuß"></Radio> <span>Standfuß</span>
