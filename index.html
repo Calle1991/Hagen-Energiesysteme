@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- Favicons================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="./auswahl.css">
+
+</head>
+
+<body>
+
+    <div class="imgcontainer container-fluid vh-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade"  data-aos-delay="300">
+        <div class="row subtext">
+            <p>Bitte Wählen Sie aus:</p>
+        </div>
+        <div class="container d-flex justify-content-center align-items-center flex-row">
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <img class="img1 img-fluid gotoLeft" src="./img/auswahl/Sonne.png" alt="">
+                <img class="img2 img-fluid gotoRight" src="./img/auswahl/Blatt.png" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12-lg d-flex justify-content-center header">
+                    <img class="headerimg" src="./img/auswahl/Schriftzug.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container buttonArea">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-6 col-md-12 schaltflaeche d-flex justify-content-center align-items-center" data-aos="fade-up"  data-aos-delay="500">
+                    <p id="left">SONNENENERGIE</p>
+                </div>
+                <div class="col-lg-6 col-md-12 schaltflaeche right d-flex justify-content-center align-items-center" data-aos="fade-up"  data-aos-delay="500">
+                    <p id="right">LADESTATION</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/anime.min.js"></script>
+
+    <script>
+
+  AOS.init();
+
+
+
+        var animateLeft = anime.timeline({
+            targets: '.img1',
+            translateX: -500,
+            autoplay: false,
+            opacity: '0',
+            duration: 1000,
+            easing: 'easeInOutExpo',
+            complete: function (anim) {
+                window.location.href = "http://127.0.0.1:5500/pages/ladestation/Ladestation.html";;
+            }
+
+        }).add({
+            targets: '.img2',
+            translateX: -20,
+        });
+
+        var animateRight = anime.timeline({
+            targets: '.img2',
+            translateX: +500,
+            autoplay: false,
+            opacity: '0',
+            duration: 1000,
+            easing: 'easeInOutExpo',
+            complete: function (anim) {
+                window.location.href = "http://127.0.0.1:5500/pages/sonnenenergie/sonnenenergie.html";;
+            }
+        }).add({
+            targets: '.img1',
+            translateX: +20,
+        });;
+
+        document.querySelector('#left').onclick = animateRight.play;
+        document.querySelector('#right').onclick = animateLeft.play;
+    </script>
+
+</body>
+
+</html>
