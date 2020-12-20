@@ -740,7 +740,7 @@ color: #777;
 	}
 
 	.headerPic{
-		height: 90vh;
+		height: 100vh;
 		background: url(../img/header.png) center no-repeat;
 		background-color: white;
 		background-position: left 0%;
