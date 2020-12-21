@@ -34,8 +34,10 @@
 
 #left:hover{
     background-color: #faca76;
+    border: 2px solid #faca76;
+    box-shadow: 1px 1px 25px #faca76;
     color:white;
-    transition: background-color 0.2s, color 0.2s ;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
 }
 
 
@@ -55,7 +57,9 @@
 #right:hover{
     background-color: #5ab9b7;
     color:white;
-    transition: background-color 0.2s, color 0.2s ;
+    box-shadow: 1px 1px 25px #5ab9b7;
+    border: 2px solid #5ab9b7;
+    transition: background-color 0.2s, color 0.2s border 0.2s;
 }
 
 .buttonArea{
@@ -94,4 +98,8 @@
         padding: 5px;
     }
  
+}
+
+
+
 }

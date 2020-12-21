@@ -1,14 +1,15 @@
 body, html {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Myriad Pro', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #777;
 	font-weight: 400;
 	width: 100% !important;
 	height: 100% !important;
+	overflow: fixed;
 }
 h2, h3, h4 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'aria narrow', sans-serif;
 }
 h2 {
 	text-transform: uppercase;
@@ -78,7 +79,7 @@ hr {
 .section-title h2::after {
 	position: absolute;
 	content: "";
-	background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+	background: linear-gradient(to right, #3399cc 0%, #339999 100%);
 	height: 4px;
 	width: 60px;
 	bottom: 0;
@@ -95,7 +96,7 @@ hr {
     border-radius: 30px;
     border: 2px solid ;
     border-color: #338a83;
-    background-color: white;
+    background-color: transparent;
     color: #338a83;
     padding: 10px;
     cursor: pointer;
@@ -105,6 +106,7 @@ hr {
 	color: #fff;
 	background-image: none;
 	background-color: #338a83;
+	box-shadow: 1px 1px 25px #5ab9b7;
 }
 .btn:active, .btn.active {
 	background-image: none;
@@ -139,7 +141,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	height: 100%;
 }
 header .intro-text  h1 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Myriad Pro', sans-serif;
 	color: #3b908c;
 	font-size: 40px;
 	font-weight: 700;
@@ -153,13 +155,19 @@ header .intro-text  h1 {
 
 }
 
+#headerpara{
+	color: headerpara;
+}
+
 #headerSubtext{
 	font-weight: 600;
+	color: grey;
 }
 
 
 #headerSubpara{
 	font-size: 14px;
+	color: grey;
 }
 
 header .intro-text span {
@@ -236,14 +244,15 @@ header .intro-text {
 	margin-bottom: 6px;
 	margin-left: 6px;
 	list-style: none;
+	font-size: 20px;
 	padding: 0;
 }
 #about .about-text li:before {
 	content: '\f105';
-	font-family: 'Font-Awesome';
+	font-family: 'Font Awesome 5 Free';
 	color: #339999;
-	font-size: 11px;
-	font-weight: 300;
+	font-size: 15px;
+	font-weight: 900;
 	padding-right: 8px;
 }
 #about img {
@@ -254,8 +263,9 @@ header .intro-text {
 
 }
 #about p {
-	line-height: 24px;
+	line-height: 1,5;
 	margin: 30px 0;
+	font-size: 20px; 
 }
 /* Services Section */
 #services {
@@ -263,6 +273,12 @@ header .intro-text {
 	background: linear-gradient(to right, #3399cc 0%, #339999 100%);
 	color: #fff;
 }
+
+#services2 {
+	padding-top: 150px;
+	color: #fff;
+}
+
 #services .service-desc {
 	margin: 10px 10px 20px;
 }
@@ -279,7 +295,7 @@ header .intro-text {
 	margin-left: -30px;
 	left: 50%;
 }
-#services i.fa {
+#services i.fab {
 	font-size: 42px;
 	width: 120px;
 	height: 120px;
@@ -289,6 +305,18 @@ header .intro-text {
 	color: #fff;
 	box-shadow: 10px 10px 10px rgba(0,0,0,.05);
 }
+
+#services i.fas {
+	font-size: 42px;
+	width: 120px;
+	height: 120px;
+	padding: 40px 0;
+	background: linear-gradient(to right, #339999 0%, #339999 100%);
+	border-radius: 50%;
+	color: #fff;
+	box-shadow: 10px 10px 10px rgba(0,0,0,.05);
+}
+
 #services h3 {
 	font-weight: 500;
 	padding: 5px 0;
@@ -301,6 +329,38 @@ header .intro-text {
 	margin-bottom: 40px;
 }
 
+#servicesbtn{
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+    border-radius: 30px;
+    border: 2px solid ;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s ;
+}
+
+#servicesbtn{
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+    border-radius: 30px;
+    border: 2px solid ;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s ;
+}
+
+
+#servicesbtn:hover{
+	color: #5ab9b7;
+	background-color: white;
+	box-shadow: 1px 1px 25px white;
+}
 
 
 
@@ -555,6 +615,10 @@ header .intro-text {
 	color: rgba(255,255,255,.75);
 }
 #contact .section-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	margin-bottom: 40px;
 }
 #contact .section-title p {
@@ -593,9 +657,10 @@ header .intro-text {
 	margin: 30px 0;
 	background: transparent;
 	border: 2px solid #fff;
+	color: white;
 }
 #contact .btn-custom:hover {
-	color: #1f386e;
+	color: #3399cc;
 	background: #fff;
 }
 label {
@@ -660,7 +725,7 @@ color: #777;
 	display: inline-block;
 	margin: 0 20px;
 }
-#contact .social i.fa {
+#contact .social i.fab {
 	font-size: 22px;
 	width: 48px;
 	height: 48px;
@@ -670,7 +735,7 @@ color: #777;
 	border-radius: 50%;
 	transition: all 0.3s;
 }
-#contact .social i.fa:hover {
+#contact .social i.fab:hover {
 	color: #608dfd;
 	background: #fff;
 }
@@ -680,6 +745,10 @@ color: #777;
 	width: 30%;
 }
 
+.contactLinks a{
+	color: white;
+	text-decoration: none;
+}
 
 
 
@@ -721,7 +790,7 @@ color: #777;
 
 @media screen and (max-width: 600px) {
 	header .intro-text {
-		padding-top: 200px;
+		padding-top: 150px;
 	}
 
 	.headerPic{
@@ -732,6 +801,47 @@ color: #777;
 		background-size: contain;
 	}
 }
+
+
+
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+
+ #header{
+	 margin-bottom: 200px;
+ }
+
+	#header .intro-text {
+		padding-top: 250px;
+	}
+
+	.headerPic{
+		height: 100vh;
+		background: url(../img/header.png) center no-repeat;
+		background-color: white;
+		background-position: left 0%;
+		background-size: contain;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
@@ -747,3 +857,25 @@ color: #777;
 		background-size: contain;
 	}
   }
+
+
+  /* Landscape */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (orientation: landscape) 
+and (-webkit-min-device-pixel-ratio: 2) {
+
+
+	header .intro-text {
+		padding-top: 300px;
+	}
+
+	.headerPic{
+		height: 100vh;
+		background: url(../img/header.png) center no-repeat;
+		background-color: white;
+		background-position: left 0%;
+		background-size: contain;
+	}
+}
