@@ -1,0 +1,84 @@
+body{
+    line-height: 0.2px;
+}
+
+/*HEADER*/
+#img {
+    width: 150px;
+    height: 65px;
+    padding: 10px;
+}
+
+
+p{
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 5px !important;
+}
+
+
+/*Frage1*/
+.frage1{
+    padding-bottom: 10px;
+}
+
+.input-group-text{
+   background-color: #57bcb3 !important; 
+   color: white !important;
+   border-color: #57bcb3;
+   width: 80px;
+}
+
+
+
+.btn-primary{
+    border-color: #57bcb3 !important;
+    background-color: #57bcb3 !important;
+
+}
+
+.btn-primary:hover{
+    background-color: #57bcb3 !important;
+}
+
+.btn-custom{
+    width: 50px;
+}
+
+.radio-group{
+    width:200px;
+}
+
+.radio-group label {
+    overflow: hidden;
+ } .radio-group input {
+     /* This is on purpose for accessibility. Using display: hidden is evil.
+     This makes things keyboard friendly right out tha box! */
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    top: -20px;
+ } .radio-group .not-active  {
+    color: black;
+    background-color: #fff !important;
+ }
+ 
+
+ /*Second*/
+
+
+.container{
+    margin-bottom: 20px;
+}
+
+.normalText{
+    text-align: left;
+}
+
+
+/*THIRD*/
+
+#imgfinish{
+    width: 350px;
+    padding: 10px;
+}
