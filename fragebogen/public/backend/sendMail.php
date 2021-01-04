@@ -34,7 +34,7 @@ try {
     // Create a message
     $message = (new Swift_Message('Angebotsanfrage - Ladestation'))
       ->setFrom(['info@hagen-energiesysteme.de' => 'Hagen Energiesysteme'])
-      ->setTo(['p.tobinski@hagengmbh.de', 'i6jmmaojxx+chuxr+j33ue@in.meistertask.com'  => 'Angebot'])
+      ->setTo(['info@hagen-energiesysteme.de', 'i6jmmaojxx+chuxr+j33ue@in.meistertask.com'  => 'Angebot'])
       ->setBody('  
 <html>
 <head>
