@@ -8,14 +8,31 @@ $(function() {
 
 
 $("#toTheSecond").click(function(){
-    window.location.href = "second.html";
+    formValid = false
+
+    alert($("input[name=meter]").val());
+    alert($('input[name=frage2Checked]:checked').val());
+    alert($('input[name=frage3Checked]:checked').val());
+    alert($('input[name=frage4Checked]:checked').val());
+    alert($('input[name=frage5Checked]:checked').val());
+    alert($('input[name=frage6Checked]:checked').val());
+
+
+    if(formValid){
+        window.location.href = "second.html";
+    }else{
+        alert("Bitte alle Infomationen ausfüllen");
+    }
+    
 });
 
-$("#toTheThird").click(function(){
-    window.location.href = "third.html";
-});
 
 
 
-//Validate First
+
+//Validate Firstpage
+
+function validateFirst(){
+alert("TEST")
+};
 

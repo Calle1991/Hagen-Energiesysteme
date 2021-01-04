@@ -45,7 +45,8 @@
         <div class="row d-flex flex-column justify-content-center align-items-center">
             <p>Wie groß ist die Entfernung zum Stromverteiler?</p>
             <div class="input-group col-md-4">
-                <input type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                <input type="number" name="meter" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number"
+                    class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
                 <span class="input-group-text">Meter</span>
             </div>
         </div>
@@ -62,14 +63,8 @@
                 <fieldset>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <div class="input-group">
-                                <div class="btn-group radio-group">
-                                    <label class="btn btn-primary not-active btn-custom">Ja <input type="radio"
-                                            value="male" name="gender"></label>
-                                    <label class="btn btn-primary not-active btn-custom">Nein<input type="radio"
-                                            value="female" name="gender"></label>
-                                </div>
-                            </div>
+                            <label class="radio-inline"><input type="radio" name="frage2Checked" value="Ja">Ja</label>
+                            <label class="radio-inline"><input type="radio" name="frage2Checked" value="Nein">Nein</label>
                         </div>
                     </div>
                 </fieldset>
@@ -85,14 +80,10 @@
                     <fieldset>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <div class="input-group">
-                                    <div class="btn-group radio-group">
-                                        <label class="btn btn-primary not-active btn-custom">Ja <input type="radio"
-                                                value="male" name="gender"></label>
-                                        <label class="btn btn-primary not-active btn-custom">Nein<input type="radio"
-                                                value="female" name="gender"></label>
-                                    </div>
-                                </div>
+                                <label class="radio-inline"><input type="radio" name="frage3Checked"
+                                        value="Ja">Ja</label>
+                                <label class="radio-inline"><input type="radio" name="frage3Checked"
+                                        value="Nein">Nein</label>
                             </div>
                         </div>
                     </fieldset>
@@ -109,14 +100,10 @@
                             <fieldset>
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                        <div class="input-group">
-                                            <div class="btn-group radio-group">
-                                                <label class="btn btn-primary not-active btn-custom">Ja <input type="radio"
-                                                        value="male" name="gender"></label>
-                                                <label class="btn btn-primary not-active btn-custom">Nein<input type="radio"
-                                                        value="female" name="gender"></label>
-                                            </div>
-                                        </div>
+                                        <label class="radio-inline"><input type="radio" name="frage4Checked"
+                                                value="Ja">Ja</label>
+                                        <label class="radio-inline"><input type="radio" name="frage4Checked"
+                                                value="Nein">Nein</label>
                                     </div>
                                 </div>
                             </fieldset>
@@ -135,25 +122,18 @@
                             <fieldset>
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                        <div class="input-group">
-                                            <div class="btn-group radio-group">
-                                                <label class="btn btn-primary not-active btn-custom">Ja <input type="radio"
-                                                        value="male" name="gender"></label>
-                                                <label class="btn btn-primary not-active btn-custom">Nein<input type="radio"
-                                                        value="female" name="gender"></label>
-                                            </div>
-                                        </div>
+                                        <label class="radio-inline"><input type="radio" name="frage5Checked" value="Aufputz">Aufputz</label>
+                                <label class="radio-inline"><input type="radio" name="frage5Checked" value="Unterputz">Unterputz</label>
                                     </div>
                                 </div>
                             </fieldset>
                         </form>
                     </div>
-
                 </div>
             </div>
 
 
-
+            <!--FRAGE6-->
             <div class="container">
                 <div class="row d-flex flex-column justify-content-center align-items-center">
                     <p>Wie soll die Ladesäule montiert werden?</p>
@@ -162,48 +142,42 @@
                             <fieldset>
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                        <div class="input-group">
-                                            <div class="btn-group radio-group">
-                                                <label class="btn btn-primary not-active btn-custom">Ja <input type="radio"
-                                                        value="male" name="gender"></label>
-                                                <label class="btn btn-primary not-active btn-custom">Nein<input type="radio"
-                                                        value="female" name="gender"></label>
-                                            </div>
-                                        </div>
+                                        <label class="radio-inline"><input type="radio" name="frage6Checked" value="Wandmontage">Wandmontage</label>
+                                <label class="radio-inline"><input type="radio" name="frage6Checked" value="Standfuß">Standfuß</label>
                                     </div>
                                 </div>
                             </fieldset>
                         </form>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <button id="toTheSecond" type="button" class="btn btn-primary btn-lg">Weiter</button>
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <button id="toTheSecond" type="button" class="btn btn-primary btn-lg">Weiter</button>
+                    </div>
                 </div>
-            </div>
 
 
-            <!--Second Screen-->
-
-
+                <!--Second Screen-->
 
 
 
-            <!--JQuery-->
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
-                integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
 
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-                integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-                crossorigin="anonymous">
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
-                integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
-                crossorigin="anonymous">
-            </script>
 
-            <script src="./main.js"></script>
+                <!--JQuery-->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+                    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+                    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+                    crossorigin="anonymous">
+                    </script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+                    integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+                    crossorigin="anonymous">
+                    </script>
+
+                <script src="./main.js"></script>
 
 
 </body>

@@ -29,8 +29,6 @@ p{
    width: 80px;
 }
 
-
-
 .btn-primary{
     border-color: #57bcb3 !important;
     background-color: #57bcb3 !important;
@@ -41,27 +39,8 @@ p{
     background-color: #57bcb3 !important;
 }
 
-.btn-custom{
-    width: 50px;
-}
 
-.radio-group{
-    width:200px;
-}
 
-.radio-group label {
-    overflow: hidden;
- } .radio-group input {
-     /* This is on purpose for accessibility. Using display: hidden is evil.
-     This makes things keyboard friendly right out tha box! */
-    height: 1px;
-    width: 1px;
-    position: absolute;
-    top: -20px;
- } .radio-group .not-active  {
-    color: black;
-    background-color: #fff !important;
- }
  
 
  /*Second*/
