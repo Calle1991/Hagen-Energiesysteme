@@ -6,21 +6,25 @@ require_once 'vendor/autoload.php';
 // Instantiation and passing `true` enables exceptions
 
 header("Access-Control-Allow-Origin: *");
-$rest_json = file_get_contents("php://input");
-$_POST = json_decode($rest_json, true);
+//$rest_json = file_get_contents("php://input");
+//$_POST = json_decode($rest_json, true);
 
 //if(isset($_POST['sendmail'])){
-$email = $_POST['mail'];
-$tel = $_POST['tel'];
-$meter = $_POST['meter'];
-$stromverteilerChecked = $_POST['stromverteilerChecked'];
-$tiefbauChecked = $_POST['tiefbauChecked'];
-$wanddurchbruchChecked = $_POST['wanddurchbruchChecked'];
-$ladesaeuleChecked = $_POST['ladesaeuleChecked'];
-$installationChecked = $_POST['installationChecked'];
+//Kontaktdaten
 $name = $_POST['name'];
-        
-echo $_POST['mail'];
+$email = $_POST['email'];
+$tel = $_POST['telefon'];
+$strasse = $_POST['strasse'];
+$ort = $_POST['ort'];
+
+//Informationen
+$meter = $_POST['meter'];
+$stromverteilerChecked = $_POST['frage2'];
+$tiefbauChecked = $_POST['frage3'];
+$wanddurchbruchChecked = $_POST['frage4'];
+$ladesaeuleChecked = $_POST['frage5'];
+$installationChecked = $_POST['frage6'];
+
 
 try {
     // Create the Transport
@@ -41,6 +45,8 @@ try {
   <title>Angebotsanfrage</title>
 </head>
 <body>
+<h1>Angebotsanfrage - Ladestation</h1>
+<h2>Kontaktdaten</h2>
 <table style="border 1px solid black">
     <tr>
         <td>
@@ -66,6 +72,27 @@ try {
         '. $tel .'
         </td>
     </tr>
+    <tr>
+        <td>
+        Straße:
+        </td>
+        <td>
+        '. $strasse .'
+        </td>
+    </tr>
+    <tr>
+        <td>
+        Ort:
+        </td>
+        <td>
+        '. $ort .'
+        </td>
+    </tr>
+</table>
+
+
+<h2>Information</h2>
+<table style="border 1px solid black">
     <tr>
         <td>
         Wie groß ist die Entfernung zum Stromverteiler?

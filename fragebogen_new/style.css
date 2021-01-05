@@ -4,16 +4,21 @@ body{
 
 /*HEADER*/
 #img {
-    width: 150px;
-    height: 65px;
+    width: 300px;
+    height: auto;
     padding: 10px;
 }
 
 
 p{
-    line-height: 1.2;
+    line-height: 1.1;
     text-align: center;
     margin-bottom: 5px !important;
+}
+
+.infos{
+	font-size: 15px;
+	line-height: 0;
 }
 
 
@@ -35,7 +40,8 @@ p{
 
 .btn-primary{
     border-color: #57bcb3 !important;
-    background-color: #57bcb3 !important;
+	background-color: #57bcb3 !important;
+	min-width: 350px;
 
 }
 
@@ -44,6 +50,8 @@ p{
 }
 
 
+
+/*RadioButton*/
 
 .b-contain *, .b-contain *::before, .b-contain *::after {
 	box-sizing: content-box !important;
@@ -66,7 +74,8 @@ p{
 	position: relative;
 	padding-left: 1.8rem;
 	cursor: pointer;
-	margin-bottom: .5rem;
+	margin-bottom: 0;
+	margin-right: 50px;
 }
 
 
@@ -80,6 +89,11 @@ p{
 	transition: background 250ms;
 	border: 1px solid rgba(184, 194, 204, 1);
 	border-radius: 2.0rem;
+}
+
+.errormessage  {
+	visibility:hidden;
+	color: red;
 }
 
 
@@ -214,11 +228,6 @@ p{
 
 
 
-
-
-
- 
-
  /*SECOND*/
 
 
@@ -227,7 +236,7 @@ p{
 }
 
 .normalText{
-    text-align: left;
+	text-align: left;
 }
 
 
@@ -236,4 +245,28 @@ p{
 #imgfinish{
     width: 350px;
     padding: 10px;
+}
+
+
+
+
+/*Second Media-Query*/
+@media screen 
+and (max-width : 400px){
+
+	
+
+	.normalText{
+		font-size: 12px;
+	}
+
+
+	#img{
+		width: 150px;
+		height: auto;
+	}
+
+	.infos{
+		font-size: 10px;
+	}
 }
