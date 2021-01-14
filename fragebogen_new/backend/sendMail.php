@@ -130,7 +130,7 @@ try {
         Soll die Installation Auf- oder Unterputz erfolgen?:
         </td>
         <td>
-        '. $installationChecked .'
+        '. $ladesaeuleChecked .'
         </td>
     </tr>
     <tr>
@@ -138,7 +138,7 @@ try {
         Wie soll die Ladesaeule montiert werden?:
         </td>
         <td>
-        '. $ladesaeuleChecked .'
+        '. $installationChecked .'
         </td>
     </tr>
 </table>
