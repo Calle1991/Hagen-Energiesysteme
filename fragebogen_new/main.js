@@ -11,7 +11,6 @@ $(function () {
 //Validate FirstScreen
 $("#toTheSecond").click(function () {
     formValid = false
-
     var meter = $("input[name=meter]").val();
     var frage2 = $('input[name=frage2Checked]:checked').val();
     var frage3 = $('input[name=frage3Checked]:checked').val();
@@ -42,9 +41,11 @@ $("#toTheSecond").click(function () {
 
 
 //Validate SecondScreen
+
+
 $("#toTheThird").click(function () {
     formValid = false
-
+    var token = $("#token").val();
     var name = $("input[name=name]").val();
     var email = $('input[name=email]').val();
     var tel = $('input[name=tel]').val();
@@ -73,6 +74,7 @@ $("#toTheThird").click(function () {
             url: './backend/sendMail.php',
             data: {
                 //Fragen vom ersten Screen
+                'token':token,
                 'meter':sessionStorage.getItem("meter"),
                 'frage2':sessionStorage.getItem("frage2"),
                 'frage3':sessionStorage.getItem("frage3"),
@@ -89,17 +91,17 @@ $("#toTheThird").click(function () {
             },
             success: function (data) {
                 console.log(data);
+                //löschen des SessionS
+                sessionStorage.clear()
+                //weiterleiten
+                window.location.href = "third.html";
             },
             error: function (xhr, status, error) {
                 console.error(xhr);
             }
         });
 
-        //löschen des SessionS
-        sessionStorage.clear()
-
-        //weiterleiten
-        window.location.href = "third.html";
+        
 
 
     } else {

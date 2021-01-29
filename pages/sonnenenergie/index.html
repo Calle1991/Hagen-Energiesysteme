@@ -9,7 +9,7 @@
   <meta name="author" content="Hagen Energiesysteme">
 
   <!-- Scripts ================================================== -->
-
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
 
 
   <!-- Favicons================================================== -->
@@ -216,6 +216,7 @@
               </div>
               <div id="success"></div>
               <button type="submit" class="btn btn-custom btn-lg">Absenden</button>
+              <input type="hidden" name="token" id="token">
             </form>
           </div>
           <div class="col-lg-12 d-flex justify-content-center align-items-center flex-row">
@@ -279,6 +280,17 @@
         <p>&copy; 2020 Hagen GmbH</p>
       </div>
     </div>
+      <!--Google ReCAPTCHA-->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
+  <script>
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv', {action: 'submit'}).then(function(token) {
+            document.getElementById("token").value = token;
+            console.log(token);
+        });
+      });
+  </script>
+  
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="../../js/jqBootstrapValidation.js"></script>
