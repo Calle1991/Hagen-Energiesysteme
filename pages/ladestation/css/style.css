@@ -16,16 +16,16 @@ h2 {
 	margin: 0 0 20px 0;
 	font-weight: 800;
 	font-size: 36px;
-	color: #333;
+	color: #333333;
 }
 h3 {
 	font-size: 20px;
 	font-weight: 600;
-	color: #333;
+	color: #333333;
 }
 h4 {
 	font-size: 18px;
-	color: #333;
+	color: #333333;
 	font-weight: 600;
 }
 h5 {
@@ -178,7 +178,7 @@ header .intro-text span {
 	color: #5ca9fb;
 }
 header .intro-text  p {
-	color: black;
+	color: #333333;
 	font-size: 22px;
 	font-weight: 300;
 	line-height: 30px;
@@ -191,7 +191,7 @@ header .intro-text {
 	padding-top: 320px;
 	padding-bottom: 50px;
 	text-align: left;
-	color: black;
+	color: #333333;
 }
 
 
@@ -538,7 +538,7 @@ header .intro-text {
   
   .tl-heading h4 {
 	margin: 0;
-	color: black;
+	color: #333333;
   }
   .tl-heading i{
 	  background: linear-gradient(to right, #3399cc 0%, #339999 100%);
