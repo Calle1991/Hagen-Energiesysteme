@@ -8,6 +8,74 @@ body, html {
 	height: 100% !important;
 	overflow: fixed;
 }
+
+#PrivatGewerbe{
+}
+
+.popular{
+	position: relative;
+}
+
+#empfohlen{
+	background-color:#2da1ab;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+	border-radius: 3px 0px 0px 3px;
+	position: absolute;
+	width: 100px;
+	height: 23px;
+	left: 410px;
+	top: 56.5px;
+	align-items: center;
+	text-align: right;
+}
+
+#empfohlen{
+color: white;
+font-weight: bold;
+padding-right: 6px;
+font-size: 12px;
+}
+label {
+    width: 100%;
+}
+
+.card-input-element {
+    display: none;
+}
+.card-input h5, p{
+}
+
+.card-input {
+	border: 1px solid #E5e5e5;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+	width: 80%;
+    margin: 10px;
+    padding: 20px;
+	text-align: start;
+	height: max-content;
+}
+
+.card-input:hover{
+	border: 1px solid #2da1ab;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+
+}
+.card-input:hover h5{
+color:#2da1ab;
+}
+
+.card-input-element:checked + .card-input h5{
+	color:#2da1ab;
+
+}
+
+.card-input-element:checked + .card-input{
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+	border: 1px solid #2da1ab;	
+
+ }
+
 h2, h3, h4 {
 	font-family: 'aria narrow', sans-serif;
 }
@@ -385,7 +453,14 @@ header .intro-text {
 	padding: 10px 0 0 0;
 	color: #888;
 }
-
+#TextLinks{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+#TextLinks p{
+text-align: left;
+}
 
 /*Timeline */
 
