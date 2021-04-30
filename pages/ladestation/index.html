@@ -323,7 +323,7 @@
         </label>
 
         <label>
-          <input type="radio" name="card" class="card-input-element" />
+          <input type="radio" name="card" id="gewerblich" class="card-input-element" />
           <div class="panel panel-default card-input">
             <div class="panel-heading">
               <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
@@ -392,8 +392,8 @@
       </div>
     </div>
 
-    <button class="accordion">Staatliche Förderung sichern</button>
-    <div class="accordionContent">
+    <button class="accordion" id="stepTwo__btn" >Staatliche Förderung sichern</button>
+    <div class="accordionContent" id="stepTwo">
       <p class="accordionContent__text">Haben Sie bereits einen KFW-Förderantrag gestellt?</p><br>
       <div class="radioButtonArea">
         <div class="radioButtonArea__input">
@@ -425,14 +425,18 @@
       </div>
       <div class="infoBox__gruenStrom">
         <div class="infoText">
-          <p>Wichtig! Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.<br> Geben Sie Ihre PLZ ein, um weitergeleitet zu werden.
-          </p>
+          <p>Wichtig! Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.<br> Geben Sie Ihre PLZ ein, um weitergeleitet zu werden.</p>
+        </div>
+        <div class="plzInput">
+          <span>Tragen Sie hier Ihre Postleitzahl ein:</span>
+          <input type="text" name="plzInput" id="plzInput">
+          <span id="plzTest"></span>
         </div>
       </div>
     </div>
 
-    <button class="accordion">Fragebogen ausfüllen</button>
-    <div class="accordionContent">
+    <button class="accordion" id="stepThree__btn">Fragebogen ausfüllen</button>
+    <div class="accordionContent" id="stepThree">
       <p class="accordionContent__text"><b>Sie haben es fast geschafft!</b><br>Um den Vorgang abzuschließen und Ihr individuelles Angebot zu erhalten,
         nehmen Sie sich zwei Minuten Zeit um unseren Fragebogen auszufüllen.</p>
         <div> <a href="https://hagen-energiesysteme.de/fragebogen" class="btn btn-custom btn-lg page-scroll">Zum

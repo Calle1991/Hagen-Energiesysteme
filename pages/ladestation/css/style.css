@@ -127,6 +127,9 @@ body, html {
 	border-top: 1px solid #E5E5E5;
 }
 
+.panel{
+	cursor: pointer;
+}
 
 .panel-body{
 	position: relative;
@@ -135,6 +138,8 @@ body, html {
 label {
     width: 100%;
 }
+
+
 
 .card-input-element {
     display: none;

@@ -1,3 +1,4 @@
+/*
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -12,22 +13,31 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+*/
 
 
-//Card - Validation
-
+//Entscheiden ob Privat oder Gewerblich
 $('#privat').click(function(){
   $('#stepOne__btn').addClass('active');
-  $('#stepOne').css('max-height','100%');
+  $('#stepOne').animate({'max-height':'500px'},800);
+});
+
+$('#gewerblich').click(function(){
+  $('#stepOne__btn').removeClass('active');
+  $('.accordionContent').animate({'max-height':'0px'},800);
 });
 
 
-$('#KFW__Nein').click(function(){
-  $('.infoBox__KFW').css('visibility','visible');
+
+//Wählen Sie ein Modell
+$("input:radio[name='product']").on('click', function(e) {
+  $('#stepTwo__btn').addClass('active');
+  $('#stepTwo').animate({'max-height':'500px'},800);
 });
 
 
-//Radiobutton Validation - Accordion
+
+//Stattliche Förderung sichern
 $('#KFW__Nein').click(function(){
   $('.infoBox__KFW').css('visibility','visible');
 });
@@ -44,3 +54,26 @@ $('#GRUEN__Nein').click(function(){
 $('#GRUEN__Ja').click(function(){
   $('.infoBox__gruenStrom').css('visibility','hidden');
 });
+
+//Postleitzahl eingeben
+
+$('#plzInput').keyup(function(){
+console.log($('#plzInput').val())
+$('#plzTest').html($('#plzInput').val())
+});
+
+//Fragebogen ausfüllen
+
+
+$("input:radio[name='KFW']").on("click",function(){
+  checkValidation();
+});
+
+function checkValidation(){
+  if($("input[name='KFW']:checked").val() == 'Ja' && $("input[name='GRUEN']:checked").val() == 'Ja'){
+    $('#stepThree__btn').addClass('active');
+    $('#stepThree').animate({'max-height':'500px'},800);
+  }else{
+    $('#stepThree').animate({'max-height':'0px'},800);
+  }
+}
