@@ -22,8 +22,6 @@ body, html {
 	transition: 0.4s;
   }
 
-
-  
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .accordion:hover {
 	background-color: #ccc;
@@ -51,7 +49,8 @@ body, html {
 	content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
   /*SUPER COOLER PASCAL ENDE*/
-.infoBox{
+.infoBox__KFW{
+	visibility: hidden;
 	display: flex;
 	width: 35.5%;
 	height: min-content;
@@ -60,7 +59,22 @@ body, html {
 	justify-content: center;
 	align-items: flex-start;
 	padding: 10px;
-}	
+}
+
+.infoBox__gruenStrom{
+	visibility: hidden;
+	display: flex;
+	width: 35.5%;
+	height: min-content;
+	flex-direction: column;
+	border: 1px solid #2da1ab;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 10px;
+}
+
+
+
 .infoText{
 	display: flex;
 	flex-direction: column;

@@ -306,16 +306,13 @@
     <div id="PrivatGewerbe">
       <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center align-items-center">
         <label>
-          <input type="radio" name="product" class="card-input-element" />
-
+          <input type="radio" name="card" id="privat" class="card-input-element" />
           <div class="panel panel-default card-input">
-
             <div class="panel-heading">
               <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#FFF122">
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
               </svg>
-
               <h5>Privat</h5>
             </div>
             <div class="panel-body">
@@ -325,12 +322,9 @@
           </div>
         </label>
 
-
         <label>
-          <input type="radio" name="product" class="card-input-element" />
+          <input type="radio" name="card" class="card-input-element" />
           <div class="panel panel-default card-input">
-
-
             <div class="panel-heading">
               <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
                 viewBox="0 0 24 24" width="30px" fill="#777">
@@ -354,16 +348,12 @@
     </div>
 
     <!--SUPER COOLER PASCAL-->
-    <button class="accordion">Wählen Sie ein Modell</button>
-    <div class="accordionContent">
+    <button class="accordion" id="stepOne__btn">Wählen Sie ein Modell</button>
+    <div class="accordionContent" id="stepOne">
       <div id="Wallboxen">
-
         <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-center popular">
           <label>
-
             <input type="radio" name="product" class="card-input-element" />
-           
-          
             <div class="panel panel-default card-input">
              <div>
               <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
@@ -407,15 +397,15 @@
       <p class="accordionContent__text">Haben Sie bereits einen KFW-Förderantrag gestellt?</p><br>
       <div class="radioButtonArea">
         <div class="radioButtonArea__input">
-          <input type="radio" id="KFW" name="Foerderung" value="Ja">
+          <input type="radio" id="KFW__Ja" name="KFW" value="Ja">
           <label for="KFW">Ja</label><br>
         </div>
         <div class="radioButtonArea__input">
-          <input type="radio" id="KFW" name="Foerderung" value="Nein">
+          <input type="radio" id="KFW__Nein" name="KFW" value="Nein">
           <label for="KFW">Nein</label><br>
         </div>
       </div>
-      <div class="infoBox">
+      <div class="infoBox__KFW" >
         <div class="infoText">
           <p>Stellen Sie Ihren Förderantrag vor der Bestellung, um die Voraussetzungen der KfW zu erfüllen.
           </p>
@@ -425,15 +415,15 @@
       <p class="accordionContent__text">Haben Sie bereits einen Gründstromvertrag abgeschlossen?</p><br>
       <div class="radioButtonArea">
         <div class="radioButtonArea__input">
-          <input type="radio" id="GRUEN" name="Foerderung" value="Ja">
+          <input type="radio" id="GRUEN__Ja" name="GRUEN" value="Ja">
           <label for="GRUEN">Ja</label><br>
         </div>
         <div class="radioButtonArea__input">
-          <input type="radio" id="GRUEN" name="Foerderung" value="Nein">
+          <input type="radio" id="GRUEN__Nein" name="GRUEN" value="Nein">
           <label for="GRUEN">Nein</label><br>
         </div>
       </div>
-      <div class="infoBox">
+      <div class="infoBox__gruenStrom">
         <div class="infoText">
           <p>Wichtig! Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.<br> Geben Sie Ihre PLZ ein, um weitergeleitet zu werden.
           </p>
