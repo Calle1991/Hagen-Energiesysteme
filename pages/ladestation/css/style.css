@@ -8,38 +8,116 @@ body, html {
 	height: 100% !important;
 	overflow: fixed;
 }
-#KFW{
-	display: flex;
-	justify-content: flex-start;
+/*SUPER COOLER PASCAL*/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+	background-color: #eee;
+	color: #777777;
+	cursor: pointer;
+	padding: 20px;
 	width: 100%;
-	align-items: flex-start;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+  }
+
+
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+	background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .accordionContent {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+  }
+
+
+  .accordion:after {
+	content: '\02795'; /* Unicode character for "plus" sign (+) */
+	font-size: 13px;
+	color: #777;
+	float: right;
+	margin-left: 5px;
+  }
+  
+  .active:after {
+	content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  /*SUPER COOLER PASCAL ENDE*/
+.infoBox{
+	display: flex;
+	width: 35.5%;
+	height: min-content;
 	flex-direction: column;
+	border: 1px solid #2da1ab;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 10px;
+}	
+.infoText{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
-
-
-.popular{
-	position: relative;
+.infoText p{
+	text-align: left;
 }
 
 #empfohlen{
 	background-color:#2da1ab;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
 	border-radius: 3px 0px 0px 3px;
-	position: absolute;
+	position:absolute;
 	width: 100px;
 	height: 23px;
-	left: 410px;
-	top: 56.5px;
+	bottom:140%;
+	left:80%;
 	align-items: center;
 	text-align: right;
+	color: white;
+	font-weight: bold;
+	padding-right: 6px;
+	font-size: 12px;
 }
 
-#empfohlen{
-color: white;
-font-weight: bold;
-padding-right: 6px;
-font-size: 12px;
+.accordionContent__text {
+	text-align: start;
 }
+.radioButtonArea{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-top:-20px ;
+}
+
+.radioButtonArea__input{
+	display: flex;
+	flex-direction: row;
+	padding-right: 200px;
+}
+.radioButtonArea__input label{
+	font-family: 'Myriad Pro', sans-serif;
+	font-size: initial;
+}
+
+
+.accordion{
+	background-color: white;
+	border-top: 1px solid #E5E5E5;
+}
+
+
+.panel-body{
+	position: relative;
+}
+
 label {
     width: 100%;
 }
@@ -49,8 +127,6 @@ label {
 }
 
 
-.card-input h5, p{
-}
 
 .card-input {
 	border: 1px solid #E5e5e5;
@@ -75,6 +151,8 @@ color:#2da1ab;
 	color:#2da1ab;
 
 }
+
+
 
 .card-input-element:checked + .card-input{
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
