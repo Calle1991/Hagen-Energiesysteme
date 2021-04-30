@@ -25,6 +25,7 @@ $('#privat').click(function(){
 $('#gewerblich').click(function(){
   $('#stepOne__btn').removeClass('active');
   $('.accordionContent').animate({'max-height':'0px'},800);
+  window.location.href = "index.html#contact"
 });
 
 
@@ -66,6 +67,10 @@ $('#plzTest').html($('#plzInput').val())
 
 
 $("input:radio[name='KFW']").on("click",function(){
+  checkValidation();
+});
+
+$("input:radio[name='GRUEN']").on("click",function(){
   checkValidation();
 });
 
