@@ -20,6 +20,7 @@ for (i = 0; i < acc.length; i++) {
 $('#privat').click(function(){
   $('#stepOne__btn').addClass('active');
   $('#stepOne').animate({'max-height':'500px'},800);
+  window.location.href = "index.html#stepOne__scroll"
 });
 
 $('#gewerblich').click(function(){
@@ -34,6 +35,7 @@ $('#gewerblich').click(function(){
 $("input:radio[name='product']").on('click', function(e) {
   $('#stepTwo__btn').addClass('active');
   $('#stepTwo').animate({'max-height':'500px'},800);
+  window.location.href = "index.html#stepTwo__scroll"
 });
 
 
@@ -76,8 +78,10 @@ $("input:radio[name='GRUEN']").on("click",function(){
 
 function checkValidation(){
   if($("input[name='KFW']:checked").val() == 'Ja' && $("input[name='GRUEN']:checked").val() == 'Ja'){
+    window.location.href = "index.html#stepThree__scroll"
     $('#stepThree__btn').addClass('active');
     $('#stepThree').animate({'max-height':'500px'},800);
+    
   }else{
     $('#stepThree').animate({'max-height':'0px'},800);
   }
