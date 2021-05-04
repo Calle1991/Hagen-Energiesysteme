@@ -525,7 +525,7 @@ header .intro-text {
 
   /*Fragebogen*/
   #fragebogen{
-	  width: 50%;
+	  width: 100%;
   }
 
   .step{
@@ -545,7 +545,16 @@ header .intro-text {
 	width: 50%;
 }
 
+.actions{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
 
+.errormessage{
+	display: none;
+	color: red;
+}
 
 
 

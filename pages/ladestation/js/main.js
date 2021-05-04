@@ -97,19 +97,27 @@ function checkStep(n) {
   switch (n) {
     case 0:
       $(".step").eq(n).fadeIn();
-      $(".step").eq(n + 1).css("display", "none");
+      $(".step")
+        .eq(n + 1)
+        .css("display", "none");
       $("#zurueckBtn").css("display", "none");
       break;
 
     case 1:
-      $(".step").eq(n - 1).css("display", "none");
-      $(".step").eq(n + 1).css("display", "none");
+      $(".step")
+        .eq(n - 1)
+        .css("display", "none");
+      $(".step")
+        .eq(n + 1)
+        .css("display", "none");
       $(".step").eq(n).fadeIn();
       $("#zurueckBtn").css("display", "block");
       break;
 
     case 2:
-      $(".step").eq(n - 1).css("display", "none");
+      $(".step")
+        .eq(n - 1)
+        .css("display", "none");
       $(".step").eq(n).fadeIn();
       $("#zurueckBtn").css("display", "block");
       break;
@@ -122,11 +130,55 @@ function checkStep(n) {
 }
 
 function nextStep() {
-  steps++;
-  checkStep(steps);
+  if (validateForm(steps) == true) {
+    steps++;
+    checkStep(steps);
+  } else {
+    //nothing
+  }
 }
 
 function stepBack() {
   steps--;
   checkStep(steps);
+}
+
+//Fragebogen - Validation
+// First Step
+function validateForm(n) {
+  switch (n) {
+    //Firststep
+    case 0:
+      var meter = $("input[name=meter]").val();
+      var frage2 = $("input[name=frage2Checked]:checked").val();
+      var frage3 = $("input[name=frage3Checked]:checked").val();
+      var frage4 = $("input[name=frage4Checked]:checked").val();
+      var frage5 = $("input[name=frage5Checked]:checked").val();
+      var frage6 = $("input[name=frage6Checked]:checked").val();
+
+      if (meter && frage2 && frage3 && frage4 && frage5 && frage6) {
+        $(".errormessage").css("display", "none");
+        return true;
+      } else {
+        $(".errormessage").css("display", "block");
+        return false;
+      }
+      //Firststep
+    case 1:
+      var token = $("#token").val();
+      var name = $("input[name=name]").val();
+      var email = $("input[name=email]").val();
+      var tel = $("input[name=tel]").val();
+      var strasse = $("input[name=strasse]").val();
+      var ort = $("input[name=ort]").val();
+      var datenschutz = $("input[name=datenschutz]:checked").val();
+
+      if (name && email && tel && strasse && ort && datenschutz) {
+        $(".errormessage").css("display", "none");
+        return true;
+      } else {
+        $(".errormessage").css("display", "block");
+        return false;
+      }
+  }
 }
