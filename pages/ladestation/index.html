@@ -41,6 +41,7 @@
 
 
 
+
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#navBarTop" data-bs-offset="100" tabindex="0">
@@ -245,62 +246,10 @@
       <h2>Interesse?</h2>
     </div>
 
-    <!--
-      <p>Füllen Sie den Fragebogen aus und erhalten Sie ein auf Sie abgestimmtes Angebot</p>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="timeline">
-            <li>
-              <div class="tl-circ">
-                <span>1</span>
-              </div>
-              <div class="timeline-panel" data-aos="fade-right" data-aos-duration="500" data-aos-offset="200">
-                <div class="tl-heading">
-                  <i class="fas fa-pencil-alt"></i>
-                  <h4>Fragebogen ausfüllen</h4>
-                </div>
-                <div class="tl-body">
-                  <p>Fragebogen ausfüllen und uns den Rest erledigen lassen</p>
-                  <br>
-                  <a href="https://hagen-energiesysteme.de/fragebogen" class="btn btn-custom btn-lg page-scroll">Zum
-                    Fragebogen</a>
-                </div>
-              </div>
-            </li>
 
-            <li class="timeline-inverted">
-              <div class="tl-circ">2</div>
-              <div class="timeline-panel" class="timeline-panel" data-aos="fade-left" data-aos-duration="500"
-                data-aos-offset="200" data-aos-delay="100">
-                <div class="tl-heading">
-                  <i class="fas fa-search"></i>
-                  <h4>Auswertung</h4>
-                </div>
-                <div class="tl-body">
-                  <p>Wir werten Ihre Angaben aus und erstellen das perfekte Angebot für Sie</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="tl-circ">3</div>
-              <div class="timeline-panel" class="timeline-panel" data-aos="fade-right" data-aos-duration="500"
-                data-aos-offset="200" data-aos-delay="200">
-                <div class="tl-heading">
-                  <i class="fas fa-check"></i>
-                  <h4>Angebot</h4>
-                </div>
-                <div class="tl-body">
-                  <p>Alles ist fertig.</p>
-                  <p>Wir senden Ihnen das Angebot per E-Mail zu</p>
-                </div>
-              </div>
-            </li>
-        </div>
-      </div>
-    </div>
-  -->
+
+
+
 
     <!--Cards-->
     <div id="PrivatGewerbe">
@@ -347,8 +296,10 @@
       </div>
     </div>
 
+
+
+    <!--STEP ONE-->
     <div id="stepOne__scroll"></div>
-    <!--SUPER COOLER PASCAL-->
     <button class="accordion" id="stepOne__btn">Wählen Sie ein Modell</button>
     <div class="accordionContent" id="stepOne">
       <div id="Wallboxen">
@@ -356,9 +307,9 @@
           <label>
             <input type="radio" name="product" class="card-input-element" />
             <div class="panel panel-default card-input">
-             <div>
-              <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
-            </div>
+              <div>
+                <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
+              </div>
               <div class="panel-body">
                 <p>Product specific content</p>
                 <div id="empfohlen">
@@ -367,8 +318,6 @@
               </div>
             </div>
           </label>
-
-
           <label>
             <input type="radio" name="product" class="card-input-element" />
             <div class="panel panel-default card-input">
@@ -378,8 +327,6 @@
               </div>
             </div>
           </label>
-
-
           <label>
             <input type="radio" name="product" class="card-input-element" />
             <div class="panel panel-default card-input">
@@ -393,41 +340,73 @@
       </div>
     </div>
 
+    <!--STEP TWO-->
     <div id="stepTwo__scroll"></div>
-    <button class="accordion" id="stepTwo__btn" >Staatliche Förderung sichern</button>
+    <button class="accordion" id="stepTwo__btn">Staatliche Förderung sichern</button>
     <div class="accordionContent" id="stepTwo">
       <p class="accordionContent__text">Haben Sie bereits einen KFW-Förderantrag gestellt?</p><br>
+
+
+
       <div class="radioButtonArea">
-        <div class="radioButtonArea__input">
-          <input type="radio" id="KFW__Ja" name="KFW" value="Ja">
-          <label for="KFW">Ja</label><br>
+        <div class="radiobattenBox">
+          <div class="radioBatten__input">
+            <input type="radio" id="KFW__Ja" name="KFW" value="Ja">
+            <label for="KFW__Ja">
+              <span class="tick"></span>
+            </label>
+          </div>
+          <div class="radioBatten__label">
+            <p>Ja</p>
+          </div>
         </div>
-        <div class="radioButtonArea__input">
-          <input type="radio" id="KFW__Nein" name="KFW" value="Nein">
-          <label for="KFW">Nein</label><br>
+        <div class="radiobattenBox">
+          <div class="radioBatten__input">
+            <input type="radio" id="KFW__Nein" name="KFW" value="Nein">
+            <label for="KFW__Nein">
+              <span class="tick"></span>
+            </label>
+          </div>
+          <div class="radioBatten__label">
+            <p>Nein</p>
+          </div>
         </div>
       </div>
-      <div class="infoBox__KFW" >
+      <div class="infoBox__KFW">
         <div class="infoText">
           <p>Stellen Sie Ihren Förderantrag vor der Bestellung, um die Voraussetzungen der KfW zu erfüllen.
           </p>
         </div>
       </div>
-
       <p class="accordionContent__text">Haben Sie bereits einen Gründstromvertrag abgeschlossen?</p><br>
       <div class="radioButtonArea">
-        <div class="radioButtonArea__input">
-          <input type="radio" id="GRUEN__Ja" name="GRUEN" value="Ja">
-          <label for="GRUEN">Ja</label><br>
+        <div class="radiobattenBox">
+          <div class="radioBatten__input">
+            <input type="radio" id="GRUEN__Ja" name="GRUEN" value="Ja">
+            <label for="GRUEN__Ja">
+              <span class="tick"></span>
+            </label>
+          </div>
+          <div class="radioBatten__label">
+            <p>Ja</p>
+          </div>
         </div>
-        <div class="radioButtonArea__input">
-          <input type="radio" id="GRUEN__Nein" name="GRUEN" value="Nein">
-          <label for="GRUEN">Nein</label><br>
+        <div class="radiobattenBox">
+          <div class="radioBatten__input">
+            <input type="radio" id="GRUEN__Nein" name="GRUEN" value="Nein">
+            <label for="GRUEN__Nein">
+              <span class="tick"></span>
+            </label>
+          </div>
+          <div class="radioBatten__label">
+            <p>Nein</p>
+          </div>
         </div>
       </div>
       <div class="infoBox__gruenStrom">
         <div class="infoText">
-          <p>Wichtig! Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.<br> Geben Sie Ihre PLZ ein, um weitergeleitet zu werden.</p>
+          <p>Wichtig! Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.<br> Geben Sie Ihre PLZ
+            ein, um weitergeleitet zu werden.</p>
         </div>
         <div class="plzInput">
           <span>Tragen Sie hier Ihre Postleitzahl ein:</span>
@@ -437,310 +416,412 @@
       </div>
     </div>
 
+
+    <!--STEP THREE-->
     <div id="stepThree__scroll"></div>
     <button class="accordion" id="stepThree__btn">Fragebogen ausfüllen</button>
     <div class="accordionContent" id="stepThree">
-      <p class="accordionContent__text"><b>Sie haben es fast geschafft!</b><br>Um den Vorgang abzuschließen und Ihr individuelles Angebot zu erhalten,
+      <p class="accordionContent__text"><b>Sie haben es fast geschafft!</b><br>Um den Vorgang abzuschließen und Ihr
+        individuelles Angebot zu erhalten,
         nehmen Sie sich zwei Minuten Zeit um unseren Fragebogen auszufüllen.</p>
-        <div> <a href="https://hagen-energiesysteme.de/fragebogen" class="btn btn-custom btn-lg page-scroll">Zum
-          Fragebogen</a></div>
-    </div>
+      <div>
 
+        <!--FRAGEBOGEN-->
+        <div id="fragebogen">
+          <!--Fragen-->
+          <div class="step">
+            <form action="">
+              <fieldset>
 
-
-
-
-
-
-
-
-
-
-
-    <!--
-    <div class="accordion" data-accordion data-allow-all-closed="true">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="float-right accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-
-            Wählen Sie ein Modell
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-
-            <div id="Wallboxen">
-
-              <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-center popular">
-                <label>
-
-                  <input type="radio" name="product" class="card-input-element" />
-
-                  <div class="panel panel-default card-input">
-                    <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
-
-                    <div class="panel-body">
-
-                      <p>Product specific content</p>
-                      <div id="empfohlen">
-                        <p>Empfohlen</p>
-                      </div>
-
-                    </div>
-                  </div>
-                </label>
-
-
-                <label>
-                  <input type="radio" name="product" class="card-input-element" />
-                  <div class="panel panel-default card-input">
-                    <h5 class="panel-heading">Wallbox Copper SB</h5>
-                    <div class="panel-body">
-                      Product specific content
-                    </div>
-                  </div>
-                </label>
-
-
-                <label>
-                  <input type="radio" name="product" class="card-input-element" />
-                  <div class="panel panel-default card-input">
-                    <h5 class="panel-heading">Wallbox Commander 2</h5>
-                    <div class="panel-body">
-                      Product specific content
-                    </div>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#flush-collapseTwo" aria-expanded="true" aria-controls="flush-collapseTwo">
-        Staatliche Förderung sichern
-      </button>
-      </h2>
-
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-        data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <div class="container-fluid">
-
-            <div class="row row-cols-1 row-cols-md-12 g-4 d-flex popular">
-
-              <div id="KFW">
-                <p>Haben Sie bereits einen KFW-Förderantrag gestellt?</p>
-                <form class="form-horizontal">
-                  <fieldset>
-                    <div class="form-group">
-                      <div class="col-md-12 d-flex justify-content-start dl">
-                        <label class="b-contain">
-                          <input type="radio" name="KFWChecked" value="Ja">
-                          <span>Ja</span>
-                          <input type="radio" name="KFWChecked" value="Nein">
-                          <span>Nein</span>
-                        </label>
-
-                      </div>
-                  </fieldset>
-                </form>
-                <div class="infoBox">
-                  <div class="infoText">
-                    <p>Stellen Sie Ihren Förderantrag vor der Bestellung, um die Voraussetzungen der KfW zu erfüllen.
-                    </p>
+                <!--Frage 1-->
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-start flex-column">
+                    <p class="fragebogen__fragen">Wie groß ist die Entfernung zum Stromverteiler?</p>
+                    <input type="number" name="meter" min="0" inputmode="numeric" pattern="[0-9]*">
                   </div>
                 </div>
-              </div>
 
+                <!--Frage 2-->
+                <div class="row">
+                  <p class="fragebogen__fragen">Ist ausreichend Platz für einen Stromverteiler vorhanden?</p>
+                  <p class="fragebogen__fragen"><strong>(14 cm werden benötigt)</strong></p>
+                  <div class="row">
 
-              <div id="KFW">
-                <p>Haben Sie bereits einen Grünstromvertrag abgeschlossen?</p>
-                <form class="form-horizontal">
-                  <fieldset>
-                    <div class="form-group">
-                      <div class="col-md-12 d-flex justify-content-start">
-                        <label class="b-contain">
-                          <input type="radio" name="KFWChecked" value="Ja">
-                          <span>Ja</span>
-                          <input type="radio" name="KFWChecked" value="Nein">
-                          <span>Nein</span>
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage2Checked__Ja" name="frage2Checked" value="Ja">
+                        <label for="frage2Checked__Ja">
+                          <span class="tick"></span>
                         </label>
                       </div>
-                  </fieldset>
-                </form>
-                <div class="infoBox">
-                  <div class="infoText">
-                    <p>Wichtig! Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.<br> Geben Sie Ihre PLZ ein, um weitergeleitet zu werden.
-                    </p>
+                      <div class="radioBatten__label">
+                        <p>Ja</p>
+                      </div>
+                    </div>
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage2Checked__Nein" name="frage2Checked" value="Nein">
+                        <label for="frage2Checked__Nein">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Nein</p>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+
+                  <!--Frage 3-->
+                  <div class="row">
+                    <p class="fragebogen__fragen">Sind Tiefbauarbeiten notwendig?</p>
+                    <div class="row">
+
+
+                      <div class="radiobattenBox">
+                        <div class="radioBatten__input">
+                          <input type="radio" id="frage3Checked_Ja" name="frage3Checked" value="Ja">
+                          <label for="frage3Checked_Ja">
+                            <span class="tick"></span>
+                          </label>
+                        </div>
+                        <div class="radioBatten__label">
+                          <p>Ja</p>
+                        </div>
+                      </div>
+
+                      <div class="radiobattenBox">
+                        <div class="radioBatten__input">
+                          <input type="radio" id="frage3Checked_Nein" name="frage3Checked" value="Nein">
+                          <label for="frage3Checked_Nein">
+                            <span class="tick"></span>
+                          </label>
+                        </div>
+                        <div class="radioBatten__label">
+                          <p>Nein</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <!--Frage 4-->
+                  <div class="row">
+                    <p class="fragebogen__fragen">Sind Wanddurchbrüche erforderlich?</p>
+                    <div class="row">
+
+                      <div class="radiobattenBox">
+                        <div class="radioBatten__input">
+                          <input type="radio" id="frage4Checked_Ja" name="frage4Checked" value="Ja">
+                          <label for="frage4Checked_Ja">
+                            <span class="tick"></span>
+                          </label>
+                        </div>
+                        <div class="radioBatten__label">
+                          <p>Ja</p>
+                        </div>
+                      </div>
+
+                      <div class="radiobattenBox">
+                        <div class="radioBatten__input">
+                          <input type="radio" id="frage4Checked_Nein" name="frage4Checked" value="Nein">
+                          <label for="frage4Checked_Nein">
+                            <span class="tick"></span>
+                          </label>
+                        </div>
+                        <div class="radioBatten__label">
+                          <p>Nein</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!--Frage 5-->
+                  <p class="fragebogen__fragen">Soll die Installation Auf- oder Unterputz erfolgen?</p>
+                  <div class="row">
+
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage5Checked_Ja" name="frage5Checked" value="Ja">
+                        <label for="frage5Checked_Ja">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Aufputz</p>
+                      </div>
+                    </div>
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage5Checked_Nein" name="frage5Checked" value="Nein">
+                        <label for="frage5Checked_Nein">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Unterputz</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!--Frage 6-->
+                  <p class="fragebogen__fragen">Wie soll die Ladesäule montiert werden?</p>
+                  <div class="row">
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage6Checked_Ja" name="frage6Checked" value="Ja">
+                        <label for="frage6Checked_Ja">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Wandmontage</p>
+                      </div>
+                    </div>
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage6Checked_Nein" name="frage6Checked" value="Nein">
+                        <label for="frage6Checked_Nein">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Standfuß</p>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-              </div>
 
-            </div>
+              </fieldset>
+            </form>
+            <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
           </div>
-        </div>
-      </div>
 
 
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseThree" aria-expanded="true" aria-controls="flush-collapseThree">
-            Fragebogen ausfüllen </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion">
-            <div id="TextLinks">
-              <div id="KFW">
-
-              <p>Sie haben es fast geschafft!<br>Um den Vorgang abzuschließen und Ihr individuelles
-                Angebot zu erhalten, nehmen Sie sich zwei Minuten Zeit, um unseren Fragebogen auszufüllen.<br></p>
-              <div> <a href="https://hagen-energiesysteme.de/fragebogen" class="btn btn-custom btn-lg page-scroll">Zum
-                  Fragebogen</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-
-  </div>
-  </div>
-
-  </div>
--->
-    <!-- Contact Section -->
-
-    <div id="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Sprechen Sie uns an</h2>
-          <p>Füllen Sie das Formular aus, um Kontakt mit uns aufzunehmen.</p>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 d-flex  align-items-center justify-content-center">
-            <form name="sentMessage" id="contactForm" novalidate>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="text" id="name" class="form-control" placeholder="Name" required="required">
-                    <p class="help-block text-danger"></p>
+          <!--Kontaktdaten-->
+          <div class="step">
+            <h1>Kontaktdaten</h1>
+            <p>Damit wir dich erreichen können benötigen wir deine Kontaktdaten</p>
+            <form action="">
+              <fieldset>
+                <!--Frage 2/1-->
+                <div class="row">
+                  <div class="col-12">
+                    <span class="input-group-text">Name*</span>
+                    <input type="text" name="name" class="form-control">
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="email" id="email" class="form-control" placeholder="Email" required="required">
-                    <p class="help-block text-danger"></p>
+                <br>
+                <!--Frage 2/2-->
+                <div class="row">
+                  <div class="col-12">
+                    <span class="input-group-text">Email*</span>
+                    <input type="email" name="email" class="form-control">
                   </div>
                 </div>
-              </div>
-              <p class="antispam">Leave this empty: <input id="antispam" type="text" name="url" /></p>
-              <div class="form-group">
-                <textarea name="message" id="message" class="form-control" rows="4" placeholder="Nachricht"
-                  required></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-              <div id="success"></div>
-              <button type="submit" class="btn btn-custom btn-lg">Absenden</button>
-              <input type="hidden" name="token" id="token">
+                <br>
+                <!--Frage 2/3-->
+                <div class="row">
+                  <div class="col-12">
+                    <span class="input-group-text">Telefon</span>
+                    <input type="tel" name="tel" class="form-control">
+                  </div>
+                </div>
+                <br>
+                <!--Frage 2/4-->
+                <div class="row">
+                  <div class="col-12">
+                    <span class="input-group-text">Straße</span>
+                    <input type="text" name="strasse" class="form-control">
+                  </div>
+                </div>
+                <br>
+                <!--Frage 2/5-->
+                <div class="row">
+                  <div class="col-12">
+                    <span class="input-group-text">Ort</span>
+                    <input type="text" name="ort" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
             </form>
           </div>
-          <div class="col-lg-12 d-flex justify-content-center align-items-center flex-row">
+
+          <!--SuccessScreen-->
+          <div class="step">
             <div class="row">
-              <div class="col-lg-4 col-md-12">
-                <div class="contact-item d-flex flex-column align-items-center">
-                  <img class="contactimg img-fluid" src="../../img/main/Icons_Pin.png" alt="">
-                  <span>Adresse</span>
-                  <p class="contactLinks" style="text-align: center">
-                    <a
-                      href="https://www.google.com/maps/place/Hagen+GmbH/@52.3040991,10.2326137,17z/data=!4m13!1m7!3m6!1s0x47affe528e049fd5:0x3a1877cc30155243!2sPaul-Ehrlich-Weg+3,+31226+Peine!3b1!8m2!3d52.3040991!4d10.2348024!3m4!1s0x47affe3f4fff2f59:0x27d418e2f324c5c8!8m2!3d52.303853!4d10.235816">Paul-Ehrlich-Weg
-                      3<br>31226 Peine </a>
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12">
-                <div class="contact-item d-flex flex-column align-items-center">
-                  <img class="contactimg" src="../../img/main/Icons_Telefon.png" alt="">
-                  <span>Telefon</span>
-                  <p class="contactLinks" style="text-align: center"> <a href="tel:+4951715833966">05171/5833966</a></p>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12">
-                <div class="contact-item d-flex flex-column align-items-center">
-                  <img class="contactimg" src="../../img/main/Icons_Mail.png" alt="">
-                  <span>Email</span>
-                  <p class="contactLinks" style="text-align: center"> <a
-                      href="mailto:info@hagen-energiesysteme.de">info@hagen-energiesysteme.de</a></p>
-                </div>
-              </div>
+              <a href="../pages/ladestation/"><img id="imgfinish" src="../img/logo.png" alt="" /></a>
+            </div>
+            <div class="row">
+              <p><strong>Vielen dank!</strong></p>
+              <p>Wir werden uns schnellst möglich bei Ihnen melden</p>
+            </div>
+            <div class="row">
+              <a href="../pages/ladestation/"><button type="button" class="btn btn-primary btn-lg">
+                  Fertig
+                </button></a>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="col-md-12">
+          <!--Buttons-->
           <div class="row">
-            <div class="social">
-              <ul>
-                <li><a href="https://www.facebook.com/FirmaHagenGmbH/?ref=py_c"><i class="fab fa-facebook-f"></i></a>
-                </li>
-              </ul>
+            <div class="col-6">
+              <button id="weiterBtn" type="button" class="btn btn-primary btn-lg">Weiter</button>
+            </div>
+            <div class="col-6">
+              <button id="zurueckBtn" type="button" class="btn btn-primary btn-lg">Zurück</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+  </div>
+  </div>
 
-    <!-- Footer Section -->
-    <div id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footerText col-lg-12 d-flex flex-row justify-content-center">
-            <p><a href="../impressum.html">Impressum</a></p>
-            <p><a href="../datenschutz.html">Datenschutzerklärung</a></p>
-          </div>
-        </div>
 
-      </div>
-      <div class="container text-center">
-        <p>&copy; 2020 Hagen GmbH</p>
+
+
+
+
+
+
+
+
+
+  <!-- Contact Section -->
+
+  <div id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sprechen Sie uns an</h2>
+        <p>Füllen Sie das Formular aus, um Kontakt mit uns aufzunehmen.</p>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 d-flex  align-items-center justify-content-center">
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <p class="antispam">Leave this empty: <input id="antispam" type="text" name="url" /></p>
+            <div class="form-group">
+              <textarea name="message" id="message" class="form-control" rows="4" placeholder="Nachricht"
+                required></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+            <div id="success"></div>
+            <button type="submit" class="btn btn-custom btn-lg">Absenden</button>
+            <input type="hidden" name="token" id="token">
+          </form>
+        </div>
+        <div class="col-lg-12 d-flex justify-content-center align-items-center flex-row">
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="contact-item d-flex flex-column align-items-center">
+                <img class="contactimg img-fluid" src="../../img/main/Icons_Pin.png" alt="">
+                <span>Adresse</span>
+                <p class="contactLinks" style="text-align: center">
+                  <a
+                    href="https://www.google.com/maps/place/Hagen+GmbH/@52.3040991,10.2326137,17z/data=!4m13!1m7!3m6!1s0x47affe528e049fd5:0x3a1877cc30155243!2sPaul-Ehrlich-Weg+3,+31226+Peine!3b1!8m2!3d52.3040991!4d10.2348024!3m4!1s0x47affe3f4fff2f59:0x27d418e2f324c5c8!8m2!3d52.303853!4d10.235816">Paul-Ehrlich-Weg
+                    3<br>31226 Peine </a>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="contact-item d-flex flex-column align-items-center">
+                <img class="contactimg" src="../../img/main/Icons_Telefon.png" alt="">
+                <span>Telefon</span>
+                <p class="contactLinks" style="text-align: center"> <a href="tel:+4951715833966">05171/5833966</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="contact-item d-flex flex-column align-items-center">
+                <img class="contactimg" src="../../img/main/Icons_Mail.png" alt="">
+                <span>Email</span>
+                <p class="contactLinks" style="text-align: center"> <a
+                    href="mailto:info@hagen-energiesysteme.de">info@hagen-energiesysteme.de</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="social">
+            <ul>
+              <li><a href="https://www.facebook.com/FirmaHagenGmbH/?ref=py_c"><i class="fab fa-facebook-f"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-    <!--Google ReCAPTCHA-->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
-    <script>
-      grecaptcha.ready(function () {
-        grecaptcha.execute('6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv', { action: 'submit' }).then(function (token) {
-          document.getElementById("token").value = token;
-          console.log(token);
-        });
+  <!-- Footer Section -->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footerText col-lg-12 d-flex flex-row justify-content-center">
+          <p><a href="../impressum.html">Impressum</a></p>
+          <p><a href="../datenschutz.html">Datenschutzerklärung</a></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="container text-center">
+      <p>&copy; 2020 Hagen GmbH</p>
+    </div>
+  </div>
+
+
+  <!--Google ReCAPTCHA-->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
+  <script>
+    grecaptcha.ready(function () {
+      grecaptcha.execute('6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv', { action: 'submit' }).then(function (token) {
+        document.getElementById("token").value = token;
       });
-    </script>
+    });
+  </script>
 
 
-    <script type="text/javascript" src="./js/jquery.js"></script>
-    <script type="text/javascript" src="../../js/bootstrap.js"></script>
-    <script type="text/javascript" src="../../js/jqBootstrapValidation.js"></script>
-    <script type="text/javascript" src="./js/contact_me.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.js"></script>
+  <script type="text/javascript" src="../../js/jqBootstrapValidation.js"></script>
+  <script type="text/javascript" src="./js/contact_me.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
