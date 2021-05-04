@@ -303,10 +303,10 @@
     <button class="accordion" id="stepOne__btn">Wählen Sie ein Modell</button>
     <div class="accordionContent" id="stepOne">
       <div id="Wallboxen">
-        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-center popular">
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-center ">
           <label>
             <input type="radio" name="product" class="card-input-element" />
-            <div class="panel panel-default card-input">
+            <div class="panel panel-default card-input popular">
               <div>
                 <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
               </div>
@@ -345,9 +345,6 @@
     <button class="accordion" id="stepTwo__btn">Staatliche Förderung sichern</button>
     <div class="accordionContent" id="stepTwo">
       <p class="accordionContent__text">Haben Sie bereits einen KFW-Förderantrag gestellt?</p><br>
-
-
-
       <div class="radioButtonArea">
         <div class="radiobattenBox">
           <div class="radioBatten__input">
@@ -405,13 +402,24 @@
       </div>
       <div class="infoBox__gruenStrom">
         <div class="infoText">
-          <p>Wichtig! Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.<br> Geben Sie Ihre PLZ
-            ein, um weitergeleitet zu werden.</p>
+          <p>Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.
+            Geben Sie Ihre PLZ ein, um zu einem geeigneten Anbieter weitergeleitet zu werden.</p>
         </div>
-        <div class="plzInput">
-          <span>Tragen Sie hier Ihre Postleitzahl ein:</span>
+        <div class="plzInputBox">
+          <p>Tragen Sie hier Ihre Postleitzahl ein:</p>
           <input type="text" name="plzInput" id="plzInput">
           <span id="plzTest"></span>
+        </div>
+        <br>
+        <div class="gruenStromAngebot" id="swp">
+          <p><strong>Unsere Empfehlung:</strong></p>
+          <p>Besuchen Sie die <a href="">Stadtwerke Peine</a> um sich bzgl. eines Grünstromvertrages informieren 
+            und bequem abzuschließen.</p>
+        </div>
+        
+        <div class="gruenStromAngebot" id="gpl">
+          <p><strong>Unsere Empfehlung:</strong></p>
+          <p>Die GPL</p>
         </div>
       </div>
     </div>
@@ -686,11 +694,19 @@
                 </button></a>
             </div>
           </div>
+          <!--Progressbar-->
+          <div class="row">
+            <div class="progressbar">
+              <div class="progressstep"></div>
+              <div class="progressstep"></div>
+              <div class="progressstep"></div>
+            </div>
+          </div>
           <!--Buttons-->
           <div class="row">
             <div class="actions">
-              <button id="weiterBtn" type="button" class="btn btn-primary btn-lg">Weiter</button>
               <button id="zurueckBtn" type="button" class="btn btn-primary btn-lg">Zurück</button>
+              <button id="weiterBtn" type="button" class="btn btn-primary btn-lg">Weiter</button>
             </div>
           </div>
         </div>

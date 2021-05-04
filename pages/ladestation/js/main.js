@@ -29,31 +29,37 @@ $("#gewerblich").click(function () {
 //Wählen Sie ein Modell
 $("input:radio[name='product']").on("click", function (e) {
   $("#stepTwo__btn").addClass("active");
-  $("#stepTwo").animate({ "max-height": "500px" }, 800);
+  $("#stepTwo").animate({ "max-height": "800px" }, 800);
 });
+
 
 //Stattliche Förderung sichern
 $("#KFW__Nein").click(function () {
-  $(".infoBox__KFW").css("visibility", "visible");
+  $(".infoBox__KFW").css("opacity", "1");
 });
 
 $("#KFW__Ja").click(function () {
-  $(".infoBox__KFW").css("visibility", "hidden");
+  $(".infoBox__KFW").css("opacity", "0");
 });
 
 $("#GRUEN__Nein").click(function () {
-  $(".infoBox__gruenStrom").css("visibility", "visible");
+  $(".infoBox__gruenStrom").css("opacity", "1");
 });
 
 $("#GRUEN__Ja").click(function () {
-  $(".infoBox__gruenStrom").css("visibility", "hidden");
+  $(".infoBox__gruenStrom").css("opacity", "0");
 });
 
 //Postleitzahl eingeben
 
 $("#plzInput").keyup(function () {
-  console.log($("#plzInput").val());
-  $("#plzTest").html($("#plzInput").val());
+  if($("#plzInput").val() == '31226' || $("#plzInput").val() == '31224' || $("#plzInput").val() == '31228'){
+    $("#gpl").css("display", "none");
+    $("#swp").fadeIn();
+  }else{
+    $("#gpl").fadeIn();
+    $("#swp").css("display", "none");
+  }
 });
 
 //Fragebogen ausfüllen
@@ -67,6 +73,7 @@ $("input:radio[name='GRUEN']").on("click", function () {
 });
 
 function checkValidation() {
+
   if (
     $("input[name='KFW']:checked").val() &&
     $("input[name='GRUEN']:checked").val()
@@ -101,6 +108,7 @@ function checkStep(n) {
         .eq(n + 1)
         .css("display", "none");
       $("#zurueckBtn").css("display", "none");
+      $(".progressstep").eq(n).css("background-color", "#2da1ab")
       break;
 
     case 1:
@@ -112,6 +120,7 @@ function checkStep(n) {
         .css("display", "none");
       $(".step").eq(n).fadeIn();
       $("#zurueckBtn").css("display", "block");
+      $(".progressstep").eq(n).css("background-color", "#2da1ab")
       break;
 
     case 2:
@@ -120,6 +129,7 @@ function checkStep(n) {
         .css("display", "none");
       $(".step").eq(n).fadeIn();
       $("#zurueckBtn").css("display", "block");
+      $(".progressstep").eq(n).css("background-color", "#2da1ab")
       break;
 
     default:
@@ -163,7 +173,7 @@ function validateForm(n) {
         $(".errormessage").css("display", "block");
         return false;
       }
-      //Firststep
+    //Firststep
     case 1:
       var token = $("#token").val();
       var name = $("input[name=name]").val();
