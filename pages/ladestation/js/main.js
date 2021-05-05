@@ -18,7 +18,7 @@ for (i = 0; i < acc.length; i++) {
 //Entscheiden ob Privat oder Gewerblich
 $("#privat").click(function () {
   $("#stepOne__btn").addClass("active");
-  $("#stepOne").animate({ "max-height": "500px" }, 800);
+  $("#stepOne").animate({ "max-height": "800px" }, 800);
 });
 
 $("#gewerblich").click(function () {
@@ -35,19 +35,31 @@ $("input:radio[name='product']").on("click", function (e) {
 
 //Stattliche Förderung sichern
 $("#KFW__Nein").click(function () {
-  $(".infoBox__KFW").css("opacity", "1");
+  $(".infoBox__KFW").css("display", "flex");
+  $(".infoBox__KFW").animate(
+    {"opacity": "1"}    
+    ,800);
+
 });
 
 $("#KFW__Ja").click(function () {
-  $(".infoBox__KFW").css("opacity", "0");
+  $(".infoBox__KFW").css("display", "none");
+  $(".infoBox__KFW").animate({"opacity": "0"}
+  ,800);;
+
 });
 
 $("#GRUEN__Nein").click(function () {
-  $(".infoBox__gruenStrom").css("opacity", "1");
+  $(".infoBox__gruenStrom").css("display", "flex");
+  $(".infoBox__gruenStrom").animate(
+    {"opacity": "1"}    
+    ,800);
 });
 
 $("#GRUEN__Ja").click(function () {
-  $(".infoBox__gruenStrom").css("opacity", "0");
+  $(".infoBox__gruenStrom").css("display", "none");
+  $(".infoBox__gruenStrom").animate({"opacity": "0"}
+  ,800);;
 });
 
 //Postleitzahl eingeben

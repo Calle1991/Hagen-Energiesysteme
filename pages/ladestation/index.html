@@ -257,14 +257,16 @@
         <label>
           <input type="radio" name="card" id="privat" class="card-input-element" />
           <div class="panel panel-default card-input">
-            <div class="panel-heading">
-              <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#FFF122">
+            <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
+              <svg id="svg" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px"
+                fill="#777777">
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
               </svg>
               <h5>Privat</h5>
             </div>
             <div class="panel-body">
+              <br>
               <p>Sie haben Interesse an einer privaten Ladestation für Ihr zu Hause?<br><br>Kein Problem! Hier entlang,
                 um ein unverbindliches Angebot zu erhalten.</p>
             </div>
@@ -274,7 +276,7 @@
         <label>
           <input type="radio" name="card" id="gewerblich" class="card-input-element" />
           <div class="panel panel-default card-input">
-            <div class="panel-heading">
+            <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
               <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
                 viewBox="0 0 24 24" width="30px" fill="#777">
                 <g>
@@ -288,12 +290,15 @@
               <h5>Gewerblich</h5>
             </div>
             <div class="panel-body">
+              <br>
               <p>Sie haben Interesse an einer Ladestation?<br><br>Füllen Sie das Kontaktformular aus und wir setzen uns
                 mit Ihnen in Verbindung.</p>
             </div>
           </div>
         </label>
       </div>
+      <div class="Platzhalter"></div>
+
     </div>
 
 
@@ -311,7 +316,18 @@
                 <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
               </div>
               <div class="panel-body">
-                <p>Product specific content</p>
+                <p>
+                  <br>
+                  <b>Leistungsstark</b><br>mit einer Ladeleistung bis zu 22 kW<br>
+                  <br> <b>Steuerbar</b><br>mit WLAN oder Bluetooth über Ihre mobilen Geräte<br>
+                  <br><br></p>
+                  <div class="Preis_">
+                    <b>Erhältlich in schwarz oder weiß</b>
+                      <br> <div class="Preis">ab 1200 € inkl. MwSt</div>
+                    </b>
+                    </div>
+
+               
                 <div id="empfohlen">
                   <p>Empfohlen</p>
                 </div>
@@ -323,7 +339,21 @@
             <div class="panel panel-default card-input">
               <h5 class="panel-heading">Wallbox Copper SB</h5>
               <div class="panel-body">
-                Product specific content
+                <p>
+                  <br>
+                  <b>Leitsungsstark</b><br>mit einer Ladeleistung bis zu 22 kW<br>
+                  <br> <b>Steuerbar</b><br>mit WLAN, Bluetooth, Ethernet oder 3G/ 4G über Ihre mobilen Geräte<br>
+                  <br> <b>Leichte Bedienbarkeit</b><br>dank eines integrierten Touchscreens<br>
+                  <br> <b>Sicherer Zugriff</b><br>dank Passwortschutz, RFID-Karten oder der myWallbox-App<br>
+                  <br> <b>Power Sharing</b><br>ein oder mehr Ladegeräte können mit dem fleichen Stromkreis verbunden werden und mehrere Fahrzeuge gleichzeitig geladen werden<br>
+                  <br> <b>Flexibel</b><br>die eingebaute Steckdose ermöglicht das Laden aller auf dem Markt erhältlichen Elektrofahrzeuge<br>
+                  <br><br></p>
+                  <div class="Preis_">
+                    <b>Erhältlich in schwarz</b>
+                      <br> <div class="Preis">ab 1400 € inkl. MwSt</div>
+                    </b>
+                    </div>
+
               </div>
             </div>
           </label>
@@ -332,7 +362,20 @@
             <div class="panel panel-default card-input">
               <h5 class="panel-heading">Wallbox Commander 2</h5>
               <div class="panel-body">
-                Product specific content
+                <p>
+                  <br>
+                  <b>Leistungsstark</b><br>mit einer Ladeleistung bis zu 22 kW<br>
+                  <br> <b>Steuerbar</b><br>mit WLAN oder Bluetooth über Ihre mobilen Geräte<br>
+                  <br> <b>Sicherer Zugriff</b><br>dank Passwortschutz, RFID-Karten oder der myWallbox-App<br>
+                  <br> <b>Power Sharing</b><br>ein oder mehr Ladegeräte können mit dem fleichen Stromkreis verbunden werden und mehrere Fahrzeuge gleichzeitig geladen werden<br><br>
+                  <br><br></p>
+                  <div class="Preis_">
+                  <b>Erhältlich in schwarz oder weiß</b>
+                    <br> <div class="Preis">ab 1600 € inkl. MwSt</div>
+                  </b>
+                  </div>
+
+
               </div>
             </div>
           </label>
@@ -344,7 +387,7 @@
     <div id="stepTwo__scroll"></div>
     <button class="accordion" id="stepTwo__btn">Staatliche Förderung sichern</button>
     <div class="accordionContent" id="stepTwo">
-      <p class="accordionContent__text">Haben Sie bereits einen KFW-Förderantrag gestellt?</p><br>
+      <p class="accordionContent__text"><b>Haben Sie bereits einen KFW-Förderantrag gestellt?</b></p><br>
       <div class="radioButtonArea">
         <div class="radiobattenBox">
           <div class="radioBatten__input">
@@ -371,11 +414,11 @@
       </div>
       <div class="infoBox__KFW">
         <div class="infoText">
-          <p>Stellen Sie Ihren Förderantrag vor der Bestellung, um die Voraussetzungen der KfW zu erfüllen.
+          <p>Stellen Sie Ihren Förderantrag vor der Bestellung, um die Voraussetzungen der <a  href="https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestehende-Immobilie/F%C3%B6rderprodukte/Ladestationen-f%C3%BCr-Elektroautos-Wohngeb%C3%A4ude-(440)/">KfW</a> zu erfüllen.
           </p>
         </div>
       </div>
-      <p class="accordionContent__text">Haben Sie bereits einen Gründstromvertrag abgeschlossen?</p><br>
+      <p class="accordionContent__text"><b>Haben Sie bereits einen Gründstromvertrag abgeschlossen?</b></p><br>
       <div class="radioButtonArea">
         <div class="radiobattenBox">
           <div class="radioBatten__input">
@@ -413,25 +456,33 @@
         <br>
         <div class="gruenStromAngebot" id="swp">
           <p><strong>Unsere Empfehlung:</strong></p>
-          <p>Besuchen Sie die <a href="">Stadtwerke Peine</a> um sich bzgl. eines Grünstromvertrages informieren 
+          <p>Besuchen Sie die <a href="">Stadtwerke Peine</a> um sich bzgl. eines Grünstromvertrages informieren
             und bequem abzuschließen.</p>
         </div>
-        
+
         <div class="gruenStromAngebot" id="gpl">
           <p><strong>Unsere Empfehlung:</strong></p>
           <p>Die GPL</p>
         </div>
       </div>
+      <div class="Platzhalter"></div>
+
     </div>
+
 
 
     <!--STEP THREE-->
     <div id="stepThree__scroll"></div>
     <button class="accordion" id="stepThree__btn">Fragebogen ausfüllen</button>
     <div class="accordionContent" id="stepThree">
-      <p class="accordionContent__text"><b>Sie haben es fast geschafft!</b><br>Um den Vorgang abzuschließen und Ihr
-        individuelles Angebot zu erhalten,
-        nehmen Sie sich zwei Minuten Zeit um unseren Fragebogen auszufüllen.</p>
+      <p class="accordionContent__text">
+      <div class="infoBox__fragebogen">
+        <div class="infoText">
+          Sie haben es fast geschafft!<br>Um den Vorgang abzuschließen und Ihr
+          individuelles Angebot zu erhalten,
+          nehmen Sie sich zwei Minuten Zeit um unseren Fragebogen auszufüllen.</p>
+        </div>
+      </div>
       <div>
 
         <!--FRAGEBOGEN-->
@@ -443,16 +494,21 @@
 
                 <!--Frage 1-->
                 <div class="row">
+                  <div class="Platzhalter"></div>
+
                   <div class="col-12 d-flex justify-content-start flex-column">
                     <p class="fragebogen__fragen">Wie groß ist die Entfernung zum Stromverteiler?</p>
-                    <input type="number" name="meter" min="0" inputmode="numeric" pattern="[0-9]*">
+                    <div id="Metereingabe" row row-cols-md-6>
+                      <input id="Meter" type="number" name="meter" min="0" inputmode="numeric" pattern="[0-9]*">
+                      <p id="Meter_text">Meter</p>
+                    </div>
                   </div>
                 </div>
 
                 <!--Frage 2-->
                 <div class="row">
-                  <p class="fragebogen__fragen">Ist ausreichend Platz für einen Stromverteiler vorhanden?</p>
-                  <p class="fragebogen__fragen"><strong>(14 cm werden benötigt)</strong></p>
+                  <p class="fragebogen__fragen">Ist ausreichend Platz für einen Stromverteiler vorhanden?<br>(14 cm
+                    werden benötigt)</p>
                   <div class="row">
 
                     <div class="radiobattenBox">
@@ -618,11 +674,11 @@
 
           <!--Kontaktdaten-->
           <div class="step">
-            <h1>Kontaktdaten</h1>
-            <p>Damit wir dich erreichen können benötigen wir deine Kontaktdaten</p>
             <form action="">
               <fieldset>
                 <!--Frage 2/1-->
+                <div class="Platzhalter"></div>
+
                 <div class="row">
                   <div class="col-12">
                     <span class="input-group-text">Name*</span>
@@ -694,19 +750,24 @@
                 </button></a>
             </div>
           </div>
+
+
           <!--Progressbar-->
-          <div class="row">
+          <!-- 
+            <div class="row">
             <div class="progressbar">
               <div class="progressstep"></div>
               <div class="progressstep"></div>
               <div class="progressstep"></div>
             </div>
           </div>
+        -->
+
           <!--Buttons-->
           <div class="row">
-            <div class="actions">
-              <button id="zurueckBtn" type="button" class="btn btn-primary btn-lg">Zurück</button>
-              <button id="weiterBtn" type="button" class="btn btn-primary btn-lg">Weiter</button>
+            <div class="actions row row-cols-md-6 justify-content-start">
+              <button id="zurueckBtn" type="button" class="btn btn-primary btn-lg">ZURÜCK</button>
+              <button id="weiterBtn" type="button" class="btn btn-primary btn-lg">FORTFAHREN</button>
             </div>
           </div>
         </div>
