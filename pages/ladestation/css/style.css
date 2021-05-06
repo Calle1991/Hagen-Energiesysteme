@@ -23,6 +23,8 @@ html {
   margin-left: 50px;
 }
 
+
+
 .infoBox__gruenStrom {
   opacity: 0;
   display: none;
@@ -40,7 +42,7 @@ html {
   display: flex;
   text-align: left;
   width: 50%;
-  height: min-content;
+  height: 100%;
   flex-direction: column;
   border: 1px solid #2da1ab;
   justify-content: center;
@@ -156,7 +158,7 @@ label {
   margin: 10px;
   padding: 20px;
   text-align: start;
-  height: 650px;
+  height: 100%;
 }
 
 .card-input:hover {
@@ -173,10 +175,6 @@ label {
 .card-input-element:checked + .card-input {
 	border: 1px solid #2da1ab;
   }
-
-#PrivatGewerbe .card-input {
-  height: 250px;
-}
 
 h2,
 h3,
@@ -606,11 +604,12 @@ header .intro-text {
 /*Fragebogen*/
 #fragebogen {
   width: 100%;
+  height: 700px;
 }
 
 .step {
   display: none;
-  height: 600px;
+  height: 100%;
 }
 
 .fragebogen__fragen {
@@ -635,7 +634,6 @@ header .intro-text {
   display: none;
   text-align: left;
   color: red;
-  padding-top: 50px;
 }
 
 /*Progressbar*/
@@ -946,10 +944,6 @@ label {
   color: #777777;
 }
 
-.form-control {
-  width: 22%;
-}
-
 .Platzhalter {
   padding: 25px;
 }
@@ -972,7 +966,9 @@ label {
 }
 
 
-
+#step_2{
+  width: 30%;
+}
 
 
 
@@ -987,12 +983,54 @@ label {
   #about img {
     margin: 50px 0;
   }
+
+  .infoBox__KFW{
+    width: 80%;
+  }
+
+  .infoBox__gruenStrom{
+    width: 80%;
+  }
+  
+  .infoBox__fragebogen{
+    width: 80%;
+  }
+
+  #Meter{
+    width: 50%;
+  }
+
+  #step_2{
+    width: 80%;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
   header .intro-text {
     padding-top: 300px;
   }
+
+  .infoBox__KFW{
+    width: 80%;
+  }
+
+  .infoBox__gruenStrom{
+    width: 80%;
+  }
+
+  .infoBox__fragebogen{
+    width: 80%;
+  }
+
+  #Meter{
+    width: 50%;
+  }
+
+  #step_2{
+    width: 80%;
+  }
+
 }
 
 /*Smartphone*/
@@ -1000,6 +1038,26 @@ label {
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
   #header .intro-text {
     padding-top: 300px;
+  }
+
+  .infoBox__KFW{
+    width: 80%;
+  }
+
+  .infoBox__gruenStrom{
+    width: 80%;
+  }
+
+  .infoBox__fragebogen{
+    width: 80%;
+  }
+
+  #Meter{
+    width: 50%;
+  }
+
+  #step_2{
+    width: 80%;
   }
 }
 
@@ -1031,6 +1089,9 @@ label {
     background-position: left 0%;
     background-size: contain;
   }
+
+  
+
 }
 
 /*Desktop*/

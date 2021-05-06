@@ -4,7 +4,7 @@
 $("input:radio[name='card']").on("click", function() {
   if($("input:radio[name='card']:checked").val() == "privat"){
     $("#stepOne__btn").addClass("active");
-    $("#stepOne").animate({ "max-height": "800px" }, 800);
+    $("#stepOne").animate({ "max-height": "100%" }, 800);
   }else{
     $("#stepOne__btn").removeClass("active");
     $(".accordionContent").animate({ "max-height": "0px" }, 800);
@@ -12,10 +12,11 @@ $("input:radio[name='card']").on("click", function() {
 })
 
 
-//Wählen Sie ein Modell
+
+//###################### Ladeboxmodelle ########################
 $("input:radio[name='product']").on("click", function (e) {
   $("#stepTwo__btn").addClass("active");
-  $("#stepTwo").animate({ "max-height": "800px" }, 800);
+  $("#stepTwo").animate({ "max-height": "100%" }, 800);
 });
 
 
@@ -110,7 +111,7 @@ function checkStep(n) {
       $(".step")
         .eq(n + 1)
         .css("display", "none");
-      $("#zurueckBtn").css("display", "none");
+      $("#zurueckBtn").css("visibility", "hidden");
       $(".progressstep").eq(n).css("background-color", "#2da1ab")
       break;
 
@@ -122,7 +123,7 @@ function checkStep(n) {
         .eq(n + 1)
         .css("display", "none");
       $(".step").eq(n).fadeIn();
-      $("#zurueckBtn").css("display", "block");
+      $("#zurueckBtn").css("visibility", "visible");
       $(".progressstep").eq(n).css("background-color", "#2da1ab")
       break;
 
@@ -131,7 +132,7 @@ function checkStep(n) {
         .eq(n - 1)
         .css("display", "none");
       $(".step").eq(n).fadeIn();
-      $("#zurueckBtn").css("display", "block");
+      $("#zurueckBtn").css("visibility", "visible");
       $(".progressstep").eq(n).css("background-color", "#2da1ab")
       break;
 
