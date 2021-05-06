@@ -166,7 +166,7 @@ label {
   color: #2da1ab;
 }
 
-.card-input-element:checked h5 {
+.card-input-element:checked + .card-input .panel-heading{
   color: #2da1ab;
 }
 
@@ -965,6 +965,22 @@ label {
   align-items: flex-start;
   flex-direction: column;
 }
+
+
+.normalText{
+	text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*Media-Query*/
 
 @media (max-width: 768px) {

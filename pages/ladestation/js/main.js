@@ -1,30 +1,16 @@
-/*
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-*/
+//###################### Privat oder Gewerbe ########################
 
-//Entscheiden ob Privat oder Gewerblich
-$("#privat").click(function () {
-  $("#stepOne__btn").addClass("active");
-  $("#stepOne").animate({ "max-height": "800px" }, 800);
-});
+$("input:radio[name='card']").on("click", function() {
+  if($("input:radio[name='card']:checked").val() == "privat"){
+    $("#stepOne__btn").addClass("active");
+    $("#stepOne").animate({ "max-height": "800px" }, 800);
+  }else{
+    $("#stepOne__btn").removeClass("active");
+    $(".accordionContent").animate({ "max-height": "0px" }, 800);
+  }
+})
 
-$("#gewerblich").click(function () {
-  $("#stepOne__btn").removeClass("active");
-  $(".accordionContent").animate({ "max-height": "0px" }, 800);
-});
 
 //Wählen Sie ein Modell
 $("input:radio[name='product']").on("click", function (e) {
@@ -33,58 +19,44 @@ $("input:radio[name='product']").on("click", function (e) {
 });
 
 
-//Stattliche Förderung sichern
-$("#KFW__Nein").click(function () {
-  $(".infoBox__KFW").css("display", "flex");
-  $(".infoBox__KFW").animate(
-    {"opacity": "1"}    
-    ,800);
 
-});
 
-$("#KFW__Ja").click(function () {
-  $(".infoBox__KFW").css("display", "none");
-  $(".infoBox__KFW").animate({"opacity": "0"}
-  ,800);;
+//###################### KFW und Günstrom ########################
 
-});
 
-$("#GRUEN__Nein").click(function () {
-  $(".infoBox__gruenStrom").css("display", "flex");
-  $(".infoBox__gruenStrom").animate(
-    {"opacity": "1"}    
-    ,800);
-});
-
-$("#GRUEN__Ja").click(function () {
-  $(".infoBox__gruenStrom").css("display", "none");
-  $(".infoBox__gruenStrom").animate({"opacity": "0"}
-  ,800);;
-});
-
-//Postleitzahl eingeben
-
-$("#plzInput").keyup(function () {
-  if($("#plzInput").val() == '31226' || $("#plzInput").val() == '31224' || $("#plzInput").val() == '31228'){
-    $("#gpl").css("display", "none");
-    $("#swp").fadeIn();
-  }else{
-    $("#gpl").fadeIn();
-    $("#swp").css("display", "none");
+$("input:radio[name='KFW']").click(function () {
+  if ($("input:radio[name='KFW']:checked").val() == "Ja") {
+    $(".infoBox__KFW").animate({ "opacity": "0" }, 500);
+    $(".infoBox__KFW").fadeOut();
+  } else {
+    $(".infoBox__KFW").css("display", "flex");
+    $(".infoBox__KFW").animate({ "opacity": "1" }
+      , 500);;
   }
 });
 
-//Fragebogen ausfüllen
+
+$("input[name='GRUEN'").on("click", function() {
+  if ($("input:radio[name='GRUEN']:checked").val() == "Ja") {
+    $(".infoBox__gruenStrom").animate({ "opacity": "0" }, 500);
+    $(".infoBox__gruenStrom").fadeOut();
+  } else {
+    $(".infoBox__gruenStrom").css("display", "flex");
+    $(".infoBox__gruenStrom").animate({ "opacity": "1" }
+      , 500);;
+  }
+});
+
 
 $("input:radio[name='KFW']").on("click", function () {
-  checkValidation();
+  checkValidation_KFW_GRUEN();
 });
 
 $("input:radio[name='GRUEN']").on("click", function () {
-  checkValidation();
+  checkValidation_KFW_GRUEN();
 });
 
-function checkValidation() {
+function checkValidation_KFW_GRUEN() {
 
   if (
     $("input[name='KFW']:checked").val() &&
@@ -97,7 +69,23 @@ function checkValidation() {
   }
 }
 
-//Fragebogen (Multi-Form)
+//###################### Postleitzahl abfragen ########################
+
+$("#plzInput").keyup(function () {
+  if ($("#plzInput").val() == '31226' || $("#plzInput").val() == '31224' || $("#plzInput").val() == '31228') {
+    $("#gpl").css("display", "none");
+    $("#swp").fadeIn();
+  } else {
+    $("#gpl").fadeIn();
+    $("#swp").css("display", "none");
+  }
+});
+
+
+
+//######################Fragebogen ausfüllen########################
+
+//###################### Multi-Step-Form ########################
 var steps = 0;
 var maxSteps = $(".step").length;
 checkStep(steps);
@@ -111,6 +99,9 @@ $("#weiterBtn").on("click", function () {
 $("#zurueckBtn").on("click", function () {
   stepBack();
 });
+
+
+//###################### Welcher Step ist aktuell ########################
 
 function checkStep(n) {
   switch (n) {
@@ -151,6 +142,7 @@ function checkStep(n) {
   }
 }
 
+
 function nextStep() {
   if (validateForm(steps) == true) {
     steps++;
@@ -165,11 +157,14 @@ function stepBack() {
   checkStep(steps);
 }
 
-//Fragebogen - Validation
-// First Step
+
+//###################### Fragebogen - Validation ########################
+
+
 function validateForm(n) {
   switch (n) {
-    //Firststep
+
+    //###################### Validation - Step (0) ########################
     case 0:
       var meter = $("input[name=meter]").val();
       var frage2 = $("input[name=frage2Checked]:checked").val();
@@ -185,7 +180,8 @@ function validateForm(n) {
         $(".errormessage").css("display", "block");
         return false;
       }
-    //Firststep
+
+    //###################### Validation - Step (1) ########################
     case 1:
       var token = $("#token").val();
       var name = $("input[name=name]").val();
@@ -202,5 +198,8 @@ function validateForm(n) {
         $(".errormessage").css("display", "block");
         return false;
       }
+    ////###################### Validation - Step (2) ########################
+    case 2:
+      alert("TEST");
   }
 }
