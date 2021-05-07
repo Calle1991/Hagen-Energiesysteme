@@ -1,11 +1,11 @@
 
 //###################### Privat oder Gewerbe ########################
 
-$("input:radio[name='card']").on("click", function() {
-  if($("input:radio[name='card']:checked").val() == "privat"){
+$("input:radio[name='card']").on("click", function () {
+  if ($("input:radio[name='card']:checked").val() == "privat") {
     $("#stepOne__btn").addClass("active");
     $("#stepOne").animate({ "max-height": "100%" }, 800);
-  }else{
+  } else {
     $("#stepOne__btn").removeClass("active");
     $(".accordionContent").animate({ "max-height": "0px" }, 800);
   }
@@ -37,7 +37,7 @@ $("input:radio[name='KFW']").click(function () {
 });
 
 
-$("input[name='GRUEN'").on("click", function() {
+$("input[name='GRUEN'").on("click", function () {
   if ($("input:radio[name='GRUEN']:checked").val() == "Ja") {
     $(".infoBox__gruenStrom").animate({ "opacity": "0" }, 500);
     $(".infoBox__gruenStrom").fadeOut();
@@ -134,7 +134,12 @@ function checkStep(n) {
       $(".step").eq(n).fadeIn();
       $("#zurueckBtn").css("visibility", "visible");
       $(".progressstep").eq(n).css("background-color", "#2da1ab")
+
+      //###################### Validation - Step (2) ########################
+      SendData();
       break;
+
+
 
     default:
       // Anweisungen werden ausgeführt,
@@ -147,6 +152,7 @@ function checkStep(n) {
 function nextStep() {
   if (validateForm(steps) == true) {
     steps++;
+    console.log(steps);
     checkStep(steps);
   } else {
     //nothing
@@ -156,6 +162,53 @@ function nextStep() {
 function stepBack() {
   steps--;
   checkStep(steps);
+}
+
+
+function SendData(){
+
+      var meter = $("input[name=meter]").val();
+      var frage2 = $("input[name=frage2Checked]:checked").val();
+      var frage3 = $("input[name=frage3Checked]:checked").val();
+      var frage4 = $("input[name=frage4Checked]:checked").val();
+      var frage5 = $("input[name=frage5Checked]:checked").val();
+      var frage6 = $("input[name=frage6Checked]:checked").val();
+      var token = $("#token").val();
+      var name = $("input[name=name]").val();
+      var email = $("input[name=email]").val();
+      var telefon = $("input[name=tel]").val();
+      var strasse = $("input[name=strasse]").val();
+      var ort = $("input[name=ort]").val();
+
+      $.ajax({
+        type: "POST",
+        url: '../../backend/sendMail.php',
+        data: {
+          //Fragen vom ersten Screen
+          'token': token,
+          'meter': meter,
+          'frage2': frage2,
+          'frage3': frage3,
+          'frage4': frage4,
+          'frage5': frage5,
+          'frage6': frage6,
+
+          //Frgen vom zweiten Screen
+          'name': name,
+          'email': email,
+          'telefon': telefon,
+          'strasse': strasse,
+          'ort': ort
+        },
+        success: function (data) {
+          console.log(data);
+          //löschen des SessionS
+        },
+        error: function (xhr, status, error) {
+          console.error(xhr);
+        }
+      });
+  
 }
 
 
@@ -201,7 +254,7 @@ function validateForm(n) {
       }
     ////###################### Validation - Step (2) ########################
     case 2:
-      alert("TEST");
+    //STEP 2
   }
 }
 

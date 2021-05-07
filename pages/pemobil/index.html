@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pe-Mobil</title>
+
+    <!-- Scripts ================================================== -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
+
+
+    <!-- Favicons================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script>
+
+    <!-- Stylesheet
+  ================================================== -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Material Design-->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Raleway:wght@500&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="header" class="row">
+            <!--LEER--> 
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <a href="https://pe-mobil.de/" target="_blank"><img id="pemobillogo" src="img\logo_pe-mobil.png" alt=""></a>
+            </div>
+            <div class="col-6 d-flex justify-content-end align-items-center" >
+                <a href="https://hagen-energiesysteme.de/" target="_blank"><img id="hagenlogo" src="img\Logo_quer.png" alt=""></a> 
+            </div>
+        </div>
+        <div class="row" id="pemobilline"></div>
+    </div>
+
+
+
+    <div class="container">
+        <!--FRAGEBOGEN-->
+        <div class="center__fragebogen">
+
+            <div id="fragebogen">
+                <br>
+                <div class="row">
+                    <h1>Fragebogen</h1>
+                </div>
+                <!--Fragen-->
+                <div class="step">
+                    <form action="">
+                        <fieldset>
+                            <div class="row">
+                                <p class="fragebogen__fragen">Haben Sie bereits einen KFW-Förderantrag gestellt?</p>
+                                <div class="row">
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="KFW__Ja" name="KFW" value="Ja">
+                                            <label for="KFW__Ja">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Ja</p>
+                                        </div>
+                                    </div>
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="KFW__Nein" name="KFW" value="Nein">
+                                            <label for="KFW__Nein">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Nein</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infoBox__KFW">
+                                    <div class="infoText">
+                                        <p>Stellen Sie Ihren Förderantrag vor der Bestellung, um die Voraussetzungen der
+                                            <a href="https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestehende-Immobilie/F%C3%B6rderprodukte/Ladestationen-f%C3%BCr-Elektroautos-Wohngeb%C3%A4ude-(440)/"
+                                                target="_blank">KfW</a>
+                                            zu erfüllen.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <p class="fragebogen__fragen">Haben Sie bereits einen Gründstromvertrag abgeschlossen?
+                                </p>
+                                <div class="row">
+
+
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="GRUEN__Ja" name="GRUEN" value="Ja">
+                                            <label for="GRUEN__Ja">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Ja</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="GRUEN__Nein" name="GRUEN" value="Nein">
+                                            <label for="GRUEN__Nein">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Nein</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="infoBox__gruenStrom">
+                                            <div class="infoText">
+                                                <p>Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend
+                                                    notwendig.</p>
+                                            </div>
+                                            <div class="gruenStromAngebot" id="swp">
+                                                <p><strong>Unsere Empfehlung:</strong></p>
+                                                <p>Besuchen Sie die <a href="" target="_blank">Stadtwerke Peine</a> um
+                                                    sich bzgl. eines
+                                                    Grünstromvertrages zu informieren und bequem abzuschließen.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Frage 1-->
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-start flex-column">
+                                    <p class="fragebogen__fragen">Wie groß ist die Entfernung zum Stromverteiler?</p>
+                                    <div id="Metereingabe" row row-cols-md-6>
+                                        <input id="Meter" type="number" name="meter" min="0" inputmode="numeric"
+                                            pattern="[0-9]*">
+                                        <p id="Meter_text">Meter</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Frage 2-->
+                            <div class="row">
+                                <p class="fragebogen__fragen">Ist ausreichend Platz für einen Stromverteiler
+                                    vorhanden?<br>(14
+                                    cm
+                                    werden benötigt)</p>
+                                <div class="row">
+
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="frage2Checked__Ja" name="frage2Checked" value="Ja">
+                                            <label for="frage2Checked__Ja">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Ja</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="frage2Checked__Nein" name="frage2Checked"
+                                                value="Nein">
+                                            <label for="frage2Checked__Nein">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Nein</p>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <!--Frage 3-->
+                                <div class="row">
+                                    <p class="fragebogen__fragen">Sind Tiefbauarbeiten notwendig?</p>
+                                    <div class="row">
+
+                                        <div class="radiobattenBox">
+                                            <div class="radioBatten__input">
+                                                <input type="radio" id="frage3Checked_Ja" name="frage3Checked"
+                                                    value="Ja">
+                                                <label for="frage3Checked_Ja">
+                                                    <span class="tick"></span>
+                                                </label>
+                                            </div>
+                                            <div class="radioBatten__label">
+                                                <p>Ja</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="radiobattenBox">
+                                            <div class="radioBatten__input">
+                                                <input type="radio" id="frage3Checked_Nein" name="frage3Checked"
+                                                    value="Nein">
+                                                <label for="frage3Checked_Nein">
+                                                    <span class="tick"></span>
+                                                </label>
+                                            </div>
+                                            <div class="radioBatten__label">
+                                                <p>Nein</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <!--Frage 4-->
+                                <div class="row">
+                                    <p class="fragebogen__fragen">Sind Wanddurchbrüche erforderlich?</p>
+                                    <div class="row">
+
+                                        <div class="radiobattenBox">
+                                            <div class="radioBatten__input">
+                                                <input type="radio" id="frage4Checked_Ja" name="frage4Checked"
+                                                    value="Ja">
+                                                <label for="frage4Checked_Ja">
+                                                    <span class="tick"></span>
+                                                </label>
+                                            </div>
+                                            <div class="radioBatten__label">
+                                                <p>Ja</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="radiobattenBox">
+                                            <div class="radioBatten__input">
+                                                <input type="radio" id="frage4Checked_Nein" name="frage4Checked"
+                                                    value="Nein">
+                                                <label for="frage4Checked_Nein">
+                                                    <span class="tick"></span>
+                                                </label>
+                                            </div>
+                                            <div class="radioBatten__label">
+                                                <p>Nein</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!--Frage 5-->
+                                <p class="fragebogen__fragen">Soll die Installation Auf- oder Unterputz erfolgen?</p>
+                                <div class="row">
+
+
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="frage5Checked_Ja" name="frage5Checked" value="Ja">
+                                            <label for="frage5Checked_Ja">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Aufputz</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="frage5Checked_Nein" name="frage5Checked"
+                                                value="Nein">
+                                            <label for="frage5Checked_Nein">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Unterputz</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!--Frage 6-->
+                                <p class="fragebogen__fragen">Wie soll die Ladesäule montiert werden?</p>
+                                <div class="row">
+
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="frage6Checked_Ja" name="frage6Checked" value="Ja">
+                                            <label for="frage6Checked_Ja">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Wandmontage</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="radiobattenBox">
+                                        <div class="radioBatten__input">
+                                            <input type="radio" id="frage6Checked_Nein" name="frage6Checked"
+                                                value="Nein">
+                                            <label for="frage6Checked_Nein">
+                                                <span class="tick"></span>
+                                            </label>
+                                        </div>
+                                        <div class="radioBatten__label">
+                                            <p>Standfuß</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                    <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
+                </div>
+
+
+                <!--Kontaktdaten-->
+                <div class="step">
+                    <form action="">
+                        <fieldset id="step_2">
+                            <!--Frage 2/1-->
+                            <div class="Platzhalter"></div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="input-group-text">Name*</span>
+                                    <input type="text" name="name" class="form-control">
+                                </div>
+                            </div>
+                            <br>
+                            <!--Frage 2/2-->
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="input-group-text">Email*</span>
+                                    <input type="email" name="email" class="form-control">
+                                </div>
+                            </div>
+                            <br>
+                            <!--Frage 2/3-->
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="input-group-text">Telefon</span>
+                                    <input type="tel" name="tel" class="form-control">
+                                </div>
+                            </div>
+                            <br>
+                            <!--Frage 2/4-->
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="input-group-text">Straße</span>
+                                    <input type="text" name="strasse" class="form-control">
+                                </div>
+                            </div>
+                            <br>
+                            <!--Frage 2/5-->
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="input-group-text">Ort</span>
+                                    <input type="text" name="ort" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
+                                <br>
+                                <div class="col-12 d-flex">
+                                    <div class="col-2">
+                                        <input class="form-check-input" type="checkbox" name="datenschutz" value="Ja"
+                                            id="checkDatenschutz">
+                                    </div>
+                                    <div class="col-10">
+                                        <p class="normalText">Ich habe die <a
+                                                href="https://hagen-energiesysteme.de/pages/datenschutz.html"
+                                                target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen. Ich
+                                            stimme
+                                            zu,
+                                            dass meine
+                                            Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und
+                                            gespeichert werden.
+                                        </p>
+                                    </div>
+                                </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <!--SuccessScreen-->
+                <div class="step">
+                    <div class="container">
+                        <div class="row">
+                            <div id="success">
+                                <br>
+                                <h1><strong>Vielen dank!</strong></h1><br>
+                                <p>Ihre Anfrage ist bei der Hagen Energiesysteme eingegangen und Sie sollten in Kürze
+                                    eine Bestätigungsmail
+                                    erhalten. 
+                                    <br>
+                                    Wir werden Ihnen schnellstmöglich unser unverbindliches Angebot zukommen
+                                    lassen.
+                                    <br>
+                                    <br>
+                                    Sie können dieses Fenster nun schließen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Buttons-->
+                <div class="row">
+                    <div class="actions row row-cols-md-12 justify-content-start">
+                        <button id="zurueckBtn" type="button" class="btn btn-primary btn-lg">ZURÜCK</button>
+                        <button id="weiterBtn" type="button" class="btn btn-custom">Fortfahren</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="token" id="token">
+    <div class="container-fluid" id="footerBackground">
+        <div id="bogen">
+        </div>
+        <footer>
+            <div class="row">
+                <div class="footerText col-lg-12 d-flex flex-row justify-content-center">
+                    <p><a href="../impressum.html" target="_blank">Impressum</a></p>
+                    <p><a href="../datenschutz.html" target="_blank">Datenschutzerklärung</a></p>
+                </div>
+                <div class="container text-center">
+                    <p>&copy; 2021 Hagen GmbH</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--Google ReCAPTCHA-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv', { action: 'submit' }).then(function (token) {
+                document.getElementById("token").value = token;
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+
+</html>

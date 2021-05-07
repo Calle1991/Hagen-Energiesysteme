@@ -1,0 +1,537 @@
+body,
+html {
+  font-family: "Raleway", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: #5e5e5e;
+  line-height: 1.8;
+  font-size: 17px;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: fixed;
+  margin: 0;
+}
+
+
+#pemobillogo {
+  width: 300px;
+}
+
+#hagenlogo {
+  margin-top: 25px;
+  margin-right: 25px;
+  width: 300px;
+  height: 100px;
+}
+
+.infoBox__KFW {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  height: min-content;
+  flex-direction: column;
+  border: 1px solid #ffed00;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.infoBox__gruenStrom {
+  opacity: 0;
+  display: none;
+  width: 100%;
+  height: min-content;
+  flex-direction: column;
+  border: 1px solid #ffed00;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+#stepOne {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.infoText p {
+  text-align: left;
+}
+
+#zurueckBtn {
+  width: 33%;
+  border: none;
+  background-color: white;
+  color: #ffed00;
+}
+
+#fragebogen {
+  padding-left: 50px;
+}
+.fragebogen__fragen {
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+h1 {
+  font-family: "Bree Serif", serif;
+  color: #333333;
+  font-size: 34px;
+}
+
+h2 {
+  font-family: "Bree Serif", serif;
+  color: #333333;
+  font-size: 32px;
+}
+
+p {
+  font-size: 15px;
+}
+p.intro {
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+a {
+  color: #608dfd;
+  font-weight: 400;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #608dfd;
+}
+ul,
+ol {
+  list-style: none;
+}
+ul,
+ol {
+  padding: 0;
+  webkit-padding: 0;
+  moz-padding: 0;
+}
+
+#header {
+  border-top: 3px solid #ffed00;
+  border-bottom: 1px solid #ffed00;
+  height: 50px;
+}
+#pemobilline {
+  border-top: 1px solid #ffed00;
+}
+
+.btn-custom {
+  font-family: "Raleway", sans-serif;
+  font-size: 14pt;
+  font-weight: bolder;
+  border-radius: 20px;
+  /*border: 1px solid;
+  border-color: #2da1ab;*/
+  background-color: #ffed00;
+  color: #333333;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  height: 50px;
+  width: 33%;
+  text-align: center;
+  display: inline;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-image: none;
+  background-color: #ffed00;
+  box-shadow: 0px 8px 20px rgba(119, 119, 119, 0.3);
+  transition: all 0.3s ease 0s;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  outline-offset: none;
+}
+
+.fill {
+  height: 100%;
+}
+
+.plzInputBox {
+  text-align: left;
+}
+
+.gruenStromAngebot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#swp {
+  display: block;
+}
+
+#gpl {
+  display: none;
+}
+
+.gruenStromAngebot p {
+  text-align: left;
+}
+
+/*Fragebogen*/
+#fragebogen {
+  width: 100%;
+  height: 100%;
+}
+
+.center__fragebogen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.step {
+  display: none;
+  height: 100%;
+}
+
+.fragebogen__fragen {
+  text-align: left;
+}
+
+.fragebogen__fragen > .row > .col-6 {
+  justify-content: left;
+}
+
+.fragebogen__radiobutton {
+  width: 50%;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.errormessage {
+  display: none;
+  text-align: left;
+  color: red;
+}
+
+/*Progressbar*/
+.progressbar {
+  display: flex;
+  justify-content: center;
+}
+
+.progressstep {
+  margin: 10px;
+  height: 25px;
+  width: 25px;
+  background-color: #888;
+  border-radius: 50%;
+}
+
+label {
+  font-size: 17px;
+  font-family: "Raleway", sans-serif;
+  float: left;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #777;
+}
+.form-control:-moz-placeholder {
+  color: #777;
+}
+.form-control::-moz-placeholder {
+  color: #777;
+}
+.form-control:-ms-input-placeholder {
+  color: #777;
+}
+
+.antispam {
+  display: none;
+}
+
+.radioButtonArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: -20px;
+  padding-left: 50px;
+}
+
+.radioButtonArea__input {
+  display: flex;
+  flex-direction: row;
+}
+.radioButtonArea__input label {
+  font-family: "Raleway", sans-serif;
+  font-size: initial;
+}
+
+.radiobattenBox {
+  position: relative;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  height: 2px;
+  padding-bottom: 25px;
+}
+
+.radioBatten__label {
+  padding-top: 20px;
+  margin-left: 5px;
+}
+
+/*Original Radiobutton entfernen*/
+.radiobattenBox input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+/*Label Design*/
+.radiobattenBox label {
+  position: relative;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: solid #5e5e5e 1px;
+}
+
+.radiobattenBox label .tick {
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 4px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #ffed00;
+}
+
+/*Wenn über das Label gehovert wird*/
+.radiobattenBox label:hover {
+  border: 1px solid #ffed00;
+}
+
+/*Wenn der Radiobutton geklickt wurde*/
+.radiobattenBox input[type="radio"]:checked + label {
+  border: 1px solid #ffed00;
+}
+
+.radiobattenBox input[type="radio"]:checked + label .tick {
+  display: block;
+}
+#Meter {
+  width: 5%;
+  text-align: center;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #777777;
+}
+
+#Meter_text {
+  text-align: left;
+}
+#Metereingabe {
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+}
+
+#success {
+  display: flex;
+  height: 60vh;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#success h1 {
+  color: #ffed00;
+}
+
+
+
+.input-group-text {
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  color: #777777;
+}
+
+.Platzhalter {
+  padding: 25px;
+}
+
+.normalText {
+  text-align: left;
+}
+
+#step_2 {
+  width: 30%;
+}
+
+.footerText p {
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
+
+
+
+#bogen {
+    width: 100%;
+    height: 50px;
+    border-radius: 100% / 0 0 80% 80%;
+    background: white;
+  }
+  
+
+
+  footer {
+    height: 100px;
+    
+  }
+
+  #footerBackground{
+    background-color: #ffed00;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+/*Media-Query*/
+
+@media (max-width: 768px) {
+  #about img {
+    margin: 50px 0;
+  }
+
+  .infoBox__KFW {
+    width: 80%;
+  }
+
+  .infoBox__gruenStrom {
+    width: 80%;
+  }
+
+  #Meter {
+    width: 50%;
+  }
+
+  #step_2 {
+    width: 80%;
+  }
+
+  #pemobillogo{
+      width: 150px;
+  }
+
+
+  #hagenlogo{
+    width: 150px;
+    height: auto;
+    margin: 0;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+  header .intro-text {
+    padding-top: 300px;
+  }
+
+  .infoBox__KFW {
+    width: 80%;
+  }
+
+  .infoBox__gruenStrom {
+    width: 80%;
+  }
+
+  .infoBox__fragebogen {
+    width: 80%;
+  }
+
+  #Meter {
+    width: 50%;
+  }
+
+  #step_2 {
+    width: 80%;
+  }
+}
+
+/*Smartphone*/
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  #header .intro-text {
+    padding-top: 300px;
+  }
+
+  .infoBox__KFW {
+    width: 80%;
+  }
+
+  .infoBox__gruenStrom {
+    width: 80%;
+  }
+
+  .infoBox__fragebogen {
+    width: 80%;
+  }
+
+  #Meter {
+    width: 50%;
+  }
+
+  #step_2 {
+    width: 80%;
+  }
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/*Desktop*/
+
+@media screen and (min-width: 1920px) {
+}
+
+@media screen and (min-width: 3840px) {
+}
