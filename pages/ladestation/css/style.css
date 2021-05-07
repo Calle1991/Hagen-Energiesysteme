@@ -10,6 +10,12 @@ html {
   overflow: fixed;
 }
 
+
+
+/*   TEEEEEEST  */
+
+
+
 .infoBox__KFW {
   display: none;
   opacity: 0;
@@ -71,21 +77,22 @@ html {
   text-align: left;
 }
 
-#weiterBtn {
-  border: 2px solid #2da1ab;
-  border-radius: 30px;
-  text-align: center;
-  text-align: center;
-  background-color: white;
-  color: #2da1ab;
-  justify-content: center;
-  margin-right: 12%;
-}
+
 
 #zurueckBtn {
   border: none;
   background-color: white;
   color: #2da1ab;
+}
+
+.wallbox_pics{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+
 }
 
 #empfohlen {
@@ -174,6 +181,8 @@ label {
 
 .card-input-element:checked + .card-input {
 	border: 1px solid #2da1ab;
+  box-shadow: 0px 8px 15px rgba(45, 161, 171, 0.4);
+
   }
 
 h2,
@@ -234,7 +243,7 @@ hr {
   width: 70px;
   text-align: center;
   position: relative;
-  background: #1e7a46;
+  background: #2da1ab;
   margin-bottom: 20px;
   border: 0;
 }
@@ -264,16 +273,22 @@ hr {
 }
 .btn-custom {
   font-family: "Raleway", sans-serif;
+  font-size: 14pt;
   text-transform: uppercase;
-  font-weight: 500;
-  border-radius: 30px;
-  border: 2px solid;
-  border-color: #338a83;
+  font-weight:bolder;
+  border-radius: 20px;
+    /*border: 1px solid;
+  border-color: #2da1ab;*/
   background-color: transparent;
-  color: #338a83;
-  padding: 10px;
+  color: #2da1ab;
+  padding-left: 16px;
+  padding-right: 16px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
+  height: 36px;
+  box-shadow: 0px 8px 20px rgba(119, 119, 119, 0.3);
+  text-align: center;
+  display:inline;
 }
 .btn-custom:hover,
 .btn-custom:focus,
@@ -282,8 +297,11 @@ hr {
 .btn-custom.active {
   color: #fff;
   background-image: none;
-  background-color: #338a83;
-  box-shadow: 1px 1px 25px #5ab9b7;
+  background-color: #2da1ab;
+  box-shadow: 0px 8px 15px rgba(45, 161, 171, 0.4);
+  transition: all 0.3s ease 0s;
+
+
 }
 .btn:active,
 .btn.active {
@@ -329,7 +347,7 @@ a:focus,
 }
 header .intro-text h1 {
   font-family: "Myriad Pro", sans-serif;
-  color: #3b908c;
+  color: #2da1ab;
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
@@ -937,6 +955,24 @@ label {
   text-align: justify;
 }
 
+#success{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#success strong{
+  color:#2da1ab;
+  font-size: x-large;
+
+}
+
+#success p{
+  font-size: x-large;
+
+}
+
 .input-group-text {
   background-color: white;
   border: none;
@@ -955,9 +991,9 @@ label {
 
 .Preis_ {
   display: flex;
-  justify-content: end;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-direction: column;
+  justify-content: end;
 }
 
 
