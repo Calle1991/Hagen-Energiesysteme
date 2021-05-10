@@ -13,10 +13,13 @@
 
 
   <!-- Favicons================================================== -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+  <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
@@ -123,23 +126,6 @@
               sogar beides?
               Dann sind Sie bei uns genau richtig!
               Unser freundliches Team steht Ihnen von der Beratung bis hin zur Installation und Prüfung zur Seite.</p>
-
-            <!--
-              <h3>Why Choose Us?</h3>
-            <div class="list-style">
-              <div class="row">
-                <div class="col-lg-6 col-sm-6 col-xs-6" data-aos="fade-down" data-aos-duration="500" data-aos-offset="0"
-                  data-aos-delay="200">
-                  <ul>
-                    <li>langjährige Erfahrung</li>
-                    <li></li>
-                    <li>Lorem ipsum dolor</li>
-                    <li>Incididunt ut labore</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            -->
           </div>
         </div>
       </div>
@@ -253,52 +239,58 @@
 
     <!--Cards-->
     <div id="PrivatGewerbe">
-      <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center align-items-stretch">
-        <label>
-          <input type="radio" name="card" id="privat" value="privat" class="card-input-element" />
-          <div class="panel panel-default card-input">
-            <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
-              <svg id="svg" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px"
-                fill="#777777">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-              </svg>
-              <h5>Privat</h5>
-            </div>
-            <div class="panel-body">
-              <br>
-              <p>Sie haben Interesse an einer privaten Ladestation für Ihr zu Hause?<br><br>Kein Problem! Hier entlang,
-                um ein unverbindliches Angebot zu erhalten.
+      <div class="row d-flex g-4 justify-content-center align-items-stretch">
 
-              </p>
+        <div class="col-xs-6 col-md-6 col-lg-3 col-xl-3">
+          <label>
+            <input type="radio" name="card" id="privat" value="privat" class="card-input-element" />
+            <div class="panel panel-default card-input">
+              <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
+                <svg id="svg" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px"
+                  fill="#777777">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                </svg>
+                <h5>Privat</h5>
+              </div>
+              <div class="panel-body">
+                <br>
+                <p>Sie haben Interesse an einer privaten Ladestation für Ihr zu Hause?<br><br>Kein Problem! Hier
+                  entlang,
+                  um ein unverbindliches Angebot zu erhalten.
+                </p>
+              </div>
             </div>
-          </div>
-        </label>
+          </label>
+        </div>
 
-        <label>
-          <input type="radio" name="card" id="gewerblich" value="gewerbe" class="card-input-element" />
-          <div class="panel panel-default card-input">
-            <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
-                viewBox="0 0 24 24" width="30px" fill="#777">
-                <g>
-                  <rect fill="none" height="24" width="24" />
-                </g>
-                <g>
-                  <path
-                    d="M17,11V3H7v4H3v14h8v-4h2v4h8V11H17z M7,19H5v-2h2V19z M7,15H5v-2h2V15z M7,11H5V9h2V11z M11,15H9v-2h2V15z M11,11H9V9h2 V11z M11,7H9V5h2V7z M15,15h-2v-2h2V15z M15,11h-2V9h2V11z M15,7h-2V5h2V7z M19,19h-2v-2h2V19z M19,15h-2v-2h2V15z" />
-                </g>
-              </svg>
-              <h5>Gewerblich</h5>
+        <div class="col-xs-6 col-md-6 col-lg-3 col-xl-3">
+          <label>
+            <input type="radio" name="card" id="gewerblich" value="gewerbe" class="card-input-element" />
+            <div class="panel panel-default card-input">
+              <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
+                  viewBox="0 0 24 24" width="30px" fill="#777">
+                  <g>
+                    <rect fill="none" height="24" width="24" />
+                  </g>
+                  <g>
+                    <path
+                      d="M17,11V3H7v4H3v14h8v-4h2v4h8V11H17z M7,19H5v-2h2V19z M7,15H5v-2h2V15z M7,11H5V9h2V11z M11,15H9v-2h2V15z M11,11H9V9h2 V11z M11,7H9V5h2V7z M15,15h-2v-2h2V15z M15,11h-2V9h2V11z M15,7h-2V5h2V7z M19,19h-2v-2h2V19z M19,15h-2v-2h2V15z" />
+                  </g>
+                </svg>
+                <h5>Gewerblich</h5>
+              </div>
+              <div class="panel-body">
+                <br>
+                <p>Sie haben Interesse an Ladestationen für Ihr Gewerbe?<br><br>Füllen Sie das Kontaktformular aus und
+                  wir
+                  setzen uns
+                  mit Ihnen in Verbindung.</p>
+              </div>
             </div>
-            <div class="panel-body">
-              <br>
-              <p>Sie haben Interesse an Ladestationen für Ihr Gewerbe?<br><br>Füllen Sie das Kontaktformular aus und wir
-                setzen uns
-                mit Ihnen in Verbindung.</p>
-            </div>
-          </div>
-        </label>
+          </label>
+        </div>
       </div>
       <div class="Platzhalter"></div>
 
@@ -311,13 +303,13 @@
     <button class="accordion" id="stepOne__btn">Wählen Sie ein Modell</button>
     <div class="accordionContent" id="stepOne">
       <div id="Wallboxen">
-        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-stretch">
+        <div class="row row-cols-1 row-cols-md-12 row-cols-xl-3 g-4 justify-content-center align-items-stretch">
           <label>
-            <input type="radio" name="product" class="card-input-element" />
+            <input type="radio" name="product" class="card-input-element" value="WallboxPulsarPlus" />
             <div class="panel panel-default card-input popular">
               <div>
                 <a class="wallbox_pics">
-                  <img src="../../img/ladestation/PULSAR PLUS BLACK.png" width="200px">
+                  <img src="img/ladestation/PULSAR PLUS BLACK.png" width="200px">
                 </a>
                 <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
               </div>
@@ -328,30 +320,52 @@
                   <br> <b>Verbunden</b><br>Steuere dein Ladegerät mit WLAN oder Bluetooth ganz
                   einfach von deinen mobilen Geräten aus<br>
                   <br> <b>Kompakt</b><br>Kleiner als ein Notizbuch und nicht einmal 1 kg schwer<br>
-
-                  <br><br>
                 </p>
-                <div class="Preis_Pos">
-                  <div class="Preis_">
-                    <b>Erhältlich in schwarz oder weiß</b>
-                    <br>
-                    <div class="Preis">ab 1200 € inkl. MwSt</div>
-                    </b>
+                <br>
+                <br>
+                
+                <div class="auswahl">
+                  <p class="errormessage" style="color:#2da1ab;"><strong>Bitte wählen Sie Farbe und Kabellänge aus:</strong></p>
+                  <div class="auswahl__box">
+                    <label for="farbe"><p>Farbe:</p></label>
+                    <select name="farbe" id="farbe">
+                      <option value="not">Nicht gewählt</option>
+                      <option value="schwarz">Schwarz</option>
+                      <option value="weiß">Weiß</option>
+                    </select>
                   </div>
+                  <br>
+                  <div class="auswahl_box">
+                    <label for="laenge"><p>Kabellänge:</p></label>
+                    <select name="laenge" id="laenge">
+                      <option value="not">Nicht gewählt</option>
+                      <option value="5 Meter">5 Meter</option>
+                      <option value="7 Meter">7 Meter</option>
+                    </select>
+                  </div>
+                  <br>
                 </div>
-
-
-                <div id="empfohlen">
-                  <p>Empfohlen</p>
+                <div class="Platzhalter"></div>
+              </div>
+              <div class="Preis_Pos">
+                <div class="Preis_">
+                  <b>Erhältlich in schwarz oder weiß</b>
+                  <br>
+                  <div class="Preis">ab 1169 € inkl. MwSt</div>
+                  </b>
                 </div>
               </div>
+              <div id="empfohlen">
+                <p>Empfohlen</p>
+              </div>
             </div>
+
           </label>
           <label>
-            <input type="radio" name="product" class="card-input-element" />
+            <input type="radio" name="product" class="card-input-element" value="WallboxCopperSB" />
             <div class="panel panel-default card-input">
               <a class="wallbox_pics">
-                <img src="../../img/ladestation/CopperSB.png" width="200px">
+                <img src="img/ladestation/CopperSB.png" width="200px">
               </a>
               <h5 class="panel-heading">Wallbox Copper SB</h5>
               <div class="panel-body">
@@ -371,23 +385,22 @@
                   laden Sie mehrere Elektrofahrzeuge gleichzeitig<br>
                   <br><br>
                 </p>
-                <div class="Preis_Pos">
-
+              </div>
+              <div class="Preis_Pos">
                 <div class="Preis_">
                   <b>Erhältlich in schwarz</b>
                   <br>
-                  <div class="Preis">ab 1400 € inkl. MwSt</div>
+                  <div class="Preis">ab 1369 € inkl. MwSt</div>
                   </b>
                 </div>
-</div>
               </div>
             </div>
           </label>
           <label>
-            <input type="radio" name="product" class="card-input-element" />
+            <input type="radio" name="product" class="card-input-element" value="WallboxCommander2" />
             <div class="panel panel-default card-input">
               <a class="wallbox_pics">
-                <img src="../../img/ladestation/COMMANDER 2 .png" width="200px">
+                <img src="img/ladestation/COMMANDER 2 .png" width="200px">
               </a>
               <h5 class="panel-heading">Wallbox Commander 2</h5>
               <div class="panel-body">
@@ -405,19 +418,15 @@
                   laden Sie mehrere Elektrofahrzeuge gleichzeitig<br>
                   <br><br>
                 </p>
-
-                <div class="Preis_Pos">
-
-                  <div class="Preis_">
-                    <b>Erhältlich in schwarz oder weiß</b>
-                    <br>
-                    <div class="Preis">ab 1600 € inkl. MwSt</div>
-                    </b>
-                  </div>
-                </div>
-
               </div>
-
+              <div class="Preis_Pos">
+                <div class="Preis_">
+                  <b>Erhältlich in schwarz oder weiß</b>
+                  <br>
+                  <div class="Preis">ab 1569 € inkl. MwSt</div>
+                  </b>
+                </div>
+              </div>
             </div>
           </label>
         </div>
@@ -430,6 +439,7 @@
     <div id="stepTwo__scroll"></div>
     <button class="accordion" id="stepTwo__btn">Staatliche Förderung sichern</button>
     <div class="accordionContent" id="stepTwo">
+      <div id="scroll_kfw"></div>
       <p class="accordionContent__text"><b>Haben Sie bereits einen KFW-Förderantrag gestellt?</b></p><br>
       <div class="radioButtonArea">
         <div class="radiobattenBox">
@@ -465,6 +475,7 @@
         </div>
       </div>
 
+      <div id="scroll_gruen"></div>
       <p class="accordionContent__text"><b>Haben Sie bereits einen Gründstromvertrag abgeschlossen?</b></p><br>
       <div class="radioButtonArea">
         <div class="radiobattenBox">
@@ -503,13 +514,14 @@
         <br>
         <div class="gruenStromAngebot" id="swp">
           <p><strong>Unsere Empfehlung:</strong></p>
-          <p>Besuchen Sie die <a href="">Stadtwerke Peine</a> um sich bzgl. eines Grünstromvertrages informieren
+          <p>Besuchen Sie die <a href="https://www.stadtwerke-peine.de/" target="_blank">Stadtwerke Peine</a> um sich bzgl. eines Grünstromvertrages informieren
             und bequem abzuschließen.</p>
         </div>
 
         <div class="gruenStromAngebot" id="gpl">
           <p><strong>Unsere Empfehlung:</strong></p>
-          <p>Die GPL</p>
+          <p>Erkundigen Sie sich bei Ihrem derzeitigem Anbieter nach einem Grünstromvertrag, um die Anforderungen für die staatliche Förderungen zu erfüllen.
+          </p>
         </div>
       </div>
       <div class="Platzhalter"></div>
@@ -763,15 +775,17 @@
                     <input type="text" name="ort" class="form-control">
                   </div>
                 </div>
+                <div class="Platzhalter"></div>
                 <div class="row">
                   <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
                   <br>
                   <div class="col-12 d-flex">
-                    <div class="col-2">
+                    <div class="col-1">
                       <input class="form-check-input" type="checkbox" name="datenschutz" value="Ja"
                         id="checkDatenschutz">
                     </div>
-                    <div class="col-10">
+
+                    <div class="col-11">
                       <p class="normalText">Ich habe die <a
                           href="https://hagen-energiesysteme.de/pages/datenschutz.html"
                           target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine
@@ -786,12 +800,11 @@
           <!--SuccessScreen-->
           <div class="step">
             <div class="container">
-              <div class="row">
-                <div id="success">
-                  <p><strong>Vielen dank!</strong></p><br>
+              <div class="row" id="success">
+                <div>
+                  <h2><strong>Vielen dank!</strong></h2><br>
                   <p>Ihre Anfrage ist bei uns eingegangen und Sie sollten in Kürze eine Bestätigungsmail erhalten.<br>
-                    Wir werden Ihnen schnellstmöglich unser unverbindliches Angebot zukommen lassen.<br>
-
+                    <br> Wir werden Ihnen schnellstmöglich unser unverbindliches Angebot zukommen lassen.<br>
                   </p>
                 </div>
               </div>
@@ -801,7 +814,7 @@
           <!--Buttons-->
         </div>
         <div class="row">
-          <div class="actions row row-cols-md-6 justify-content-start">
+          <div class="actions row row-cols-md-4 g-4 justify-content-start">
             <button id="zurueckBtn" type="button" class="btn btn-primary ">ZURÜCK</button>
             <button id="weiterBtn" type="button" class="btn btn-custom">Fortfahren</button>
 

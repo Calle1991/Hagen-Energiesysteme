@@ -3,22 +3,58 @@
 
 $("input:radio[name='card']").on("click", function () {
   if ($("input:radio[name='card']:checked").val() == "privat") {
-    $("#stepOne__btn").addClass("active");
+    $("#stepOne__btn").addClass("activeAcc");
     $("#stepOne").animate({ "max-height": "100%" }, 800);
+    window.location = "index.html#stepOne__scroll";
   } else {
-    $("#stepOne__btn").removeClass("active");
+    $("#stepOne__btn").removeClass("activeAcc");
     $(".accordionContent").animate({ "max-height": "0px" }, 800);
+    window.location = "index.html#contact";
   }
 })
 
 
 
 //###################### Ladeboxmodelle ########################
-$("input:radio[name='product']").on("click", function (e) {
-  $("#stepTwo__btn").addClass("active");
-  $("#stepTwo").animate({ "max-height": "100%" }, 800);
+
+$("#farbe").change(function () {
+  productValidation();
 });
 
+$("#laenge").change(function () {
+  productValidation();
+});
+
+
+$("input:radio[name='product']").on("click", function (e) {
+  if (e.currentTarget.defaultValue == "WallboxPulsarPlus") {
+    productValidation();
+  } else {
+
+    $("#stepTwo__btn").addClass("activeAcc");
+    $("#stepTwo").animate({ "max-height": "100%" }, 800);
+    window.location = "index.html#stepTwo__scroll";
+  }
+
+});
+
+//Pulsar Plus
+function productValidation() {
+  var farbe = $("#farbe").val()
+  var laenge = $("#laenge").val()
+  if (farbe != "not" && laenge != "not") {
+    $("input:radio[value='WallboxPulsarPlus']").prop("checked", true);
+    $("#stepTwo__btn").addClass("activeAcc");
+    $("#stepTwo").animate({ "max-height": "100%" }, 800);
+    $(".auswahl > .errormessage").css("display", "none");
+    window.location = "index.html#stepTwo__scroll";
+  } else {
+    $(".auswahl > .errormessage").css("display", "block");
+    $("input:radio[value='WallboxPulsarPlus']").prop("checked", false);
+  }
+
+
+}
 
 
 
@@ -63,11 +99,25 @@ function checkValidation_KFW_GRUEN() {
     $("input[name='KFW']:checked").val() &&
     $("input[name='GRUEN']:checked").val()
   ) {
-    $("#stepThree__btn").addClass("active");
+    $("#stepThree__btn").addClass("activeAcc");
     $("#stepThree").animate({ "max-height": "100%" }, 800);
   } else {
     $("#stepThree").animate({ "max-height": "0px" }, 800);
   }
+
+  if($("input[name='GRUEN']:checked").val() == 'Nein'){
+    window.location = "index.html#scroll_gruen";
+  }else{
+    window.location = "index.html#stepThree__scroll"
+  }
+
+  if($("input[name='KFW']:checked").val() == 'Nein'){
+    window.location = "index.html#scroll_kfw";
+  }else{
+    window.location = "index.html#stepThree__scroll"
+  }
+
+
 }
 
 //###################### Postleitzahl abfragen ########################
@@ -128,6 +178,9 @@ function checkStep(n) {
       break;
 
     case 2:
+      $(".infoBox__fragebogen").css("display", "none");
+      $("#zurueckBtn").css("display", "none");
+      $("#weiterBtn").css("display", "none");
       $(".step")
         .eq(n - 1)
         .css("display", "none");
@@ -165,50 +218,72 @@ function stepBack() {
 }
 
 
-function SendData(){
+function SendData() {
 
-      var meter = $("input[name=meter]").val();
-      var frage2 = $("input[name=frage2Checked]:checked").val();
-      var frage3 = $("input[name=frage3Checked]:checked").val();
-      var frage4 = $("input[name=frage4Checked]:checked").val();
-      var frage5 = $("input[name=frage5Checked]:checked").val();
-      var frage6 = $("input[name=frage6Checked]:checked").val();
-      var token = $("#token").val();
-      var name = $("input[name=name]").val();
-      var email = $("input[name=email]").val();
-      var telefon = $("input[name=tel]").val();
-      var strasse = $("input[name=strasse]").val();
-      var ort = $("input[name=ort]").val();
+  var instanz = "Energiesysteme";
 
-      $.ajax({
-        type: "POST",
-        url: '../../backend/sendMail.php',
-        data: {
-          //Fragen vom ersten Screen
-          'token': token,
-          'meter': meter,
-          'frage2': frage2,
-          'frage3': frage3,
-          'frage4': frage4,
-          'frage5': frage5,
-          'frage6': frage6,
+  var laenge = $("#laenge").val();
+  var farbe = $("#farbe").val();
+  var product = $("input[name=product]:checked").val();
 
-          //Frgen vom zweiten Screen
-          'name': name,
-          'email': email,
-          'telefon': telefon,
-          'strasse': strasse,
-          'ort': ort
-        },
-        success: function (data) {
-          console.log(data);
-          //löschen des SessionS
-        },
-        error: function (xhr, status, error) {
-          console.error(xhr);
-        }
-      });
-  
+  var kfw = $("input[name=KFW]:checked").val();
+  var gruen = $("input[name=GRUEN]:checked").val();
+
+  var meter = $("input[name=meter]").val();
+  var frage2 = $("input[name=frage2Checked]:checked").val();
+  var frage3 = $("input[name=frage3Checked]:checked").val();
+  var frage4 = $("input[name=frage4Checked]:checked").val();
+  var frage5 = $("input[name=frage5Checked]:checked").val();
+  var frage6 = $("input[name=frage6Checked]:checked").val();
+  var token = $("#token").val();
+  var name = $("input[name=name]").val();
+  var email = $("input[name=email]").val();
+  var telefon = $("input[name=tel]").val();
+  var strasse = $("input[name=strasse]").val();
+  var ort = $("input[name=ort]").val();
+
+  $.ajax({
+    type: "POST",
+    url: '../../backend/sendMail.php',
+    data: {
+
+      //Instanz
+      'instanz': instanz,
+
+      //Produktauswahl
+      'product': product,
+      'farbe': farbe,
+      'laenge': laenge,
+
+      //Förderung
+      'kfw':kfw,
+      'gruen':gruen,
+
+      //Fragen vom ersten Screen
+      'token': token,
+      'meter': meter,
+      'frage2': frage2,
+      'frage3': frage3,
+      'frage4': frage4,
+      'frage5': frage5,
+      'frage6': frage6,
+
+      //Frgen vom zweiten Screen
+      'name': name,
+      'email': email,
+      'telefon': telefon,
+      'strasse': strasse,
+      'ort': ort
+    },
+    success: function (data) {
+      console.log(data);
+      //löschen des SessionS
+    },
+    error: function (xhr, status, error) {
+      console.error(xhr);
+    }
+  });
+
 }
 
 
