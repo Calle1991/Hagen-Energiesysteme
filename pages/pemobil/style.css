@@ -432,6 +432,67 @@ label {
 
 /*Media-Query*/
 
+@media (max-width: 390px) {
+  #about img {
+    margin: 50px 0;
+  }
+
+  .infoBox__KFW {
+    width: 100%;
+  }
+
+  .infoBox__gruenStrom {
+    width: 80%;
+  }
+
+  #Meter {
+    width: 50%;
+  }
+
+  #step_2 {
+    width: 80%;
+  }
+
+  #pemobillogo{
+      width: 150px;
+  }
+
+
+  #hagenlogo{
+    width: 150px;
+    height: auto;
+    margin: 0;
+
+  }
+
+  .radiobattenBox{
+  width: 140px;
+  }
+
+  .btn-custom{
+    width: 40%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #fragebogen {
+    padding-left: 5px;
+  }
+
+  .datenschutz{
+    padding-top: 5px;
+  }
+
+  .normalText {
+    text-align: left;
+    font-size: 11px;
+  }
+
+}
+
+
+
+
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
@@ -463,6 +524,9 @@ label {
     height: auto;
     margin: 0;
 }
+
+
+
 
 }
 
@@ -518,6 +582,8 @@ label {
   #step_2 {
     width: 80%;
   }
+
+
 }
 
 /* On screens that are 992px or less, set the background color to blue */
@@ -531,7 +597,9 @@ label {
 /*Desktop*/
 
 @media screen and (min-width: 1920px) {
+
 }
 
 @media screen and (min-width: 3840px) {
+
 }
