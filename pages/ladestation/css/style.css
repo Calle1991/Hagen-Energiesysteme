@@ -63,10 +63,6 @@ html {
   padding-right: 50px;
 }
 
-#Wallboxen {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
 
 .infoText {
   display: flex;
@@ -138,6 +134,7 @@ html {
 
 .panel {
   cursor: pointer;
+  
 }
 
 .panel-body {
@@ -160,10 +157,10 @@ label {
 
 .card-input {
   border: 1px solid #e5e5e5;
-  border-radius: 3px;
+  border-radius: 6px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   margin: 10px;
-  padding: 20px;
+  padding: 30px;
   text-align: start;
   height: 100%;
 }
@@ -181,7 +178,7 @@ label {
 
 .card-input-element:checked + .card-input {
 	border: 1px solid #2da1ab;
-  box-shadow: 0px 8px 15px rgba(45, 161, 171, 0.4);
+  box-shadow: 0px 0px 10px rgba(45, 161, 171, 0.4);
 
   }
 
@@ -276,7 +273,7 @@ hr {
   font-size: 14pt;
   text-transform: uppercase;
   font-weight:bolder;
-  border-radius: 20px;
+  border-radius: 6px;
     /*border: 1px solid;
   border-color: #2da1ab;*/
   background-color: transparent;
@@ -523,36 +520,20 @@ header .intro-text {
   margin-bottom: 40px;
 }
 
-#servicesbtn {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  border-radius: 30px;
-  border: 2px solid;
-  border-color: white;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-}
+
 
 #servicesbtn {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  border-radius: 30px;
-  border: 2px solid;
-  border-color: white;
+  background: transparent;
+  border: 1px solid #fff;
   color: white;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
 }
+
 
 #servicesbtn:hover {
-  color: #5ab9b7;
-  background-color: white;
-  box-shadow: 1px 1px 25px white;
+  color: #3399cc;
+  background: #fff;
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease 0s;
 }
 
 .plzInputBox {
@@ -740,16 +721,28 @@ header .intro-text {
   color: #cc0033;
   text-align: left;
 }
+
+
 #contact .btn-custom {
-  margin: 30px 0;
+  margin-top: 25px;
+  margin-bottom: 50px;
+
   background: transparent;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   color: white;
+
+
 }
 #contact .btn-custom:hover {
   color: #3399cc;
   background: #fff;
-}
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease 0s;
+
+} 
+
+
+
 label {
   font-size: 12px;
   font-weight: 400;
@@ -987,15 +980,26 @@ label {
   font-size: x-large;
   font-weight: bold;
   color: #2da1ab;
-}
-
-.Preis_ {
   display: flex;
+}
+.Preis_ {
+  position: relative;
   align-items: flex-end;
-  flex-direction: column;
   justify-content: end;
+  display: flex;
+  flex-direction: column;
+
+
 }
 
+.Preis_Pos{
+  right: 0;
+  top: 580px;
+  position: absolute;
+  justify-content: end;
+  align-items: flex-end;
+  background-color: khaki;
+}
 
 .normalText{
 	text-align: left;
