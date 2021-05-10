@@ -128,7 +128,7 @@ function stepBack() {
 
 
 function SendData() {
-
+    var instanz = "pemobil";
     var kfw = $("input[name=KFW]:checked").val();
     var gruen = $("input[name=GRUEN]:checked").val();
     var meter = $("input[name=meter]").val();
@@ -148,6 +148,10 @@ function SendData() {
         type: "POST",
         url: '../../backend/sendMail.php',
         data: {
+
+            //Instanz
+            'instanz':instanz,
+
             //Fragen vom ersten Screen
             'kfw': kfw,
             'gruen': gruen,

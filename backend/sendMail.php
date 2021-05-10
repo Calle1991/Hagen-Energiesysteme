@@ -11,6 +11,20 @@ header("Access-Control-Allow-Origin: *");
 
 //if(isset($_POST['sendmail'])){
 
+
+//Von welcher Instanz
+
+$pemobil = false;
+if(isset($_POST['instanz'])){
+    if($_POST['instanz'] == 'pemobil'){
+        $pemobil = true;
+    }else{
+        $pemobil = false;
+    }
+}
+
+
+
 //KFW & Grünstrom
 $kfw = $_POST['kfw'];
 $gruen = $_POST['gruen'];
@@ -50,6 +64,7 @@ if(isset($_POST['token'])){
                 $message = (new Swift_Message('Angebotsanfrage - Ladestation'))
                   ->setFrom(['info@hagen-energiesysteme.de' => 'Hagen Energiesysteme'])
                   ->setTo(['info@hagen-energiesysteme.de', 'i6jmmaojxx+chuxr+j33ue@in.meistertask.com' => 'Angebot'])
+                  //->setTo(['p.tobinski@hagengmbh.de' => 'Angebot'])
                   ->setBody('  
             <html>
             <head>
@@ -174,6 +189,17 @@ if(isset($_POST['token'])){
             </body>
             </html>', 'text/html');
                 // Send the message
+
+
+                //Hinzufügen der PE-mobil E-Mail Adresse
+                if($pemobil == true){
+                    $message->addTo('e-ladebox@stadtwerke-peine.de');
+                }else{
+                    //nothing
+                }
+
+
+
                 $result = $mailer->send($message);
             
             
