@@ -95,26 +95,20 @@ $("input:radio[name='GRUEN']").on("click", function () {
 
 function checkValidation_KFW_GRUEN() {
 
-  if (
-    $("input[name='KFW']:checked").val() &&
-    $("input[name='GRUEN']:checked").val()
-  ) {
+  if ($("input[name='KFW']:checked").val() && $("input[name='GRUEN']:checked").val()) {
+
+    if ($("input[name='KFW']:checked").val() == 'Nein') {
+      window.location = "index.html#scroll_kfw";
+    }
+
+    if ($("input[name='GRUEN']:checked").val() == 'Nein') {
+      window.location = "index.html#scroll_gruen";
+    }
+
     $("#stepThree__btn").addClass("activeAcc");
     $("#stepThree").animate({ "max-height": "100%" }, 800);
   } else {
     $("#stepThree").animate({ "max-height": "0px" }, 800);
-  }
-
-  if($("input[name='GRUEN']:checked").val() == 'Nein'){
-    window.location = "index.html#scroll_gruen";
-  }else{
-    window.location = "index.html#stepThree__scroll"
-  }
-
-  if($("input[name='KFW']:checked").val() == 'Nein'){
-    window.location = "index.html#scroll_kfw";
-  }else{
-    window.location = "index.html#stepThree__scroll"
   }
 
 
@@ -256,8 +250,8 @@ function SendData() {
       'laenge': laenge,
 
       //Förderung
-      'kfw':kfw,
-      'gruen':gruen,
+      'kfw': kfw,
+      'gruen': gruen,
 
       //Fragen vom ersten Screen
       'token': token,
