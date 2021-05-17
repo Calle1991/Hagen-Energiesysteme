@@ -4,7 +4,7 @@
 $("input:radio[name='card']").on("click", function () {
   if ($("input:radio[name='card']:checked").val() == "privat") {
     $("#stepOne__btn").addClass("activeAcc");
-    $("#stepOne").animate({ "max-height": "100%" }, 800);
+    $("#stepOne").animate({ "max-height": "100%" }, 500);
     window.location = "index.html#stepOne__scroll";
   } else {
     $("#stepOne__btn").removeClass("activeAcc");

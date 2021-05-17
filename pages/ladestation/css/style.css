@@ -73,12 +73,14 @@ html {
 }
 
 .wallbox_pics {
-  position: relative;
   display: flex;
-  flex-direction: row;
+  padding: 25px;
   align-items: center;
   justify-content: center;
-  padding-bottom: 25px;
+}
+
+.wallbox_pics img{
+  width: 350px;
 }
 
 #empfohlen {

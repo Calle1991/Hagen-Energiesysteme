@@ -14,6 +14,8 @@
   <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
 
 
+
+
   <!-- Favicons================================================== -->
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -233,349 +235,388 @@
     <div class="section-title">
       <h2>Interesse?</h2>
     </div>
+  </div>
 
 
 
 
 
+  <!--Cards-->
+  <div id="PrivatGewerbe">
+    <div class="row d-flex g-4 justify-content-center align-items-stretch">
 
-    <!--Cards-->
-    <div id="PrivatGewerbe">
-      <div class="row d-flex g-4 justify-content-center align-items-stretch">
+      <div class="col-xs-6 col-md-6 col-lg-3 col-xl-3">
+        <label>
+          <input type="radio" name="card" id="privat" value="privat" class="card-input-element" />
+          <div class="panel panel-default card-input">
+            <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
+              <svg id="svg" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px"
+                fill="#777777">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+              </svg>
+              <h5>Privat</h5>
+            </div>
+            <div class="panel-body">
+              <br>
+              <p>Sie haben Interesse an einer privaten Ladestation für Ihr zu Hause?<br><br>Kein Problem! Hier
+                entlang,
+                um ein unverbindliches Angebot zu erhalten.
+              </p>
+            </div>
+          </div>
+        </label>
+      </div>
 
-        <div class="col-xs-6 col-md-6 col-lg-3 col-xl-3">
-          <label>
-            <input type="radio" name="card" id="privat" value="privat" class="card-input-element" />
-            <div class="panel panel-default card-input">
-              <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
-                <svg id="svg" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px"
-                  fill="#777777">
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-                </svg>
-                <h5>Privat</h5>
-              </div>
-              <div class="panel-body">
+      <div class="col-xs-6 col-md-6 col-lg-3 col-xl-3">
+        <label>
+          <input type="radio" name="card" id="gewerblich" value="gewerbe" class="card-input-element" />
+          <div class="panel panel-default card-input">
+            <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
+                viewBox="0 0 24 24" width="30px" fill="#777">
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <path
+                    d="M17,11V3H7v4H3v14h8v-4h2v4h8V11H17z M7,19H5v-2h2V19z M7,15H5v-2h2V15z M7,11H5V9h2V11z M11,15H9v-2h2V15z M11,11H9V9h2 V11z M11,7H9V5h2V7z M15,15h-2v-2h2V15z M15,11h-2V9h2V11z M15,7h-2V5h2V7z M19,19h-2v-2h2V19z M19,15h-2v-2h2V15z" />
+                </g>
+              </svg>
+              <h5>Gewerblich</h5>
+            </div>
+            <div class="panel-body">
+              <br>
+              <p>Sie haben Interesse an Ladestationen für Ihr Gewerbe?<br><br>Füllen Sie das Kontaktformular aus und
+                wir
+                setzen uns
+                mit Ihnen in Verbindung.</p>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="Platzhalter"></div>
+  </div>
+
+
+
+  <!--STEP ONE-->
+  <div id="stepOne__scroll"></div>
+  <button class="accordion" id="stepOne__btn">Wählen Sie ein Modell</button>
+  <div class="accordionContent" id="stepOne">
+    <div id="Wallboxen">
+      <div class="row row-cols-1 row-cols-md-12 row-cols-xl-3 g-4 justify-content-center align-items-stretch">
+        <label>
+          <input type="radio" name="product" class="card-input-element" value="WallboxPulsarPlus" />
+          <div class="panel panel-default card-input popular">
+            <div>
+              <a class="wallbox_pics">
+                <img src="img/ladestation/PULSAR PLUS BLACK.png">
+              </a>
+              <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
+            </div>
+            <div class="panel-body">
+              <p>
                 <br>
-                <p>Sie haben Interesse an einer privaten Ladestation für Ihr zu Hause?<br><br>Kein Problem! Hier
-                  entlang,
-                  um ein unverbindliches Angebot zu erhalten.
-                </p>
+                <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                <br> <b>Verbunden</b><br>Steuere dein Ladegerät mit WLAN oder Bluetooth ganz
+                einfach von deinen mobilen Geräten aus<br>
+                <br> <b>Kompakt</b><br>Kleiner als ein Notizbuch und nicht einmal 1 kg schwer<br>
+              </p>
+              <br>
+              <br>
+
+              <div class="auswahl">
+                <p class="errormessage" style="color:#2da1ab;"><strong>Bitte wählen Sie Farbe und Kabellänge
+                    aus:</strong></p>
+                <div class="auswahl__box">
+                  <label for="farbe">
+                    <p>Farbe:</p>
+                  </label>
+                  <select name="farbe" id="farbe">
+                    <option value="not">Nicht gewählt</option>
+                    <option value="schwarz">Schwarz</option>
+                    <option value="weiß">Weiß</option>
+                  </select>
+                </div>
+                <br>
+                <div class="auswahl_box">
+                  <label for="laenge">
+                    <p>Kabellänge:</p>
+                  </label>
+                  <select name="laenge" id="laenge">
+                    <option value="not">Nicht gewählt</option>
+                    <option value="5 Meter">5 Meter</option>
+                    <option value="7 Meter">7 Meter</option>
+                  </select>
+                </div>
+                <br>
+              </div>
+              <div class="Platzhalter"></div>
+            </div>
+            <div class="Preis_Pos">
+              <div class="Preis_">
+                <b>Erhältlich in schwarz oder weiß</b>
+                <br>
+                <div class="Preis">ab 1169 € inkl. MwSt</div>
+                </b>
               </div>
             </div>
-          </label>
-        </div>
+            <div id="empfohlen">
+              <p>Empfohlen</p>
+            </div>
+          </div>
 
-        <div class="col-xs-6 col-md-6 col-lg-3 col-xl-3">
-          <label>
-            <input type="radio" name="card" id="gewerblich" value="gewerbe" class="card-input-element" />
-            <div class="panel panel-default card-input">
-              <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
-                  viewBox="0 0 24 24" width="30px" fill="#777">
-                  <g>
-                    <rect fill="none" height="24" width="24" />
-                  </g>
-                  <g>
-                    <path
-                      d="M17,11V3H7v4H3v14h8v-4h2v4h8V11H17z M7,19H5v-2h2V19z M7,15H5v-2h2V15z M7,11H5V9h2V11z M11,15H9v-2h2V15z M11,11H9V9h2 V11z M11,7H9V5h2V7z M15,15h-2v-2h2V15z M15,11h-2V9h2V11z M15,7h-2V5h2V7z M19,19h-2v-2h2V19z M19,15h-2v-2h2V15z" />
-                  </g>
-                </svg>
-                <h5>Gewerblich</h5>
-              </div>
-              <div class="panel-body">
+        </label>
+        <label>
+          <input type="radio" name="product" class="card-input-element" value="WallboxCopperSB" />
+          <div class="panel panel-default card-input">
+            <a class="wallbox_pics">
+              <img src="img/ladestation/CopperSB.png">
+            </a>
+            <h5 class="panel-heading">Wallbox Copper SB</h5>
+            <div class="panel-body">
+              <p>
                 <br>
-                <p>Sie haben Interesse an Ladestationen für Ihr Gewerbe?<br><br>Füllen Sie das Kontaktformular aus und
-                  wir
-                  setzen uns
-                  mit Ihnen in Verbindung.</p>
+                <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                <br> <b>Flexibel</b><br>Die eingebaute Steckdose ermöglicht das Laden aller auf dem Markt erhältlichen
+                Elektrofahrzeuge<br>
+                <br> <b>Einfacher Benutzerzugriff</b><br>Sicherer gemeinschaftlicher Zugang dank RFID-Karten oder der
+                myWallbox-App<br>
+                <br> <b>Vernetzt</b><br>Steuerung des Ladegeräts über WLAN, Bluetooth, Ethernet oder 3G/4G (optional)
+                von Ihren smarten Geräten aus<br>
+                <br> <b>Power Sharing</b><br>ein oder mehr Ladegeräte können mit dem fleichen Stromkreis verbunden
+                werden und mehrere Fahrzeuge gleichzeitig geladen werden<br>
+                <br> <b>Steuerbar</b><br>Smarte Steuerung Ihres Ladegeräts von der myWallbox-Plattform aus<br>
+                <br> <b>Power Sharing</b><br>Verbinden Sie zwei oder mehr Ladegeräte mit dem gleichen Stromkreis und
+                laden Sie mehrere Elektrofahrzeuge gleichzeitig<br>
+                <br><br>
+              </p>
+            </div>
+            <div class="Preis_Pos">
+              <div class="Preis_">
+                <b>Erhältlich in schwarz</b>
+                <br>
+                <div class="Preis">ab 1369 € inkl. MwSt</div>
+                </b>
               </div>
             </div>
-          </label>
-        </div>
+          </div>
+        </label>
+        <label>
+          <input type="radio" name="product" class="card-input-element" value="WallboxCommander2" />
+          <div class="panel panel-default card-input">
+            <div class="wallbox_pics">
+              <img src="img/ladestation/COMMANDER 2 .png">
+            </div>
+            <h5 class="panel-heading">Wallbox Commander 2</h5>
+            <div class="panel-body">
+              <p>
+                <br>
+                <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                <br> <b>Einfach benutzbar</b><br>Der eingebaute Touchscreen vereinfacht das Entsperren und die Auswahl
+                der Ladeeinstellungen<br>
+                <br> <b>Einfacher Benutzerzugriff</b><br>Sicherer gemeinschaftlicher Zugang dank Passwortschutz,
+                RFID-Karten oder der myWallbox-App<br>
+                <br> <b>Vernetzt</b><br>Steuerung des Ladegeräts über WLAN, Bluetooth, Ethernet oder 3G/4G (optional)
+                von Ihren smarten Geräten aus<br>
+                <br> <b>Steuerbar</b><br>Smarte Steuerung Ihres Ladegeräts von der myWallbox-Plattform aus<br>
+                <br> <b>Power Sharing</b><br>Verbinden Sie zwei oder mehr Ladegeräte mit dem gleichen Stromkreis und
+                laden Sie mehrere Elektrofahrzeuge gleichzeitig<br>
+                <br><br>
+              </p>
+            </div>
+            <div class="Preis_Pos">
+              <div class="Preis_">
+                <b>Erhältlich in schwarz</b>
+                <br>
+                <div class="Preis">ab 1569 € inkl. MwSt</div>
+                </b>
+              </div>
+            </div>
+          </div>
+        </label>
       </div>
       <div class="Platzhalter"></div>
 
     </div>
+  </div>
+
+  <!--STEP TWO-->
+  <div id="stepTwo__scroll"></div>
+  <button class="accordion" id="stepTwo__btn">Staatliche Förderung sichern</button>
+  <div class="accordionContent" id="stepTwo">
+    <div id="scroll_kfw"></div>
+    <p class="accordionContent__text"><b>Haben Sie bereits einen KFW-Förderantrag gestellt?</b></p><br>
+    <div class="radioButtonArea">
+      <div class="radiobattenBox">
+        <div class="radioBatten__input">
+          <input type="radio" id="KFW__Ja" name="KFW" value="Ja">
+          <label for="KFW__Ja">
+            <span class="tick"></span>
+          </label>
+        </div>
+        <div class="radioBatten__label">
+          <p>Ja</p>
+        </div>
+      </div>
+      <div class="radiobattenBox">
+        <div class="radioBatten__input">
+          <input type="radio" id="KFW__Nein" name="KFW" value="Nein">
+          <label for="KFW__Nein">
+            <span class="tick"></span>
+          </label>
+        </div>
+        <div class="radioBatten__label">
+          <p>Nein</p>
+        </div>
+      </div>
+    </div>
+    <div class="infoBox__KFW">
+      <div class="infoText">
+        <p>Stellen Sie Ihren Förderantrag vor der Bestellung, um die Voraussetzungen der <a
+            href="https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestehende-Immobilie/F%C3%B6rderprodukte/Ladestationen-f%C3%BCr-Elektroautos-Wohngeb%C3%A4ude-(440)/"
+            target="_blank">KfW</a>
+          zu erfüllen.
+        </p>
+      </div>
+    </div>
+
+    <div id="scroll_gruen"></div>
+    <p class="accordionContent__text"><b>Haben Sie bereits einen Gründstromvertrag abgeschlossen?</b></p><br>
+    <div class="radioButtonArea">
+      <div class="radiobattenBox">
+        <div class="radioBatten__input">
+          <input type="radio" id="GRUEN__Ja" name="GRUEN" value="Ja">
+          <label for="GRUEN__Ja">
+            <span class="tick"></span>
+          </label>
+        </div>
+        <div class="radioBatten__label">
+          <p>Ja</p>
+        </div>
+      </div>
+      <div class="radiobattenBox">
+        <div class="radioBatten__input">
+          <input type="radio" id="GRUEN__Nein" name="GRUEN" value="Nein">
+          <label for="GRUEN__Nein">
+            <span class="tick"></span>
+          </label>
+        </div>
+        <div class="radioBatten__label">
+          <p>Nein</p>
+        </div>
+      </div>
+    </div>
+    <div class="infoBox__gruenStrom">
+      <div class="infoText">
+        <p>Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.
+          Geben Sie Ihre PLZ ein, um zu einem geeigneten Anbieter weitergeleitet zu werden.</p>
+      </div>
+      <div class="plzInputBox">
+        <p>Tragen Sie hier Ihre Postleitzahl ein:</p>
+        <input type="text" name="plzInput" id="plzInput">
+        <span id="plzTest"></span>
+      </div>
+      <br>
+      <div class="gruenStromAngebot" id="swp">
+        <p><strong>Unsere Empfehlung:</strong></p>
+        <p>Besuchen Sie die <a href="https://www.stadtwerke-peine.de/" target="_blank">Stadtwerke Peine</a> um sich
+          bzgl. eines Grünstromvertrages informieren
+          und bequem abzuschließen.</p>
+      </div>
+
+      <div class="gruenStromAngebot" id="gpl">
+        <p><strong>Unsere Empfehlung:</strong></p>
+        <p>Erkundigen Sie sich bei Ihrem derzeitigem Anbieter nach einem Grünstromvertrag, um die Anforderungen für die
+          staatliche Förderungen zu erfüllen.
+        </p>
+      </div>
+    </div>
+    <div class="Platzhalter"></div>
+
+  </div>
 
 
 
-    <!--STEP ONE-->
-    <div id="stepOne__scroll"></div>
-    <button class="accordion" id="stepOne__btn">Wählen Sie ein Modell</button>
-    <div class="accordionContent" id="stepOne">
-      <div id="Wallboxen">
-        <div class="row row-cols-1 row-cols-md-12 row-cols-xl-3 g-4 justify-content-center align-items-stretch">
-          <label>
-            <input type="radio" name="product" class="card-input-element" value="WallboxPulsarPlus" />
-            <div class="panel panel-default card-input popular">
-              <div>
-                <a class="wallbox_pics">
-                  <img src="img/ladestation/PULSAR PLUS BLACK.png" width="200px">
-                </a>
-                <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
-              </div>
-              <div class="panel-body">
-                <p>
-                  <br>
-                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
-                  <br> <b>Verbunden</b><br>Steuere dein Ladegerät mit WLAN oder Bluetooth ganz
-                  einfach von deinen mobilen Geräten aus<br>
-                  <br> <b>Kompakt</b><br>Kleiner als ein Notizbuch und nicht einmal 1 kg schwer<br>
-                </p>
-                <br>
-                <br>
-                
-                <div class="auswahl">
-                  <p class="errormessage" style="color:#2da1ab;"><strong>Bitte wählen Sie Farbe und Kabellänge aus:</strong></p>
-                  <div class="auswahl__box">
-                    <label for="farbe"><p>Farbe:</p></label>
-                    <select name="farbe" id="farbe">
-                      <option value="not">Nicht gewählt</option>
-                      <option value="schwarz">Schwarz</option>
-                      <option value="weiß">Weiß</option>
-                    </select>
-                  </div>
-                  <br>
-                  <div class="auswahl_box">
-                    <label for="laenge"><p>Kabellänge:</p></label>
-                    <select name="laenge" id="laenge">
-                      <option value="not">Nicht gewählt</option>
-                      <option value="5 Meter">5 Meter</option>
-                      <option value="7 Meter">7 Meter</option>
-                    </select>
-                  </div>
-                  <br>
-                </div>
+  <!--STEP THREE-->
+  <div id="stepThree__scroll"></div>
+  <button class="accordion" id="stepThree__btn">Fragebogen ausfüllen</button>
+  <div class="accordionContent" id="stepThree">
+    <p class="accordionContent__text">
+    <div class="infoBox__fragebogen">
+      <div class="infoText">
+        Sie haben es fast geschafft!<br>Um den Vorgang abzuschließen und Ihr
+        individuelles Angebot zu erhalten,
+        nehmen Sie sich zwei Minuten Zeit um unseren Fragebogen auszufüllen.</p>
+      </div>
+    </div>
+    <div>
+
+      <!--FRAGEBOGEN-->
+      <div id="fragebogen">
+        <!--Fragen-->
+        <div class="step">
+          <form action="">
+            <fieldset>
+
+              <!--Frage 1-->
+              <div class="row">
                 <div class="Platzhalter"></div>
-              </div>
-              <div class="Preis_Pos">
-                <div class="Preis_">
-                  <b>Erhältlich in schwarz oder weiß</b>
-                  <br>
-                  <div class="Preis">ab 1169 € inkl. MwSt</div>
-                  </b>
+
+                <div class="col-12 d-flex justify-content-start flex-column">
+                  <p class="fragebogen__fragen">Wie groß ist die Entfernung zum Stromverteiler?</p>
+                  <div id="Metereingabe" row row-cols-md-6>
+                    <input id="Meter" type="number" name="meter" min="0" inputmode="numeric" pattern="[0-9]*">
+                    <p id="Meter_text">Meter</p>
+                  </div>
                 </div>
               </div>
-              <div id="empfohlen">
-                <p>Empfohlen</p>
-              </div>
-            </div>
 
-          </label>
-          <label>
-            <input type="radio" name="product" class="card-input-element" value="WallboxCopperSB" />
-            <div class="panel panel-default card-input">
-              <a class="wallbox_pics">
-                <img src="img/ladestation/CopperSB.png" width="200px">
-              </a>
-              <h5 class="panel-heading">Wallbox Copper SB</h5>
-              <div class="panel-body">
-                <p>
-                  <br>
-                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
-                  <br> <b>Flexibel</b><br>Die eingebaute Steckdose ermöglicht das Laden aller auf dem Markt erhältlichen
-                  Elektrofahrzeuge<br>
-                  <br> <b>Einfacher Benutzerzugriff</b><br>Sicherer gemeinschaftlicher Zugang dank RFID-Karten oder der
-                  myWallbox-App<br>
-                  <br> <b>Vernetzt</b><br>Steuerung des Ladegeräts über WLAN, Bluetooth, Ethernet oder 3G/4G (optional)
-                  von Ihren smarten Geräten aus<br>
-                  <br> <b>Power Sharing</b><br>ein oder mehr Ladegeräte können mit dem fleichen Stromkreis verbunden
-                  werden und mehrere Fahrzeuge gleichzeitig geladen werden<br>
-                  <br> <b>Steuerbar</b><br>Smarte Steuerung Ihres Ladegeräts von der myWallbox-Plattform aus<br>
-                  <br> <b>Power Sharing</b><br>Verbinden Sie zwei oder mehr Ladegeräte mit dem gleichen Stromkreis und
-                  laden Sie mehrere Elektrofahrzeuge gleichzeitig<br>
-                  <br><br>
-                </p>
-              </div>
-              <div class="Preis_Pos">
-                <div class="Preis_">
-                  <b>Erhältlich in schwarz</b>
-                  <br>
-                  <div class="Preis">ab 1369 € inkl. MwSt</div>
-                  </b>
-                </div>
-              </div>
-            </div>
-          </label>
-          <label>
-            <input type="radio" name="product" class="card-input-element" value="WallboxCommander2" />
-            <div class="panel panel-default card-input">
-              <a class="wallbox_pics">
-                <img src="img/ladestation/COMMANDER 2 .png" width="200px">
-              </a>
-              <h5 class="panel-heading">Wallbox Commander 2</h5>
-              <div class="panel-body">
-                <p>
-                  <br>
-                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
-                  <br> <b>Einfach benutzbar</b><br>Der eingebaute Touchscreen vereinfacht das Entsperren und die Auswahl
-                  der Ladeeinstellungen<br>
-                  <br> <b>Einfacher Benutzerzugriff</b><br>Sicherer gemeinschaftlicher Zugang dank Passwortschutz,
-                  RFID-Karten oder der myWallbox-App<br>
-                  <br> <b>Vernetzt</b><br>Steuerung des Ladegeräts über WLAN, Bluetooth, Ethernet oder 3G/4G (optional)
-                  von Ihren smarten Geräten aus<br>
-                  <br> <b>Steuerbar</b><br>Smarte Steuerung Ihres Ladegeräts von der myWallbox-Plattform aus<br>
-                  <br> <b>Power Sharing</b><br>Verbinden Sie zwei oder mehr Ladegeräte mit dem gleichen Stromkreis und
-                  laden Sie mehrere Elektrofahrzeuge gleichzeitig<br>
-                  <br><br>
-                </p>
-              </div>
-              <div class="Preis_Pos">
-                <div class="Preis_">
-                  <b>Erhältlich in schwarz</b>
-                  <br>
-                  <div class="Preis">ab 1569 € inkl. MwSt</div>
-                  </b>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>
-        <div class="Platzhalter"></div>
-
-      </div>
-    </div>
-
-    <!--STEP TWO-->
-    <div id="stepTwo__scroll"></div>
-    <button class="accordion" id="stepTwo__btn">Staatliche Förderung sichern</button>
-    <div class="accordionContent" id="stepTwo">
-      <div id="scroll_kfw"></div>
-      <p class="accordionContent__text"><b>Haben Sie bereits einen KFW-Förderantrag gestellt?</b></p><br>
-      <div class="radioButtonArea">
-        <div class="radiobattenBox">
-          <div class="radioBatten__input">
-            <input type="radio" id="KFW__Ja" name="KFW" value="Ja">
-            <label for="KFW__Ja">
-              <span class="tick"></span>
-            </label>
-          </div>
-          <div class="radioBatten__label">
-            <p>Ja</p>
-          </div>
-        </div>
-        <div class="radiobattenBox">
-          <div class="radioBatten__input">
-            <input type="radio" id="KFW__Nein" name="KFW" value="Nein">
-            <label for="KFW__Nein">
-              <span class="tick"></span>
-            </label>
-          </div>
-          <div class="radioBatten__label">
-            <p>Nein</p>
-          </div>
-        </div>
-      </div>
-      <div class="infoBox__KFW">
-        <div class="infoText">
-          <p>Stellen Sie Ihren Förderantrag vor der Bestellung, um die Voraussetzungen der <a
-              href="https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestehende-Immobilie/F%C3%B6rderprodukte/Ladestationen-f%C3%BCr-Elektroautos-Wohngeb%C3%A4ude-(440)/"
-              target="_blank">KfW</a>
-            zu erfüllen.
-          </p>
-        </div>
-      </div>
-
-      <div id="scroll_gruen"></div>
-      <p class="accordionContent__text"><b>Haben Sie bereits einen Gründstromvertrag abgeschlossen?</b></p><br>
-      <div class="radioButtonArea">
-        <div class="radiobattenBox">
-          <div class="radioBatten__input">
-            <input type="radio" id="GRUEN__Ja" name="GRUEN" value="Ja">
-            <label for="GRUEN__Ja">
-              <span class="tick"></span>
-            </label>
-          </div>
-          <div class="radioBatten__label">
-            <p>Ja</p>
-          </div>
-        </div>
-        <div class="radiobattenBox">
-          <div class="radioBatten__input">
-            <input type="radio" id="GRUEN__Nein" name="GRUEN" value="Nein">
-            <label for="GRUEN__Nein">
-              <span class="tick"></span>
-            </label>
-          </div>
-          <div class="radioBatten__label">
-            <p>Nein</p>
-          </div>
-        </div>
-      </div>
-      <div class="infoBox__gruenStrom">
-        <div class="infoText">
-          <p>Um die Förderung zu erhalten, ist ein Grünstromvertrag zwingend notwendig.
-            Geben Sie Ihre PLZ ein, um zu einem geeigneten Anbieter weitergeleitet zu werden.</p>
-        </div>
-        <div class="plzInputBox">
-          <p>Tragen Sie hier Ihre Postleitzahl ein:</p>
-          <input type="text" name="plzInput" id="plzInput">
-          <span id="plzTest"></span>
-        </div>
-        <br>
-        <div class="gruenStromAngebot" id="swp">
-          <p><strong>Unsere Empfehlung:</strong></p>
-          <p>Besuchen Sie die <a href="https://www.stadtwerke-peine.de/" target="_blank">Stadtwerke Peine</a> um sich bzgl. eines Grünstromvertrages informieren
-            und bequem abzuschließen.</p>
-        </div>
-
-        <div class="gruenStromAngebot" id="gpl">
-          <p><strong>Unsere Empfehlung:</strong></p>
-          <p>Erkundigen Sie sich bei Ihrem derzeitigem Anbieter nach einem Grünstromvertrag, um die Anforderungen für die staatliche Förderungen zu erfüllen.
-          </p>
-        </div>
-      </div>
-      <div class="Platzhalter"></div>
-
-    </div>
-
-
-
-    <!--STEP THREE-->
-    <div id="stepThree__scroll"></div>
-    <button class="accordion" id="stepThree__btn">Fragebogen ausfüllen</button>
-    <div class="accordionContent" id="stepThree">
-      <p class="accordionContent__text">
-      <div class="infoBox__fragebogen">
-        <div class="infoText">
-          Sie haben es fast geschafft!<br>Um den Vorgang abzuschließen und Ihr
-          individuelles Angebot zu erhalten,
-          nehmen Sie sich zwei Minuten Zeit um unseren Fragebogen auszufüllen.</p>
-        </div>
-      </div>
-      <div>
-
-        <!--FRAGEBOGEN-->
-        <div id="fragebogen">
-          <!--Fragen-->
-          <div class="step">
-            <form action="">
-              <fieldset>
-
-                <!--Frage 1-->
+              <!--Frage 2-->
+              <div class="row">
+                <p class="fragebogen__fragen">Ist ausreichend Platz für einen Stromverteiler vorhanden?<br>(14 cm
+                  werden benötigt)</p>
                 <div class="row">
-                  <div class="Platzhalter"></div>
 
-                  <div class="col-12 d-flex justify-content-start flex-column">
-                    <p class="fragebogen__fragen">Wie groß ist die Entfernung zum Stromverteiler?</p>
-                    <div id="Metereingabe" row row-cols-md-6>
-                      <input id="Meter" type="number" name="meter" min="0" inputmode="numeric" pattern="[0-9]*">
-                      <p id="Meter_text">Meter</p>
+                  <div class="radiobattenBox">
+                    <div class="radioBatten__input">
+                      <input type="radio" id="frage2Checked__Ja" name="frage2Checked" value="Ja">
+                      <label for="frage2Checked__Ja">
+                        <span class="tick"></span>
+                      </label>
+                    </div>
+                    <div class="radioBatten__label">
+                      <p>Ja</p>
                     </div>
                   </div>
+
+                  <div class="radiobattenBox">
+                    <div class="radioBatten__input">
+                      <input type="radio" id="frage2Checked__Nein" name="frage2Checked" value="Nein">
+                      <label for="frage2Checked__Nein">
+                        <span class="tick"></span>
+                      </label>
+                    </div>
+                    <div class="radioBatten__label">
+                      <p>Nein</p>
+                    </div>
+                  </div>
+
+
+
                 </div>
 
-                <!--Frage 2-->
+                <!--Frage 3-->
                 <div class="row">
-                  <p class="fragebogen__fragen">Ist ausreichend Platz für einen Stromverteiler vorhanden?<br>(14 cm
-                    werden benötigt)</p>
+                  <p class="fragebogen__fragen">Sind Tiefbauarbeiten notwendig?</p>
                   <div class="row">
 
                     <div class="radiobattenBox">
                       <div class="radioBatten__input">
-                        <input type="radio" id="frage2Checked__Ja" name="frage2Checked" value="Ja">
-                        <label for="frage2Checked__Ja">
+                        <input type="radio" id="frage3Checked_Ja" name="frage3Checked" value="Ja">
+                        <label for="frage3Checked_Ja">
                           <span class="tick"></span>
                         </label>
                       </div>
@@ -586,8 +627,8 @@
 
                     <div class="radiobattenBox">
                       <div class="radioBatten__input">
-                        <input type="radio" id="frage2Checked__Nein" name="frage2Checked" value="Nein">
-                        <label for="frage2Checked__Nein">
+                        <input type="radio" id="frage3Checked_Nein" name="frage3Checked" value="Nein">
+                        <label for="frage3Checked_Nein">
                           <span class="tick"></span>
                         </label>
                       </div>
@@ -596,236 +637,201 @@
                       </div>
                     </div>
 
-
-
                   </div>
+                </div>
 
-                  <!--Frage 3-->
+
+                <!--Frage 4-->
+                <div class="row">
+                  <p class="fragebogen__fragen">Sind Wanddurchbrüche erforderlich?</p>
                   <div class="row">
-                    <p class="fragebogen__fragen">Sind Tiefbauarbeiten notwendig?</p>
-                    <div class="row">
-
-                      <div class="radiobattenBox">
-                        <div class="radioBatten__input">
-                          <input type="radio" id="frage3Checked_Ja" name="frage3Checked" value="Ja">
-                          <label for="frage3Checked_Ja">
-                            <span class="tick"></span>
-                          </label>
-                        </div>
-                        <div class="radioBatten__label">
-                          <p>Ja</p>
-                        </div>
-                      </div>
-
-                      <div class="radiobattenBox">
-                        <div class="radioBatten__input">
-                          <input type="radio" id="frage3Checked_Nein" name="frage3Checked" value="Nein">
-                          <label for="frage3Checked_Nein">
-                            <span class="tick"></span>
-                          </label>
-                        </div>
-                        <div class="radioBatten__label">
-                          <p>Nein</p>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-
-                  <!--Frage 4-->
-                  <div class="row">
-                    <p class="fragebogen__fragen">Sind Wanddurchbrüche erforderlich?</p>
-                    <div class="row">
-
-                      <div class="radiobattenBox">
-                        <div class="radioBatten__input">
-                          <input type="radio" id="frage4Checked_Ja" name="frage4Checked" value="Ja">
-                          <label for="frage4Checked_Ja">
-                            <span class="tick"></span>
-                          </label>
-                        </div>
-                        <div class="radioBatten__label">
-                          <p>Ja</p>
-                        </div>
-                      </div>
-
-                      <div class="radiobattenBox">
-                        <div class="radioBatten__input">
-                          <input type="radio" id="frage4Checked_Nein" name="frage4Checked" value="Nein">
-                          <label for="frage4Checked_Nein">
-                            <span class="tick"></span>
-                          </label>
-                        </div>
-                        <div class="radioBatten__label">
-                          <p>Nein</p>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <!--Frage 5-->
-                  <p class="fragebogen__fragen">Soll die Installation Auf- oder Unterputz erfolgen?</p>
-                  <div class="row">
-
 
                     <div class="radiobattenBox">
                       <div class="radioBatten__input">
-                        <input type="radio" id="frage5Checked_Ja" name="frage5Checked" value="Aufputz">
-                        <label for="frage5Checked_Ja">
+                        <input type="radio" id="frage4Checked_Ja" name="frage4Checked" value="Ja">
+                        <label for="frage4Checked_Ja">
                           <span class="tick"></span>
                         </label>
                       </div>
                       <div class="radioBatten__label">
-                        <p>Aufputz</p>
+                        <p>Ja</p>
                       </div>
                     </div>
 
                     <div class="radiobattenBox">
                       <div class="radioBatten__input">
-                        <input type="radio" id="frage5Checked_Nein" name="frage5Checked" value="Unterputz">
-                        <label for="frage5Checked_Nein">
+                        <input type="radio" id="frage4Checked_Nein" name="frage4Checked" value="Nein">
+                        <label for="frage4Checked_Nein">
                           <span class="tick"></span>
                         </label>
                       </div>
                       <div class="radioBatten__label">
-                        <p>Unterputz</p>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <!--Frage 6-->
-                  <p class="fragebogen__fragen">Wie soll die Ladesäule montiert werden?</p>
-                  <div class="row">
-
-                    <div class="radiobattenBox">
-                      <div class="radioBatten__input">
-                        <input type="radio" id="frage6Checked_Ja" name="frage6Checked" value="Wandmontage">
-                        <label for="frage6Checked_Ja">
-                          <span class="tick"></span>
-                        </label>
-                      </div>
-                      <div class="radioBatten__label">
-                        <p>Wandmontage</p>
-                      </div>
-                    </div>
-
-                    <div class="radiobattenBox">
-                      <div class="radioBatten__input">
-                        <input type="radio" id="frage6Checked_Nein" name="frage6Checked" value="Standfuß">
-                        <label for="frage6Checked_Nein">
-                          <span class="tick"></span>
-                        </label>
-                      </div>
-                      <div class="radioBatten__label">
-                        <p>Standfuß</p>
+                        <p>Nein</p>
                       </div>
                     </div>
 
                   </div>
                 </div>
 
-              </fieldset>
-            </form>
-            <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
-          </div>
-
-
-          <!--Kontaktdaten-->
-          <div class="step">
-            <form action="">
-              <fieldset id="step_2">
-                <!--Frage 2/1-->
-                <div class="Platzhalter"></div>
+                <!--Frage 5-->
+                <p class="fragebogen__fragen">Soll die Installation Auf- oder Unterputz erfolgen?</p>
                 <div class="row">
-                  <div class="col-12">
-                    <span class="input-group-text">Name*</span>
-                    <input type="text" name="name" class="form-control">
+
+
+                  <div class="radiobattenBox">
+                    <div class="radioBatten__input">
+                      <input type="radio" id="frage5Checked_Ja" name="frage5Checked" value="Aufputz">
+                      <label for="frage5Checked_Ja">
+                        <span class="tick"></span>
+                      </label>
+                    </div>
+                    <div class="radioBatten__label">
+                      <p>Aufputz</p>
+                    </div>
                   </div>
+
+                  <div class="radiobattenBox">
+                    <div class="radioBatten__input">
+                      <input type="radio" id="frage5Checked_Nein" name="frage5Checked" value="Unterputz">
+                      <label for="frage5Checked_Nein">
+                        <span class="tick"></span>
+                      </label>
+                    </div>
+                    <div class="radioBatten__label">
+                      <p>Unterputz</p>
+                    </div>
+                  </div>
+
                 </div>
+
+                <!--Frage 6-->
+                <p class="fragebogen__fragen">Wie soll die Ladesäule montiert werden?</p>
+                <div class="row">
+
+                  <div class="radiobattenBox">
+                    <div class="radioBatten__input">
+                      <input type="radio" id="frage6Checked_Ja" name="frage6Checked" value="Wandmontage">
+                      <label for="frage6Checked_Ja">
+                        <span class="tick"></span>
+                      </label>
+                    </div>
+                    <div class="radioBatten__label">
+                      <p>Wandmontage</p>
+                    </div>
+                  </div>
+
+                  <div class="radiobattenBox">
+                    <div class="radioBatten__input">
+                      <input type="radio" id="frage6Checked_Nein" name="frage6Checked" value="Standfuß">
+                      <label for="frage6Checked_Nein">
+                        <span class="tick"></span>
+                      </label>
+                    </div>
+                    <div class="radioBatten__label">
+                      <p>Standfuß</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+          <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
+        </div>
+
+
+        <!--Kontaktdaten-->
+        <div class="step">
+          <form action="">
+            <fieldset id="step_2">
+              <!--Frage 2/1-->
+              <div class="Platzhalter"></div>
+              <div class="row">
+                <div class="col-12">
+                  <span class="input-group-text">Name*</span>
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+              <br>
+              <!--Frage 2/2-->
+              <div class="row">
+                <div class="col-12">
+                  <span class="input-group-text">Email*</span>
+                  <input type="email" name="email" class="form-control">
+                </div>
+              </div>
+              <br>
+              <!--Frage 2/3-->
+              <div class="row">
+                <div class="col-12">
+                  <span class="input-group-text">Telefon</span>
+                  <input type="tel" name="tel" class="form-control">
+                </div>
+              </div>
+              <br>
+              <!--Frage 2/4-->
+              <div class="row">
+                <div class="col-12">
+                  <span class="input-group-text">Straße</span>
+                  <input type="text" name="strasse" class="form-control">
+                </div>
+              </div>
+              <br>
+              <!--Frage 2/5-->
+              <div class="row">
+                <div class="col-12">
+                  <span class="input-group-text">Ort</span>
+                  <input type="text" name="ort" class="form-control">
+                </div>
+              </div>
+              <div class="Platzhalter"></div>
+              <div class="row">
+                <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
                 <br>
-                <!--Frage 2/2-->
-                <div class="row">
-                  <div class="col-12">
-                    <span class="input-group-text">Email*</span>
-                    <input type="email" name="email" class="form-control">
+                <div class="col-12 d-flex">
+                  <div class="col-1">
+                    <input class="form-check-input" type="checkbox" name="datenschutz" value="Ja" id="checkDatenschutz">
                   </div>
-                </div>
-                <br>
-                <!--Frage 2/3-->
-                <div class="row">
-                  <div class="col-12">
-                    <span class="input-group-text">Telefon</span>
-                    <input type="tel" name="tel" class="form-control">
-                  </div>
-                </div>
-                <br>
-                <!--Frage 2/4-->
-                <div class="row">
-                  <div class="col-12">
-                    <span class="input-group-text">Straße</span>
-                    <input type="text" name="strasse" class="form-control">
-                  </div>
-                </div>
-                <br>
-                <!--Frage 2/5-->
-                <div class="row">
-                  <div class="col-12">
-                    <span class="input-group-text">Ort</span>
-                    <input type="text" name="ort" class="form-control">
-                  </div>
-                </div>
-                <div class="Platzhalter"></div>
-                <div class="row">
-                  <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
-                  <br>
-                  <div class="col-12 d-flex">
-                    <div class="col-1">
-                      <input class="form-check-input" type="checkbox" name="datenschutz" value="Ja"
-                        id="checkDatenschutz">
-                    </div>
 
-                    <div class="col-11">
-                      <p class="normalText">Ich habe die <a
-                          href="https://hagen-energiesysteme.de/pages/datenschutz.html"
-                          target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine
-                        Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.
-                      </p>
-                    </div>
+                  <div class="col-11">
+                    <p class="normalText">Ich habe die <a href="https://hagen-energiesysteme.de/pages/datenschutz.html"
+                        target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine
+                      Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.
+                    </p>
                   </div>
-              </fieldset>
-            </form>
-          </div>
-
-          <!--SuccessScreen-->
-          <div class="step">
-            <div class="container">
-              <div class="row" id="success">
-                <div>
-                  <h2><strong>Vielen dank!</strong></h2><br>
-                  <p>Ihre Anfrage ist bei uns eingegangen und Sie sollten in Kürze eine Bestätigungsmail erhalten.<br>
-                    <br> Wir werden Ihnen schnellstmöglich unser unverbindliches Angebot zukommen lassen.<br>
-                  </p>
                 </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <!--SuccessScreen-->
+        <div class="step">
+          <div class="container">
+            <div class="row" id="success">
+              <div>
+                <h2><strong>Vielen dank!</strong></h2><br>
+                <p>Ihre Anfrage ist bei uns eingegangen und Sie sollten in Kürze eine Bestätigungsmail erhalten.<br>
+                  <br> Wir werden Ihnen schnellstmöglich unser unverbindliches Angebot zukommen lassen.<br>
+                </p>
               </div>
             </div>
           </div>
-
-          <!--Buttons-->
         </div>
-        <div class="row">
-          <div class="actions row row-cols-md-4 g-4 justify-content-start">
-            <button id="zurueckBtn" type="button" class="btn btn-primary ">ZURÜCK</button>
-            <button id="weiterBtn" type="button" class="btn btn-custom">Fortfahren</button>
 
-          </div>
-          <div class="Platzhalter"></div>
+        <!--Buttons-->
+      </div>
+      <div class="row">
+        <div class="actions row row-cols-md-4 g-4 justify-content-start">
+          <button id="zurueckBtn" type="button" class="btn btn-primary ">ZURÜCK</button>
+          <button id="weiterBtn" type="button" class="btn btn-custom">Fortfahren</button>
 
         </div>
+        <div class="Platzhalter"></div>
+
       </div>
     </div>
+  </div>
   </div>
   </div>
 
@@ -952,6 +958,11 @@
 
   <!--Javascript Libarys-->
   <script type="text/javascript" src="js/jquery.js"></script>
+
+  <!--JQuery UI-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="js/contact_me.js"></script>
