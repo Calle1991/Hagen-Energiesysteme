@@ -141,10 +141,12 @@ html {
 
 label {
   width: 100%;
+  font-family: "Myriad Pro", sans-serif !important;
 }
 
 .card-input-element {
   display: none;
+  
 }
 
 .card-input {
@@ -259,6 +261,13 @@ hr {
 .section-title p {
   font-size: 18px;
 }
+
+
+.btn{
+  line-height: 0;
+}
+
+
 .btn-custom {
   font-family: "Raleway", sans-serif;
   font-size: 14pt;
