@@ -5,11 +5,13 @@ $("input:radio[name='card']").on("click", function () {
   if ($("input:radio[name='card']:checked").val() == "privat") {
     $("#stepOne__btn").addClass("activeAcc");
     $("#stepOne").animate({ "max-height": "100%" }, 500);
-    window.location = "index.html#stepOne__scroll";
+    location.href = "#";
+    location.href = "#stepOne__scroll";
   } else {
     $("#stepOne__btn").removeClass("activeAcc");
     $(".accordionContent").animate({ "max-height": "0px" }, 800);
-    window.location = "index.html#contact";
+    location.href = "#";
+    location.href = "#contact";
   }
 })
 
@@ -33,7 +35,8 @@ $("input:radio[name='product']").on("click", function (e) {
 
     $("#stepTwo__btn").addClass("activeAcc");
     $("#stepTwo").animate({ "max-height": "100%" }, 800);
-    window.location = "index.html#stepTwo__scroll";
+    location.href = "#";
+    location.href = "#stepTwo__scroll";
   }
 
 });
@@ -47,7 +50,8 @@ function productValidation() {
     $("#stepTwo__btn").addClass("activeAcc");
     $("#stepTwo").animate({ "max-height": "100%" }, 800);
     $(".auswahl > .errormessage").css("display", "none");
-    window.location = "index.html#stepTwo__scroll";
+    location.href = "#";
+    location.href = "#stepTwo__scroll";
   } else {
     $(".auswahl > .errormessage").css("display", "block");
     $("input:radio[value='WallboxPulsarPlus']").prop("checked", false);
@@ -98,11 +102,13 @@ function checkValidation_KFW_GRUEN() {
   if ($("input[name='KFW']:checked").val() && $("input[name='GRUEN']:checked").val()) {
 
     if ($("input[name='KFW']:checked").val() == 'Nein') {
-      window.location = "index.html#scroll_kfw";
+      location.href = "#";
+      location.href = "#scroll_kfw";
     }
 
     if ($("input[name='GRUEN']:checked").val() == 'Nein') {
-      window.location = "index.html#scroll_gruen";
+      location.href = "#";
+      location.href = "#scroll_gruen";
     }
 
     $("#stepThree__btn").addClass("activeAcc");
