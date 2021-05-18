@@ -106,7 +106,7 @@ function checkValidation_KFW_GRUEN() {
     }
 
     $("#stepThree__btn").addClass("activeAcc");
-    $("#stepThree").animate({ "max-height": "100%" }, 800);
+    $("#stepThree").animate({ "max-height": "300%" }, 800);
   } else {
     $("#stepThree").animate({ "max-height": "0px" }, 800);
   }
