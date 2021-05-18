@@ -111,6 +111,11 @@ function checkValidation_KFW_GRUEN() {
       location.href = "#scroll_gruen";
     }
 
+    if ($("input[name='KFW']:checked").val() == 'Ja' && $("input[name='GRUEN']:checked").val() == 'Ja') {
+      location.href = "#";
+      location.href = "#stepThree__scroll";
+    }
+
     $("#stepThree__btn").addClass("activeAcc");
     $("#stepThree").animate({ "max-height": "300%" }, 800);
   } else {
@@ -124,11 +129,25 @@ function checkValidation_KFW_GRUEN() {
 
 $("#plzInput").keyup(function () {
   if ($("#plzInput").val() == '31226' || $("#plzInput").val() == '31224' || $("#plzInput").val() == '31228') {
+    $("#swp").fadeIn();  
     $("#gpl").css("display", "none");
-    $("#swp").fadeIn();
-  } else {
+    $("#andere").css("display", "none");
+  }else if ($("#plzInput").val() == '31234' 
+  || $("#plzInput").val() == '31241' 
+  || $("#plzInput").val() == '31246' 
+  || $("#plzInput").val() == '31249' 
+  || $("#plzInput").val() == '38176'
+  || $("#plzInput").val() == '38268'
+  || $("#plzInput").val() == '38159'
+  ) {
     $("#gpl").fadeIn();
     $("#swp").css("display", "none");
+    $("#andere").css("display", "none");
+  }
+  else {
+    $("#gpl").css("display", "none");
+    $("#swp").css("display", "none");
+    $("#andere").fadeIn();
   }
 });
 

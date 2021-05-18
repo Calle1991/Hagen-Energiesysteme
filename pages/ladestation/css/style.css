@@ -75,7 +75,7 @@ html {
 }
 
 .wallbox_pics img{
-  width: 350px;
+width: 350px;
 }
 
 #empfohlen {
@@ -535,6 +535,10 @@ header .intro-text {
 }
 
 #gpl {
+  display: none;
+}
+
+#andere {
   display: none;
 }
 
