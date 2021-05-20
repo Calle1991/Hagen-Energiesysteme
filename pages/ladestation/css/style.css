@@ -709,7 +709,14 @@ header .intro-text {
   padding-top: 20px;
 }
 #contact .text-danger {
+  font-weight: bold;
   color: #cc0033;
+  text-align: left;
+}
+
+#contact .text-success {
+  font-weight: bold;
+  color: #0da53a;
   text-align: left;
 }
 

@@ -129,16 +129,16 @@ function checkValidation_KFW_GRUEN() {
 
 $("#plzInput").keyup(function () {
   if ($("#plzInput").val() == '31226' || $("#plzInput").val() == '31224' || $("#plzInput").val() == '31228') {
-    $("#swp").fadeIn();  
+    $("#swp").fadeIn();
     $("#gpl").css("display", "none");
     $("#andere").css("display", "none");
-  }else if ($("#plzInput").val() == '31234' 
-  || $("#plzInput").val() == '31241' 
-  || $("#plzInput").val() == '31246' 
-  || $("#plzInput").val() == '31249' 
-  || $("#plzInput").val() == '38176'
-  || $("#plzInput").val() == '38268'
-  || $("#plzInput").val() == '38159'
+  } else if ($("#plzInput").val() == '31234'
+    || $("#plzInput").val() == '31241'
+    || $("#plzInput").val() == '31246'
+    || $("#plzInput").val() == '31249'
+    || $("#plzInput").val() == '38176'
+    || $("#plzInput").val() == '38268'
+    || $("#plzInput").val() == '38159'
   ) {
     $("#gpl").fadeIn();
     $("#swp").css("display", "none");
@@ -353,3 +353,57 @@ function validateForm(n) {
 }
 
 
+//###################### Kontaktformular ########################
+
+$("#sendMessage").on("click", function () {
+  SendMessage();
+})
+
+
+function SendMessage() {
+
+  var name = $("#nameContact").val();
+  var email = $("#emailContact").val();
+  var message = $("#messageContact").val();
+  var token = $("#token").val();
+
+console.log(name);
+console.log(email);
+console.log(message);
+
+  if (name == "" || email == "" || message == "") {
+    $("#contactError").text("Bitte geben Sie alle Informationen an");
+    $("#contactError").removeClass("text-success")
+  } else {
+
+    $.ajax({
+      type: "POST",
+      url: '../../backend/contactForm.php',
+      data: {
+
+        //Seite
+        'instanz': "Ladestation",
+
+        //Kontaktdaten
+        'name': name,
+        'email': email,
+        'token': token,
+
+        //Nachricht
+        'message': message
+
+      },
+      success: function (data) {
+        console.log(data);
+        $("#contactError").removeClass("text-danger")
+        $("#contactError").addClass("text-success")
+        $("#contactError").text("Vielen Dank für Ihre Anfrage!");
+        //löschen des SessionS
+      },
+      error: function (xhr, status, error) {
+        console.error(xhr);
+      }
+    });
+
+  }
+}
