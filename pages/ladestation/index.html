@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>Hagen Energiesysteme</title>
   <meta name="description" content="Hagen Energiesysteme - Ihre private Ladestation für Ihr Zuhause - Sichern Sie sich Ihre eigene Ladestation und erhalten Sie 900€
   als staatliche Förderung">
@@ -12,6 +12,9 @@
 
   <!-- Scripts ================================================== -->
   <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
+
+
+
 
 
 
@@ -45,6 +48,15 @@
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <!-- SWIPER JS-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
 
 </head>
@@ -302,6 +314,178 @@
     <!--STEP ONE-->
     <button class="accordion" id="stepOne__btn">Wählen Sie ein Modell</button>
     <div class="accordionContent" id="stepOne">
+
+
+
+
+
+
+      <!-- ##########################  Produkte (Mobile) ########################## -->
+
+      <div id="swiper-mobile" class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <!-- ##########################  Slide (1) ########################## -->
+          <div class="swiper-slide">
+            <label>
+              <input type="radio" name="product" class="card-input-element" value="WallboxCopperSB" />
+              <div class="panel panel-default card-input">
+                <a class="wallbox_pics">
+                  <img src="img/ladestation/CopperSB-shutter.jpg">
+                </a>
+                <h5 class="panel-heading">Wallbox Copper SB</h5>
+                <div class="panel-body">
+                  <p>
+                    <br>
+                    <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                    <br> <b>Flexibel</b><br>Die eingebaute Steckdose ermöglicht das Laden aller auf dem Markt
+                    erhältlichen
+                    Elektrofahrzeuge<br>
+                    <br> <b>Einfacher Benutzerzugriff</b><br>Sicherer gemeinschaftlicher Zugang dank RFID-Karten oder
+                    der
+                    myWallbox-App<br>
+                    <br> <b>Vernetzt</b><br>Steuerung des Ladegeräts über WLAN, Bluetooth, Ethernet oder 3G/4G
+                    (optional)
+                    von Ihren smarten Geräten aus<br>
+                    <br> <b>Power Sharing</b><br>ein oder mehr Ladegeräte können mit dem fleichen Stromkreis verbunden
+                    werden und mehrere Fahrzeuge gleichzeitig geladen werden<br>
+                    <br> <b>Steuerbar</b><br>Smarte Steuerung Ihres Ladegeräts von der myWallbox-Plattform aus<br>
+                    <br> <b>Power Sharing</b><br>Verbinden Sie zwei oder mehr Ladegeräte mit dem gleichen Stromkreis und
+                    laden Sie mehrere Elektrofahrzeuge gleichzeitig<br>
+                    <br><br>
+                  </p>
+                </div>
+                <div class="Preis_Pos">
+                  <div class="Preis_">
+                    <b>Erhältlich in schwarz</b>
+                    <br>
+                    <div class="Preis">ab 1.369 € inkl. MwSt</div>
+                    </b>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+
+          </div>
+          <!-- ##########################  Slide (2) ########################## -->
+          <div class="swiper-slide">
+            <label>
+              <input type="radio" name="product" class="card-input-element" value="WallboxPulsarPlus" />
+              <div class="panel panel-default card-input popular">
+                <div>
+                  <a class="wallbox_pics">
+                    <img src="img/ladestation/PULSAR-PLUS-BLACK-FRONT.jpg">
+                  </a>
+                  <h5 class="panel-heading">Wallbox Pulsar Plus</h5>
+                </div>
+                <div class="panel-body">
+                  <p>
+                    <br>
+                    <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                    <br> <b>Verbunden</b><br>Steuere dein Ladegerät mit WLAN oder Bluetooth ganz
+                    einfach von deinen mobilen Geräten aus<br>
+                    <br> <b>Kompakt</b><br>Kleiner als ein Notizbuch und nicht einmal 1 kg schwer<br>
+                  </p>
+                  <br>
+                  <br>
+                  <div class="auswahl">
+                    <p class="errormessage" style="color:#2da1ab;"><strong>Bitte wählen Sie Farbe und Kabellänge
+                        aus:</strong></p>
+                    <div class="auswahl__box">
+                      <label for="farbe">
+                        <p>Farbe:</p>
+                      </label>
+                      <select name="farbe" id="farbe">
+                        <option value="not">Nicht gewählt</option>
+                        <option value="schwarz">Schwarz</option>
+                        <option value="weiß">Weiß</option>
+                      </select>
+                    </div>
+                    <br>
+                    <div class="auswahl_box">
+                      <label for="laenge">
+                        <p>Kabellänge:</p>
+                      </label>
+                      <select name="laenge" id="laenge">
+                        <option value="not">Nicht gewählt</option>
+                        <option value="5 Meter">5 Meter</option>
+                        <option value="7 Meter">7 Meter</option>
+                      </select>
+                    </div>
+                    <br>
+                  </div>
+                  <div class="Platzhalter"></div>
+                </div>
+                <div class="Preis_Pos">
+                  <div class="Preis_">
+                    <b>Erhältlich in schwarz oder weiß</b>
+                    <br>
+                    <div class="Preis">ab 1.169 € inkl. MwSt</div>
+                    </b>
+                  </div>
+                </div>
+                <div id="empfohlen">
+                  <p>Empfohlen</p>
+                </div>
+              </div>
+            </label>
+          </div>
+          <!-- ##########################  Slide (3) ########################## -->
+          <div class="swiper-slide">
+            <label>
+              <input type="radio" name="product" class="card-input-element" value="WallboxCommander2" />
+              <div class="panel panel-default card-input">
+                <div class="wallbox_pics">
+                  <img src="img/ladestation/COMMANDER-2---FRONT-BLACK.jpg">
+                </div>
+                <h5 class="panel-heading">Wallbox Commander 2</h5>
+                <div class="panel-body">
+                  <p>
+                    <br>
+                    <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                    <br> <b>Einfach benutzbar</b><br>Der eingebaute Touchscreen vereinfacht das Entsperren und die
+                    Auswahl
+                    der Ladeeinstellungen<br>
+                    <br> <b>Einfacher Benutzerzugriff</b><br>Sicherer gemeinschaftlicher Zugang dank Passwortschutz,
+                    RFID-Karten oder der myWallbox-App<br>
+                    <br> <b>Vernetzt</b><br>Steuerung des Ladegeräts über WLAN, Bluetooth, Ethernet oder 3G/4G
+                    (optional)
+                    von Ihren smarten Geräten aus<br>
+                    <br> <b>Steuerbar</b><br>Smarte Steuerung Ihres Ladegeräts von der myWallbox-Plattform aus<br>
+                    <br> <b>Power Sharing</b><br>Verbinden Sie zwei oder mehr Ladegeräte mit dem gleichen Stromkreis und
+                    laden Sie mehrere Elektrofahrzeuge gleichzeitig<br>
+                    <br><br>
+                  </p>
+                </div>
+                <div class="Preis_Pos">
+                  <div class="Preis_">
+                    <b>Erhältlich in schwarz</b>
+                    <br>
+                    <div class="Preis">ab 1.569 € inkl. MwSt</div>
+                    </b>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+          </div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+        <div class="Platzhalter"></div>
+      </div>
+
+      <div class="Platzhalter"></div>
+
+      <!-- ##########################  Produkte (Desktop) ########################## -->
+
       <div id="Wallboxen">
         <div class="row row-cols-1 row-cols-md-12 row-cols-xl-3 g-4 justify-content-center align-items-stretch">
           <label>
@@ -980,7 +1164,7 @@
     });
   </script>
 
-<!--
+  <!--
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="js/contact_me.js"></script>

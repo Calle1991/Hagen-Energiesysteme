@@ -1,10 +1,38 @@
 
+
+
+
+//###################### SWIPER JS ########################
+
+
+
+var swiper = new Swiper(".swiper-container", {
+  slidesPerView: "1.2",
+  centeredSlides: true,
+  spaceBetween: 5,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: false,
+  },
+});
+
+swiper.slideTo(1, 0)
+
+
+
+
+
+
+
+
+
+
 //###################### Privat oder Gewerbe ########################
 
 $("input:radio[name='card']").on("click", function () {
   if ($("input:radio[name='card']:checked").val() == "privat") {
     $("#stepOne__btn").addClass("activeAcc");
-    $("#stepOne").animate({ "max-height": "100%" }, 500);
+    $("#stepOne").animate({ "max-height": "120%" }, 500);
     location.href = "#";
     location.href = "#stepOne__scroll";
   } else {
@@ -321,6 +349,49 @@ function validateForm(n) {
       var frage5 = $("input[name=frage5Checked]:checked").val();
       var frage6 = $("input[name=frage6Checked]:checked").val();
 
+
+      //Frage 1
+      if (!meter) {
+        $("input[name=meter]").next().addClass("textbox--error");
+      } else {
+        $("input[name=meter]").next().removeClass("textbox--error");
+      }
+
+      //Frage 2
+      if (!frage2) {
+        $("input[name=frage2Checked]").next().addClass("radiobutton--error");
+      } else {
+        $("input[name=frage2Checked]").next().removeClass("radiobutton--error");
+      }
+
+      //Frage 3
+      if (!frage3) {
+        $("input[name=frage3Checked]").next().addClass("radiobutton--error");
+      } else {
+        $("input[name=frage3Checked]").next().removeClass("radiobutton--error");
+      }
+
+      //Frage 4
+      if (!frage4) {
+        $("input[name=frage4Checked]").next().addClass("radiobutton--error");
+      } else {
+        $("input[name=frage4Checked]").next().removeClass("radiobutton--error");
+      }
+
+      //Frage 5
+      if (!frage5) {
+        $("input[name=frage5Checked]").next().addClass("radiobutton--error");
+      } else {
+        $("input[name=frage5Checked]").next().removeClass("radiobutton--error");
+      }
+
+      //Frage 6
+      if (!frage6) {
+        $("input[name=frage6Checked]").next().addClass("radiobutton--error");
+      } else {
+        $("input[name=frage6Checked]").next().removeClass("radiobutton--error");
+      }
+
       if (meter && frage2 && frage3 && frage4 && frage5 && frage6) {
         $(".errormessage").css("display", "none");
         return true;
@@ -338,6 +409,52 @@ function validateForm(n) {
       var strasse = $("input[name=strasse]").val();
       var ort = $("input[name=ort]").val();
       var datenschutz = $("input[name=datenschutz]:checked").val();
+
+
+
+      //Frage 1
+      if (!name) {
+        $("input[name=name]").prev().addClass("textbox--error");
+      } else {
+        $("input[name=name]").prev().removeClass("textbox--error");
+      }
+
+      //Frage 2
+      if (!email) {
+        $("input[name=email]").prev().addClass("textbox--error");
+      } else {
+        $("input[name=email]").prev().removeClass("textbox--error");
+      }
+
+      //Frage 3
+      if (!tel) {
+        $("input[name=tel]").prev().addClass("textbox--error");
+      } else {
+        $("input[name=tel]").prev().removeClass("textbox--error");
+      }
+
+      //Frage 3
+      if (!strasse) {
+        $("input[name=strasse]").prev().addClass("textbox--error");
+      } else {
+        $("input[name=strasse]").prev().removeClass("textbox--error");
+      }
+
+      //Frage 4
+      if (!ort) {
+        $("input[name=ort]").prev().addClass("textbox--error");
+      } else {
+        $("input[name=ort]").prev().removeClass("textbox--error");
+      }
+
+      //Frage 5
+      if (!datenschutz) {
+        $("input[name=datenschutz]").addClass("checkbox--error");
+      } else {
+        $("input[name=datenschutz]").removeClass("checkbox--error");
+      }
+
+
 
       if (name && email && tel && strasse && ort && datenschutz) {
         $(".errormessage").css("display", "none");
@@ -367,9 +484,9 @@ function SendMessage() {
   var message = $("#messageContact").val();
   var token = $("#token").val();
 
-console.log(name);
-console.log(email);
-console.log(message);
+  console.log(name);
+  console.log(email);
+  console.log(message);
 
   if (name == "" || email == "" || message == "") {
     $("#contactError").text("Bitte geben Sie alle Informationen an");
