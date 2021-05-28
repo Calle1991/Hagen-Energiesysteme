@@ -216,6 +216,8 @@ header .intro-text {
 .featuretext{
 	font-weight: 500;
 	font-size: 20px;
+	text-align: left;
+
 }
 
 .featureSubText{
