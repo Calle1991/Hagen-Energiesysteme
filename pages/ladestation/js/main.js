@@ -343,14 +343,21 @@ function validateForm(n) {
     //###################### Validation - Step (0) ########################
     case 0:
       var meter = $("input[name=meter]").val();
+      var frage1 = $("input[name=frage0Checked]:checked").val();
       var frage2 = $("input[name=frage2Checked]:checked").val();
       var frage3 = $("input[name=frage3Checked]:checked").val();
       var frage4 = $("input[name=frage4Checked]:checked").val();
       var frage5 = $("input[name=frage5Checked]:checked").val();
       var frage6 = $("input[name=frage6Checked]:checked").val();
 
-
       //Frage 1
+      if (!frage1) {
+        $("input[name=frage0Checked]").next().addClass("radiobutton--error");
+      } else {
+        $("input[name=frage0Checked]").next().removeClass("radiobutton--error");
+      }
+
+      //Frage 1s
       if (!meter) {
         $("input[name=meter]").next().addClass("textbox--error");
       } else {
@@ -392,7 +399,7 @@ function validateForm(n) {
         $("input[name=frage6Checked]").next().removeClass("radiobutton--error");
       }
 
-      if (meter && frage2 && frage3 && frage4 && frage5 && frage6) {
+      if (frage1 && meter && frage2 && frage3 && frage4 && frage5 && frage6) {
         $(".errormessage").css("display", "none");
         return true;
       } else {

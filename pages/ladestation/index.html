@@ -58,6 +58,14 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
+  <!-- Tippy JS-->
+  <!-- Development -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+  <!-- Production -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
 
 </head>
 
@@ -482,6 +490,14 @@
 
       <div class="Platzhalter"></div>
 
+
+
+
+
+
+
+
+
       <!-- ##########################  Produkte (Desktop) ########################## -->
 
       <div id="Wallboxen">
@@ -498,7 +514,7 @@
               <div class="panel-body">
                 <p>
                   <br>
-                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 11 kW<br>
                   <br> <b>Verbunden</b><br>Steuere dein Ladegerät mit WLAN oder Bluetooth ganz
                   einfach von deinen mobilen Geräten aus<br>
                   <br> <b>Kompakt</b><br>Kleiner als ein Notizbuch und nicht einmal 1 kg schwer<br>
@@ -558,7 +574,7 @@
               <div class="panel-body">
                 <p>
                   <br>
-                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 11 kW<br>
                   <br> <b>Flexibel</b><br>Die eingebaute Steckdose ermöglicht das Laden aller auf dem Markt erhältlichen
                   Elektrofahrzeuge<br>
                   <br> <b>Einfacher Benutzerzugriff</b><br>Sicherer gemeinschaftlicher Zugang dank RFID-Karten oder der
@@ -591,7 +607,7 @@
               <div class="panel-body">
                 <p>
                   <br>
-                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 22 kW<br>
+                  <b>Leistungsstark</b><br>Mit einer Ladeleistung bis zu 11 kW<br>
                   <br> <b>Einfach benutzbar</b><br>Der eingebaute Touchscreen vereinfacht das Entsperren und die Auswahl
                   der Ladeeinstellungen<br>
                   <br> <b>Einfacher Benutzerzugriff</b><br>Sicherer gemeinschaftlicher Zugang dank Passwortschutz,
@@ -737,7 +753,6 @@
       </div>
     </div>
     <!--FRAGEBOGEN-->
-
     <div id="fragebogen">
       <!--Fragen-->
       <div class="step">
@@ -746,27 +761,13 @@
 
             <!--Frage 1-->
             <div class="row">
-              <div class="Platzhalter"></div>
-
-              <div class="col-12 d-flex justify-content-start flex-column">
-                <p class="fragebogen__fragen">Wie groß ist die Entfernung zum Stromverteiler?</p>
-                <div id="Metereingabe" row row-cols-md-6>
-                  <input id="Meter" type="number" name="meter" min="0" inputmode="numeric" pattern="[0-9]*">
-                  <p id="Meter_text">Meter</p>
-                </div>
-              </div>
-            </div>
-
-            <!--Frage 2-->
-            <div class="row">
-              <p class="fragebogen__fragen">Ist ausreichend Platz im Stromverteiler vorhanden?<br>(14 cm
-                werden benötigt)</p>
+              <p class="fragebogen__fragen">Liegt das Baujahr des <span class="infotooltip"
+                  id="stromverteilerinfo">Stromverteilers</span> vor 2018?</p>
               <div class="row">
-
                 <div class="radiobattenBox">
                   <div class="radioBatten__input">
-                    <input type="radio" id="frage2Checked__Ja" name="frage2Checked" value="Ja">
-                    <label for="frage2Checked__Ja">
+                    <input type="radio" id="frage0Checked__Ja" name="frage0Checked" value="Ja">
+                    <label for="frage0Checked__Ja">
                       <span class="tick"></span>
                     </label>
                   </div>
@@ -777,8 +778,8 @@
 
                 <div class="radiobattenBox">
                   <div class="radioBatten__input">
-                    <input type="radio" id="frage2Checked__Nein" name="frage2Checked" value="Nein">
-                    <label for="frage2Checked__Nein">
+                    <input type="radio" id="frage0Checked__Nein" name="frage0Checked" value="Nein">
+                    <label for="frage0Checked__Nein">
                       <span class="tick"></span>
                     </label>
                   </div>
@@ -786,20 +787,37 @@
                     <p>Nein</p>
                   </div>
                 </div>
+              </div>
 
 
+              <form action="../../backend/upload.php" method="post" enctype="multipart/form-data">
+                Select image to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="submit">
+              </form>
+              
+              <!--Frage 2-->
 
+              <div class="row">
+                <div class="col-12 d-flex justify-content-start flex-column">
+                  <p class="fragebogen__fragen">Wie groß ist die Entfernung zum Stromverteiler?</p>
+                  <div id="Metereingabe" row row-cols-md-6>
+                    <input id="Meter" type="number" name="meter" min="0" inputmode="numeric" pattern="[0-9]*">
+                    <p id="Meter_text">Meter</p>
+                  </div>
+                </div>
               </div>
 
               <!--Frage 3-->
               <div class="row">
-                <p class="fragebogen__fragen">Sind Tiefbauarbeiten notwendig?</p>
+                <p class="fragebogen__fragen">Ist ausreichend Platz im Stromverteiler vorhanden?<br>(14 cm
+                  werden benötigt)</p>
                 <div class="row">
 
                   <div class="radiobattenBox">
                     <div class="radioBatten__input">
-                      <input type="radio" id="frage3Checked_Ja" name="frage3Checked" value="Ja">
-                      <label for="frage3Checked_Ja">
+                      <input type="radio" id="frage2Checked__Ja" name="frage2Checked" value="Ja">
+                      <label for="frage2Checked__Ja">
                         <span class="tick"></span>
                       </label>
                     </div>
@@ -810,8 +828,8 @@
 
                   <div class="radiobattenBox">
                     <div class="radioBatten__input">
-                      <input type="radio" id="frage3Checked_Nein" name="frage3Checked" value="Nein">
-                      <label for="frage3Checked_Nein">
+                      <input type="radio" id="frage2Checked__Nein" name="frage2Checked" value="Nein">
+                      <label for="frage2Checked__Nein">
                         <span class="tick"></span>
                       </label>
                     </div>
@@ -819,104 +837,134 @@
                       <p>Nein</p>
                     </div>
                   </div>
+                </div>
+
+                <!--Frage 4-->
+                <div class="row">
+                  <p class="fragebogen__fragen">Sind Tiefbauarbeiten notwendig?</p>
+                  <div class="row">
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage3Checked_Ja" name="frage3Checked" value="Ja">
+                        <label for="frage3Checked_Ja">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Ja</p>
+                      </div>
+                    </div>
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage3Checked_Nein" name="frage3Checked" value="Nein">
+                        <label for="frage3Checked_Nein">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Nein</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <!--Frage 5-->
+                <div class="row">
+                  <p class="fragebogen__fragen">Sind Wanddurchbrüche erforderlich?</p>
+                  <div class="row">
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage4Checked_Ja" name="frage4Checked" value="Ja">
+                        <label for="frage4Checked_Ja">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Ja</p>
+                      </div>
+                    </div>
+
+                    <div class="radiobattenBox">
+                      <div class="radioBatten__input">
+                        <input type="radio" id="frage4Checked_Nein" name="frage4Checked" value="Nein">
+                        <label for="frage4Checked_Nein">
+                          <span class="tick"></span>
+                        </label>
+                      </div>
+                      <div class="radioBatten__label">
+                        <p>Nein</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!--Frage 6-->
+                <p class="fragebogen__fragen">Soll die Installation Auf- oder Unterputz erfolgen?</p>
+                <div class="row">
+
+
+                  <div class="radiobattenBox">
+                    <div class="radioBatten__input">
+                      <input type="radio" id="frage5Checked_Ja" name="frage5Checked" value="Aufputz">
+                      <label for="frage5Checked_Ja">
+                        <span class="tick"></span>
+                      </label>
+                    </div>
+                    <div class="radioBatten__label">
+                      <p>Aufputz</p>
+                    </div>
+                  </div>
+
+                  <div class="radiobattenBox">
+                    <div class="radioBatten__input">
+                      <input type="radio" id="frage5Checked_Nein" name="frage5Checked" value="Unterputz">
+                      <label for="frage5Checked_Nein">
+                        <span class="tick"></span>
+                      </label>
+                    </div>
+                    <div class="radioBatten__label">
+                      <p>Unterputz</p>
+                    </div>
+                  </div>
 
                 </div>
-              </div>
 
-
-              <!--Frage 4-->
-              <div class="row">
-                <p class="fragebogen__fragen">Sind Wanddurchbrüche erforderlich?</p>
+                <!--Frage 7-->
+                <p class="fragebogen__fragen">Wie soll die Ladesäule montiert werden?</p>
                 <div class="row">
 
                   <div class="radiobattenBox">
                     <div class="radioBatten__input">
-                      <input type="radio" id="frage4Checked_Ja" name="frage4Checked" value="Ja">
-                      <label for="frage4Checked_Ja">
+                      <input type="radio" id="frage6Checked_Ja" name="frage6Checked" value="Wandmontage">
+                      <label for="frage6Checked_Ja">
                         <span class="tick"></span>
                       </label>
                     </div>
                     <div class="radioBatten__label">
-                      <p>Ja</p>
+                      <p>Wandmontage</p>
                     </div>
                   </div>
 
                   <div class="radiobattenBox">
                     <div class="radioBatten__input">
-                      <input type="radio" id="frage4Checked_Nein" name="frage4Checked" value="Nein">
-                      <label for="frage4Checked_Nein">
+                      <input type="radio" id="frage6Checked_Nein" name="frage6Checked" value="Standfuß">
+                      <label for="frage6Checked_Nein">
                         <span class="tick"></span>
                       </label>
                     </div>
                     <div class="radioBatten__label">
-                      <p>Nein</p>
+                      <p>Standfuß</p>
                     </div>
                   </div>
 
                 </div>
               </div>
-
-              <!--Frage 5-->
-              <p class="fragebogen__fragen">Soll die Installation Auf- oder Unterputz erfolgen?</p>
-              <div class="row">
-
-
-                <div class="radiobattenBox">
-                  <div class="radioBatten__input">
-                    <input type="radio" id="frage5Checked_Ja" name="frage5Checked" value="Aufputz">
-                    <label for="frage5Checked_Ja">
-                      <span class="tick"></span>
-                    </label>
-                  </div>
-                  <div class="radioBatten__label">
-                    <p>Aufputz</p>
-                  </div>
-                </div>
-
-                <div class="radiobattenBox">
-                  <div class="radioBatten__input">
-                    <input type="radio" id="frage5Checked_Nein" name="frage5Checked" value="Unterputz">
-                    <label for="frage5Checked_Nein">
-                      <span class="tick"></span>
-                    </label>
-                  </div>
-                  <div class="radioBatten__label">
-                    <p>Unterputz</p>
-                  </div>
-                </div>
-
-              </div>
-
-              <!--Frage 6-->
-              <p class="fragebogen__fragen">Wie soll die Ladesäule montiert werden?</p>
-              <div class="row">
-
-                <div class="radiobattenBox">
-                  <div class="radioBatten__input">
-                    <input type="radio" id="frage6Checked_Ja" name="frage6Checked" value="Wandmontage">
-                    <label for="frage6Checked_Ja">
-                      <span class="tick"></span>
-                    </label>
-                  </div>
-                  <div class="radioBatten__label">
-                    <p>Wandmontage</p>
-                  </div>
-                </div>
-
-                <div class="radiobattenBox">
-                  <div class="radioBatten__input">
-                    <input type="radio" id="frage6Checked_Nein" name="frage6Checked" value="Standfuß">
-                    <label for="frage6Checked_Nein">
-                      <span class="tick"></span>
-                    </label>
-                  </div>
-                  <div class="radioBatten__label">
-                    <p>Standfuß</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
 
           </fieldset>
         </form>
@@ -1129,6 +1177,21 @@
       <p>&copy; 2021 Hagen GmbH</p>
     </div>
   </div>
+
+
+  <!-- ToolTips-->
+  <div id="tooltip1" style="display: none;">
+    <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Unterverteilung.jpg" alt="">
+  </div>
+
+  <!-- Tipps JS-->
+  <script>
+    tippy('#stromverteilerinfo', {
+      content: tooltip1.innerHTML,
+      allowHTML: true,
+      theme: 'tooltip'
+    });
+  </script>
 
 
   <!--Google ReCAPTCHA-->

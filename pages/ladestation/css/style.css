@@ -637,6 +637,7 @@ header .intro-text {
 }
 
 .fragebogen__fragen {
+  width: auto;
   text-align: left;
   font-weight: bold;
   padding-top: 20px;
@@ -934,7 +935,11 @@ label {
   border: solid #777777 1px;
 }
 
-.radiobattenBox label .tick {
+.radiobuttonlabel {
+  display: block;
+}
+
+.radiobattenBox .tick {
   position: absolute;
   display: none;
   left: 4px;
@@ -1052,9 +1057,30 @@ label {
   width: 30%;
 }
 
+
+.infotooltip{
+  background-color: transparent;
+  font-family: "Raleway", sans-serif;
+  font-size: 12pt;
+  color: #2da1ab;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tippy-box[data-theme~='tooltip'] {
+  background-color: white;
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: #2da1ab;
+}
+.tippy-box[data-theme~='tooltip'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: #2da1ab;
+}
+
 /*Media-Query*/
 
-@media (max-width: 390px) {
+@media (max-width: 415px) {
   .headerPic {
     background: url(../img/header/HeaderLaden-375.jpg) center no-repeat;
   }
