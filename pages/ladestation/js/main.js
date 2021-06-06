@@ -2,6 +2,7 @@
 
 
 
+
 //###################### SWIPER JS ########################
 
 
@@ -33,12 +34,10 @@ $("input:radio[name='card']").on("click", function () {
   if ($("input:radio[name='card']:checked").val() == "privat") {
     $("#stepOne__btn").addClass("activeAcc");
     $("#stepOne").animate({ "max-height": "120%" }, 500);
-    location.href = "#";
     location.href = "#stepOne__scroll";
   } else {
     $("#stepOne__btn").removeClass("activeAcc");
     $(".accordionContent").animate({ "max-height": "0px" }, 800);
-    location.href = "#";
     location.href = "#contact";
   }
 })
@@ -63,7 +62,6 @@ $("input:radio[name='product']").on("click", function (e) {
 
     $("#stepTwo__btn").addClass("activeAcc");
     $("#stepTwo").animate({ "max-height": "100%" }, 800);
-    location.href = "#";
     location.href = "#stepTwo__scroll";
   }
 
@@ -78,7 +76,6 @@ function productValidation() {
     $("#stepTwo__btn").addClass("activeAcc");
     $("#stepTwo").animate({ "max-height": "100%" }, 800);
     $(".auswahl > .errormessage").css("display", "none");
-    location.href = "#";
     location.href = "#stepTwo__scroll";
   } else {
     $(".auswahl > .errormessage").css("display", "block");
@@ -130,17 +127,14 @@ function checkValidation_KFW_GRUEN() {
   if ($("input[name='KFW']:checked").val() && $("input[name='GRUEN']:checked").val()) {
 
     if ($("input[name='KFW']:checked").val() == 'Nein') {
-      location.href = "#";
       location.href = "#scroll_kfw";
     }
 
     if ($("input[name='GRUEN']:checked").val() == 'Nein') {
-      location.href = "#";
       location.href = "#scroll_gruen";
     }
 
     if ($("input[name='KFW']:checked").val() == 'Ja' && $("input[name='GRUEN']:checked").val() == 'Ja') {
-      location.href = "#";
       location.href = "#stepThree__scroll";
     }
 
@@ -209,6 +203,7 @@ function checkStep(n) {
         .eq(n + 1)
         .css("display", "none");
       $("#zurueckBtn").css("visibility", "hidden");
+      $("#weiterBtn").text("Fortfahren");
       $(".progressstep").eq(n).css("background-color", "#2da1ab")
       break;
 
@@ -221,6 +216,7 @@ function checkStep(n) {
         .css("display", "none");
       $(".step").eq(n).fadeIn();
       $("#zurueckBtn").css("visibility", "visible");
+      $("#weiterBtn").text("Absenden");
       $(".progressstep").eq(n).css("background-color", "#2da1ab")
       break;
 
@@ -233,7 +229,9 @@ function checkStep(n) {
         .css("display", "none");
       $(".step").eq(n).fadeIn();
       $("#zurueckBtn").css("visibility", "visible");
-      $(".progressstep").eq(n).css("background-color", "#2da1ab")
+      $(".progressstep").eq(n).css("background-color", "#2da1ab");
+      location.href = "#success";
+
 
       //###################### Validation - Step (2) ########################
       SendData();
@@ -264,8 +262,12 @@ function stepBack() {
   checkStep(steps);
 }
 
+var filelocation = "PFAD";
 
 function SendData() {
+
+
+  uploadFile();
 
   var instanz = "Energiesysteme";
 
@@ -276,6 +278,7 @@ function SendData() {
   var kfw = $("input[name=KFW]:checked").val();
   var gruen = $("input[name=GRUEN]:checked").val();
 
+  var frage0 = $("input[name=frage0Checked]:checked").val();
   var meter = $("input[name=meter]").val();
   var frage2 = $("input[name=frage2Checked]:checked").val();
   var frage3 = $("input[name=frage3Checked]:checked").val();
@@ -288,6 +291,8 @@ function SendData() {
   var telefon = $("input[name=tel]").val();
   var strasse = $("input[name=strasse]").val();
   var ort = $("input[name=ort]").val();
+
+
 
   $.ajax({
     type: "POST",
@@ -308,6 +313,7 @@ function SendData() {
 
       //Fragen vom ersten Screen
       'token': token,
+      'alterStromverteiler': frage0,
       'meter': meter,
       'frage2': frage2,
       'frage3': frage3,
@@ -320,11 +326,13 @@ function SendData() {
       'email': email,
       'telefon': telefon,
       'strasse': strasse,
-      'ort': ort
+      'ort': ort,
+
+      //Fileupload
+      'file': filelocation
     },
     success: function (data) {
       console.log(data);
-      //löschen des SessionS
     },
     error: function (xhr, status, error) {
       console.error(xhr);
@@ -489,13 +497,20 @@ function SendMessage() {
   var name = $("#nameContact").val();
   var email = $("#emailContact").val();
   var message = $("#messageContact").val();
+  var datenschutz = $("#datenschutzKontakt").val();
   var token = $("#token").val();
 
   console.log(name);
   console.log(email);
   console.log(message);
 
-  if (name == "" || email == "" || message == "") {
+  if (!datenschutz) {
+    $("input[name=datenschutzKontakt]").addClass("checkbox--error");
+  } else {
+    $("input[name=datenschutzKontakt]").removeClass("checkbox--error");
+  }
+
+  if (name == "" || email == "" || message == "" || datenschutz == "") {
     $("#contactError").text("Bitte geben Sie alle Informationen an");
     $("#contactError").removeClass("text-success")
   } else {
@@ -529,5 +544,73 @@ function SendMessage() {
       }
     });
 
+  }
+}
+
+
+//###################### Upload ########################
+
+$('#deleteFile').click(function () {
+  $('#file').val('');
+  $('.uploadFile').css('display', 'none');
+  $('#deleteFile').css('display', 'none');
+});
+
+
+$('#file').change(function () {
+  
+  //ValidateUpload
+  var fd = new FormData();
+  var files = $('#file')[0].files;
+
+  if (files.length > 0) {
+    fd.append('file', files[0]);
+
+    $.ajax({
+      url: '../../backend/validateUpload.php',
+      type: 'post',
+      data: fd,
+      contentType: false,
+      processData: false,
+      async: true,
+      success: function (response) {
+        if (response == 1) {
+          var filename = $('#file')[0].files[0];
+          $('#filename').text(filename.name).css('color','');
+          $('.uploadFile').css('display', 'flex');
+          $('#deleteFile').css('display', 'inline-flex');
+        } else {
+          $('#filename').text(response).css('color','red');
+          $('#deleteFile').css('display', 'none');
+        }
+      },
+    });
+  }
+});
+
+
+function uploadFile() {
+  var fd = new FormData();
+  var files = $('#file')[0].files;
+
+  if (files.length > 0) {
+    fd.append('file', files[0]);
+
+    $.ajax({
+      url: '../../backend/upload.php',
+      type: 'post',
+      data: fd,
+      contentType: false,
+      processData: false,
+      async: false,
+      success: function (response) {
+        if (response != 0) {
+          filelocation = response;
+          console.log("UploadFile: " + filelocation);
+        } else {
+          $('#filename').text("Datei konnte nicht hochgeladen werden!");
+        }
+      },
+    });
   }
 }

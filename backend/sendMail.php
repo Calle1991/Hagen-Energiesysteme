@@ -43,12 +43,23 @@ $strasse = $_POST['strasse'];
 $ort = $_POST['ort'];
 
 //Informationen
+$alterStromverteiler = $_POST['alterStromverteiler'];
 $meter = $_POST['meter'];
 $stromverteilerChecked = $_POST['frage2'];
 $tiefbauChecked = $_POST['frage3'];
 $wanddurchbruchChecked = $_POST['frage4'];
 $ladesaeuleChecked = $_POST['frage5'];
 $installationChecked = $_POST['frage6'];
+
+//Upload#
+$file = false;
+if(isset($_POST['file'])){
+    $filelocation = $_POST['file'];
+    $file = true;
+}else{
+    $file = false;
+}
+
 
 
 if(isset($_POST['token'])){
@@ -68,8 +79,8 @@ if(isset($_POST['token'])){
                 // Create a message
                 $message = (new Swift_Message('Angebotsanfrage - Ladestation'))
                   ->setFrom(['info@hagen-energiesysteme.de' => 'Hagen Energiesysteme'])
-                  ->setTo(['info@hagen-energiesysteme.de', 'i6jmmaojxx+chuxr+j33ue@in.meistertask.com' => 'Angebot'])
-                  //->setTo(['p.tobinski@hagengmbh.de' => 'Angebot'])
+                  //->setTo(['info@hagen-energiesysteme.de', 'i6jmmaojxx+chuxr+j33ue@in.meistertask.com' => 'Angebot'])
+                  ->setTo(['p.tobinski@hagengmbh.de' => 'Angebot'])
                   ->setBody('  
             <html>
             <head>
@@ -179,6 +190,14 @@ if(isset($_POST['token'])){
             <table style="border 1px solid black">
                 <tr>
                     <td>
+                    Liegt das alter des Stromverteilers vor 2018?
+                    </td>
+                    <td>
+                    '. $alterStromverteiler . '
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                     Wie groß ist die Entfernung zum Stromverteiler?
                     </td>
                     <td>
@@ -228,20 +247,30 @@ if(isset($_POST['token'])){
             </table>
             </body>
             </html>', 'text/html');
-                // Send the message
+                
 
+
+                //Hinzufügen der Datei als Anhang
+                if($file == true){
+                    $message->attach(Swift_Attachment::fromPath($filelocation) ->setFilename('Stromverteiler.png'));
+                }
 
                 //Hinzufügen der PE-mobil E-Mail Adresse
                 if($pemobil == true){
-                    $message->addTo('e-ladebox@stadtwerke-peine.de');
-                    //$message->addTo('pascal.tobinski@gmx.de');
+                    //$message->addTo('e-ladebox@stadtwerke-peine.de');
+                    $message->addTo('pascal.tobinski@gmx.de');
                 }else{
                     //nothing
                 }
 
-
-
+                // Send the message
                 $result = $mailer->send($message);
+
+                // Delete File
+                if($file == true){
+                    unlink($filelocation);
+                }
+
             
             
                         //Sende Bestätigung
@@ -374,8 +403,6 @@ if(isset($_POST['token'])){
                             echo $e->getMessage();
                         } 
             
-            
-             
             } catch (Exception $e){
                 echo $e->getMessage();
             } 

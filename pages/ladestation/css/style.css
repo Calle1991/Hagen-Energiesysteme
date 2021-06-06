@@ -11,14 +11,24 @@ html {
 }
 
 
+.actionhelper{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.actionhelperContent p{
+  font-size: 25px;
+  color: #2da1ab;
+}
+
+
 /* SWIPER JS */
 .swiper-container {
   width: 100%;
   height: 100%;
   
 }
-
-
 
 .swiper-slide {
   text-align: center;
@@ -340,6 +350,60 @@ a:focus,
   outline: none;
   outline-offset: none;
 }
+
+
+.btn-upload{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: auto;
+  font-size: 14pt;
+  font-weight: bolder;
+  border-radius: 6px;
+  border: 1px solid;
+  border-color: #2da1ab;
+  background-color: transparent;
+  color: #2da1ab;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  height: 36px;
+}
+
+.btn-upload:hover{
+  color: #fff;
+  background-image: none;
+  background-color: #2da1ab;
+  box-shadow: 0px 8px 15px rgba(45, 161, 171, 0.4);
+  transition: all 0.3s ease 0s;
+}
+
+.filename{
+  vertical-align: middle;
+}
+
+.uploadedFile{
+  display: flex;
+  width: auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.uploadFile{
+  padding-left: 5px;
+}
+
+#deleteFile{
+  
+  display: none;
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Header Section */
 
 #header {
@@ -663,19 +727,6 @@ header .intro-text {
   color: red;
 }
 
-/*Progressbar*/
-.progressbar {
-  display: flex;
-  justify-content: center;
-}
-
-.progressstep {
-  margin: 10px;
-  height: 25px;
-  width: 25px;
-  background-color: #888;
-  border-radius: 50%;
-}
 
 /* CTA Section */
 #cta {
@@ -1027,6 +1078,9 @@ label {
 .Platzhalter {
   padding: 25px;
 }
+#Platzhalter2{
+  padding:80px;
+}
 .Preis {
   font-size: x-large;
   font-weight: bold;
@@ -1078,7 +1132,55 @@ label {
   border-bottom-color: #2da1ab;
 }
 
+
+/* Button */
+
+#file{
+  display: none;
+}
+
 /*Media-Query*/
+
+@media (max-width: 375px) {
+  .headerPic {
+    background: url(../img/header/HeaderLaden-375.jpg) center no-repeat;
+  }
+
+  #header .intro-text {
+    padding-top: 170px;
+  }
+
+ .Preis{
+   font-size: 20px;
+ }
+
+ .uploadedFile{
+   flex-direction: column;
+   align-items: flex-start;
+ }
+
+  #headertext{
+    font-size: 26px;
+  }
+
+  #stepOne {
+    padding: 0px;
+  }
+
+  .radiobattenBox {
+    width: 100px;
+  }
+
+ .wallbox_pics img{
+   width: 140%;
+ }
+ 
+ #Wallboxen{
+   display: none;
+ }
+
+}
+
 
 @media (max-width: 415px) {
   .headerPic {
