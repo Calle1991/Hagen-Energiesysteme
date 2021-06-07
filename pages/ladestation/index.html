@@ -141,7 +141,8 @@
             <h2>Über Uns</h2>
             <p>Herzlich Willkommen auf der Seite der Hagen Energiesysteme!</p>
             <p>
-              Als Geschäftsbereich der <a href="https://www.hagengmbh.de">Hagen GmbH</a> kümmern wir uns um Ihre Belange bezüglich Elektromobilität und
+              Als Geschäftsbereich der <a href="https://www.hagengmbh.de">Hagen GmbH</a> kümmern wir uns um Ihre Belange
+              bezüglich Elektromobilität und
               Solarenergie.
               Uns liegt die Umwelt am Herzen, deshalb gehen wir schon lange mit einem guten Beispiel voran und möchten
               auch unsere Kunden diesbezüglich unterstützen.
@@ -269,12 +270,8 @@
           <input type="radio" name="card" id="privat" value="privat" class="card-input-element" />
           <div class="panel panel-default card-input">
             <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
-              <svg id="svg" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px"
-                fill="#777777">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-              </svg>
-              <h5>Privat</h5>
+              <i style="font-size: 25px; width: auto; " class="fas fa-home"></i>
+              <h5 style="margin: 0; text-align: left; width: auto;">Privat</h5>
             </div>
             <div class="panel-body">
               <br>
@@ -292,17 +289,8 @@
           <input type="radio" name="card" id="gewerblich" value="gewerbe" class="card-input-element" />
           <div class="panel panel-default card-input">
             <div class="panel-heading row row-cols-md-6 justify-content-start align-items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px"
-                viewBox="0 0 24 24" width="30px" fill="#777">
-                <g>
-                  <rect fill="none" height="24" width="24" />
-                </g>
-                <g>
-                  <path
-                    d="M17,11V3H7v4H3v14h8v-4h2v4h8V11H17z M7,19H5v-2h2V19z M7,15H5v-2h2V15z M7,11H5V9h2V11z M11,15H9v-2h2V15z M11,11H9V9h2 V11z M11,7H9V5h2V7z M15,15h-2v-2h2V15z M15,11h-2V9h2V11z M15,7h-2V5h2V7z M19,19h-2v-2h2V19z M19,15h-2v-2h2V15z" />
-                </g>
-              </svg>
-              <h5>Gewerblich</h5>
+              <i style="font-size: 25px; width: auto;" class="fas fa-building"></i>
+              <h5 style="margin: 0; text-align: left; width: auto;">Gewerblich</h5>
             </div>
             <div class="panel-body">
               <br>
@@ -323,9 +311,6 @@
     <!--STEP ONE-->
     <button class="accordion" id="stepOne__btn">Wählen Sie ein Modell</button>
     <div class="accordionContent" id="stepOne">
-
-
-
 
 
       <!-- ##########################  Produkte (Mobile) ########################## -->
@@ -425,7 +410,7 @@
                   </div>
                   <div class="Platzhalter"></div>
                 </div>
-                <div id ="Platzhalter2"></div>
+                <div id="Platzhalter2"></div>
                 <div class="Preis_Pos">
                   <div class="Preis_">
                     <b>Erhältlich in schwarz oder weiß</b>
@@ -495,11 +480,6 @@
 
 
 
-
-
-
-
-
       <!-- ##########################  Produkte (Desktop) ########################## -->
 
       <div id="Wallboxen">
@@ -564,8 +544,8 @@
                 <p>Empfohlen</p>
               </div>
             </div>
-
           </label>
+
           <label>
             <input type="radio" name="product" class="card-input-element" value="WallboxCopperSB" />
             <div class="panel panel-default card-input">
@@ -599,6 +579,7 @@
               </div>
             </div>
           </label>
+
           <label>
             <input type="radio" name="product" class="card-input-element" value="WallboxCommander2" />
             <div class="panel panel-default card-input">
@@ -802,7 +783,7 @@
                       </label>
                     </div>
                     <div class="uploadFile">
-                      <span id="filename"></span> <span id="deleteFile">X</span>
+                      <span id="filename"></span><span id="deleteFile"><i class="fas fa-trash-alt"></i></span>
                     </div>
                   </div>
                 </div>
@@ -966,7 +947,7 @@
         </form>
         <p class="errormessage">Bitte füllen Sie alle Informationen aus</p>
       </div>
-      
+
 
 
 
@@ -988,6 +969,7 @@
               <div class="col-12">
                 <span class="input-group-text">E-Mail</span>
                 <input type="email" name="email" class="form-control">
+                <p class="errormessage">Bitte geben Sie eine Gültige E-Mail ein</p>
               </div>
             </div>
             <br>
@@ -1078,36 +1060,46 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                  <input type="text" id="nameContact" class="form-control" placeholder="Name" required="required">
+                  <input type="text" id="nameContact" class="form-control" placeholder="Name*" required="required">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                  <input type="email" id="emailContact" class="form-control" placeholder="Email" required="required">
+                  <input type="email" id="emailContact" class="form-control" placeholder="E-Mail*" required="required">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <input type="text" id="UnternehmenContact" class="form-control" placeholder="Unternehmen">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <textarea name="message" id="messageContact" class="form-control" rows="4" placeholder="Nachricht"
+              <textarea name="message" id="messageContact" class="form-control" rows="4" placeholder="Nachricht*"
                 required></textarea>
               <p id="contactError" class="help-block text-danger" style="text-align: center;"></p>
             </div>
-            
+            <p>Pflichtfelder sind mit einem * gekennzeichnet.</p>
+
 
             <div id="success"></div>
             <input type="hidden" name="token" id="token">
           </form>
         </div>
-        
+
         <div class="col-12 d-flex justify-content-center g-2">
           <div class="col-1 d-flex justify-content-end" style="padding-right: 5px;">
             <input class="form-check-input" type="checkbox" name="datenschutzKontakt" value="Ja" id="checkDatenschutz">
           </div>
           <div class="col-lg-5 d-flex justify-content-start">
-            <p class="normalText">Ich habe die <a style="color:white; "href="https://hagen-energiesysteme.de/pages/datenschutz.html"
-                target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine
+            <p class="normalText">Ich habe die <a style="color:white; "
+                href="https://hagen-energiesysteme.de/pages/datenschutz.html" target="_blank">Datenschutzerklärung</a>
+              zur Kenntnis genommen. Ich stimme zu, dass meine
               Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.
             </p>
           </div>
@@ -1186,8 +1178,8 @@
 
 
   <!-- ToolTips-->
-  <div id="tooltip1" style="display: none;">
-    <div class="normalText" style="color: #777;">Beispiel</div>
+  <div id="tooltip1" style="display: none; border: 1px solid black;">
+    <div class="normalText" style="color: #777; font-weight: bold;">Referenzbild:</div>
     <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Unterverteilung.jpg" alt="">
   </div>
 

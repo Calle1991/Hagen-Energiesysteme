@@ -201,6 +201,10 @@ label {
   color: #2da1ab;
 }
 
+.card-input:hover i {
+  color: #2da1ab;
+}
+
 .card-input-element:checked + .card-input .panel-heading {
   color: #2da1ab;
 }
@@ -380,7 +384,7 @@ a:focus,
 }
 
 .filename{
-  vertical-align: middle;
+  
 }
 
 .uploadedFile{
@@ -395,10 +399,12 @@ a:focus,
 }
 
 #deleteFile{
-  
   display: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
   cursor: pointer;
-  color: red;
+  color: #DE3B23;
   font-weight: bold;
   align-items: center;
   justify-content: center;
@@ -1123,6 +1129,7 @@ label {
 
 .tippy-box[data-theme~='tooltip'] {
   background-color: white;
+  border: 1px solid #2da1ab;
 }
 
 .tippy-box[data-theme~='tooltip'][data-placement^='top'] > .tippy-arrow::before {
@@ -1191,7 +1198,10 @@ label {
     padding-top: 170px;
   }
 
-
+  .uploadedFile{
+    flex-direction: column;
+    align-items: flex-start;
+  }
   #headertext{
     font-size: 26px;
   }
@@ -1361,7 +1371,7 @@ label {
   }
 
   #swiper-mobile{
-    display: none;
+    display: block;
   }
 
 }

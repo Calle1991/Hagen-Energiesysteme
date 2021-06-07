@@ -17,12 +17,7 @@ var swiper = new Swiper(".swiper-container", {
   },
 });
 
-swiper.slideTo(1, 0)
-
-
-
-
-
+swiper.slideTo(1, 0);
 
 
 
@@ -46,43 +41,41 @@ $("input:radio[name='card']").on("click", function () {
 
 //###################### Ladeboxmodelle ########################
 
-$("#farbe").change(function () {
-  productValidation();
-});
 
-$("#laenge").change(function () {
-  productValidation();
-});
+var farbe = "not"
+var laenge = "not"
 
-
-$("input:radio[name='product']").on("click", function (e) {
-  if (e.currentTarget.defaultValue == "WallboxPulsarPlus") {
-    productValidation();
+$("input:radio[name='product']").on("click", function () {
+  console.log($(this).next().find('select[name=farbe]').val());
+  console.log($(this).next().find('select[name=laenge]').val());
+  console.log($(this));
+  if ($(this).val() == "WallboxPulsarPlus") {
+    productValidation($(this).next());
   } else {
-
     $("#stepTwo__btn").addClass("activeAcc");
     $("#stepTwo").animate({ "max-height": "100%" }, 800);
     location.href = "#stepTwo__scroll";
   }
-
 });
 
+
+
 //Pulsar Plus
-function productValidation() {
-  var farbe = $("#farbe").val()
-  var laenge = $("#laenge").val()
+function productValidation(e) {
+  farbe = e.find('select[name=farbe]').val()
+  laenge = e.find('select[name=laenge]').val()
   if (farbe != "not" && laenge != "not") {
     $("input:radio[value='WallboxPulsarPlus']").prop("checked", true);
     $("#stepTwo__btn").addClass("activeAcc");
     $("#stepTwo").animate({ "max-height": "100%" }, 800);
     $(".auswahl > .errormessage").css("display", "none");
+    farbe = e.find('select[name=farbe]').val()
+    laenge = e.find('select[name=laenge]').val()
     location.href = "#stepTwo__scroll";
   } else {
     $(".auswahl > .errormessage").css("display", "block");
     $("input:radio[value='WallboxPulsarPlus']").prop("checked", false);
   }
-
-
 }
 
 
@@ -116,6 +109,7 @@ $("input[name='GRUEN'").on("click", function () {
 
 $("input:radio[name='KFW']").on("click", function () {
   checkValidation_KFW_GRUEN();
+
 });
 
 $("input:radio[name='GRUEN']").on("click", function () {
@@ -262,7 +256,8 @@ function stepBack() {
   checkStep(steps);
 }
 
-var filelocation = "PFAD";
+
+var filelocation;
 
 function SendData() {
 
@@ -270,9 +265,6 @@ function SendData() {
   uploadFile();
 
   var instanz = "Energiesysteme";
-
-  var laenge = $("#laenge").val();
-  var farbe = $("#farbe").val();
   var product = $("input[name=product]:checked").val();
 
   var kfw = $("input[name=KFW]:checked").val();
@@ -297,6 +289,7 @@ function SendData() {
   $.ajax({
     type: "POST",
     url: '../../backend/sendMail.php',
+    async: false,
     data: {
 
       //Instanz
@@ -435,11 +428,33 @@ function validateForm(n) {
       }
 
       //Frage 2
+      
+      if(email){
+        $("input[name=email]").prev().removeClass("textbox--error");
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+          $("input[name=email]").next().removeClass("textbox--error");
+          $("input[name=email]").next().remove();
+        } else {
+          $("input[name=email]").next().addClass("textbox--error");
+        } 
+      } else{
+        $("input[name=email]").prev().addClass("textbox--error");
+      }
+
+      /*
       if (!email) {
         $("input[name=email]").prev().addClass("textbox--error");
       } else {
         $("input[name=email]").prev().removeClass("textbox--error");
+
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+          $("input[name=email]").next().css('display', 'none');
+        } else {
+          $("input[name=email]").next().addClass("textbox--error");
+        }
       }
+      */
+
 
       //Frage 3
       if (!tel) {
@@ -558,7 +573,7 @@ $('#deleteFile').click(function () {
 
 
 $('#file').change(function () {
-  
+
   //ValidateUpload
   var fd = new FormData();
   var files = $('#file')[0].files;
@@ -576,11 +591,11 @@ $('#file').change(function () {
       success: function (response) {
         if (response == 1) {
           var filename = $('#file')[0].files[0];
-          $('#filename').text(filename.name).css('color','');
+          $('#filename').text(filename.name).css('color', '');
           $('.uploadFile').css('display', 'flex');
           $('#deleteFile').css('display', 'inline-flex');
         } else {
-          $('#filename').text(response).css('color','red');
+          $('#filename').text(response).css('color', 'red');
           $('#deleteFile').css('display', 'none');
         }
       },
