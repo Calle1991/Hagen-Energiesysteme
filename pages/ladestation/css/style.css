@@ -810,7 +810,8 @@ header .intro-text {
 
 #contact .text-success {
   font-weight: bold;
-  color: #0da53a;
+  font-size: 20px;
+  color: white;
   text-align: left;
 }
 
@@ -1030,8 +1031,8 @@ label {
 }
 
 .textbox--error{
+  text-align: left;
   color: red !important;
-  font-weight: bold;
 }
 
 .checkbox--error{
@@ -1139,12 +1140,39 @@ label {
   border-bottom-color: #2da1ab;
 }
 
-
 /* Button */
 
 #file{
   display: none;
 }
+
+
+
+#cookiesettings{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  font-size: 12px;
+  height: 50px;
+  width: 150px;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+  left: 20px;
+  bottom:20px;
+  cursor: pointer;
+}
+.cookiesettings__Content {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.cookiesettings__Content > div{
+  margin-left: 5px;
+  }
 
 /*Media-Query*/
 

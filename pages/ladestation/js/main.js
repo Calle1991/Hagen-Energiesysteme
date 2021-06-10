@@ -46,9 +46,6 @@ var farbe = "not"
 var laenge = "not"
 
 $("input:radio[name='product']").on("click", function () {
-  console.log($(this).next().find('select[name=farbe]').val());
-  console.log($(this).next().find('select[name=laenge]').val());
-  console.log($(this));
   if ($(this).val() == "WallboxPulsarPlus") {
     productValidation($(this).next());
   } else {
@@ -58,7 +55,13 @@ $("input:radio[name='product']").on("click", function () {
   }
 });
 
+$("input:radio[name='product'][value='WallboxPulsarPlus']").next().find('select[name=farbe]').change(function(){
+  productValidation($(this).parents("div.panel-body"))
+});
 
+$("input:radio[name='product'][value='WallboxPulsarPlus']").next().find('select[name=laenge]').change(function(){
+  productValidation($(this).parents("div.panel-body"))
+});
 
 //Pulsar Plus
 function productValidation(e) {
@@ -77,6 +80,7 @@ function productValidation(e) {
     $("input:radio[value='WallboxPulsarPlus']").prop("checked", false);
   }
 }
+
 
 
 
@@ -420,73 +424,88 @@ function validateForm(n) {
 
 
 
+      var NameValidateOK = false;
+      var EmailValidateOK = false;
+      var TelValidateOK = false;
+      var StrasseValidateOK = false;
+      var OrtValidateOK = false;
+      var DSValidateOK = false;
+
+
       //Frage 1
       if (!name) {
         $("input[name=name]").prev().addClass("textbox--error");
+        $("input[name=name]").next().addClass("textbox--error").css('display','block');
+        NameValidateOK = false;
       } else {
         $("input[name=name]").prev().removeClass("textbox--error");
+        $("input[name=name]").next().removeClass("textbox--error").css('display','none');
+        NameValidateOK = true;
       }
 
       //Frage 2
-      
-      if(email){
-        $("input[name=email]").prev().removeClass("textbox--error");
-        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
-          $("input[name=email]").next().removeClass("textbox--error");
-          $("input[name=email]").next().remove();
-        } else {
-          $("input[name=email]").next().addClass("textbox--error");
-        } 
-      } else{
-        $("input[name=email]").prev().addClass("textbox--error");
-      }
 
-      /*
       if (!email) {
         $("input[name=email]").prev().addClass("textbox--error");
+        $("input[name=email]").next().addClass("textbox--error").text('Bitte tragen Sie eine E-Mail ein').css('display','block')
+        EmailValidateOK = false;
       } else {
         $("input[name=email]").prev().removeClass("textbox--error");
-
-        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
-          $("input[name=email]").next().css('display', 'none');
-        } else {
-          $("input[name=email]").next().addClass("textbox--error");
-        }
+        if(validateEmail(email)){
+          $("input[name=email]").next().removeClass("textbox--error").css('display','none');
+          EmailValidateOK = true;
+        }else{
+          $("input[name=email]").next().addClass("textbox--error").text('Bitte tragen Sie eine gültige E-Mail ein').css('display','block');
+        } 
       }
-      */
-
 
       //Frage 3
       if (!tel) {
         $("input[name=tel]").prev().addClass("textbox--error");
+        $("input[name=tel]").next().addClass("textbox--error").text('Bitte tragen Sie eine Telefonnummer ein').css('display','block')
+        TelValidateOK = false;
       } else {
         $("input[name=tel]").prev().removeClass("textbox--error");
+        if(validateTelefon(tel)){
+          $("input[name=tel]").next().removeClass("textbox--error").css('display','none');
+          TelValidateOK = true;
+        }else{
+          $("input[name=tel]").next().addClass("textbox--error").text('Bitte tragen Sie eine gültige Telefonnummer ein').css('display','block');
+        } 
       }
 
       //Frage 3
       if (!strasse) {
         $("input[name=strasse]").prev().addClass("textbox--error");
+        $("input[name=strasse]").next().addClass("textbox--error").css('display','block');
+        StrasseValidateOK = false;
       } else {
         $("input[name=strasse]").prev().removeClass("textbox--error");
+        $("input[name=strasse]").next().removeClass("textbox--error").css('display','none');
+        StrasseValidateOK = true;
       }
 
       //Frage 4
       if (!ort) {
         $("input[name=ort]").prev().addClass("textbox--error");
+        $("input[name=ort]").next().addClass("textbox--error").css('display','block');
+        OrtValidateOK = false;
       } else {
         $("input[name=ort]").prev().removeClass("textbox--error");
+        $("input[name=ort]").next().removeClass("textbox--error").css('display','none');
+        OrtValidateOK = true;
       }
 
       //Frage 5
       if (!datenschutz) {
         $("input[name=datenschutz]").addClass("checkbox--error");
+        DSValidateOK = false;
       } else {
         $("input[name=datenschutz]").removeClass("checkbox--error");
+        DSValidateOK = true;
       }
 
-
-
-      if (name && email && tel && strasse && ort && datenschutz) {
+      if (NameValidateOK && EmailValidateOK && TelValidateOK && StrasseValidateOK && OrtValidateOK && DSValidateOK) {
         $(".errormessage").css("display", "none");
         return true;
       } else {
@@ -500,6 +519,26 @@ function validateForm(n) {
 }
 
 
+
+
+
+////###################### Validation - Telefon ########################
+function validateTelefon(x) {
+  var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+  if (re.test(x)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+////###################### Validation - Email ########################
+function validateEmail(x) {
+    return /\S+@\S+\.\S+/.test(x);
+}
+
+
+
 //###################### Kontaktformular ########################
 
 $("#sendMessage").on("click", function () {
@@ -511,8 +550,9 @@ function SendMessage() {
 
   var name = $("#nameContact").val();
   var email = $("#emailContact").val();
+  var unternehmen = $("#UnternehmenContact").val();
   var message = $("#messageContact").val();
-  var datenschutz = $("#datenschutzKontakt").val();
+  var datenschutz = $("input[name=datenschutzKontakt]:checked").val();
   var token = $("#token").val();
 
   console.log(name);
@@ -525,7 +565,7 @@ function SendMessage() {
     $("input[name=datenschutzKontakt]").removeClass("checkbox--error");
   }
 
-  if (name == "" || email == "" || message == "" || datenschutz == "") {
+  if (name == "" || email == "" || message == "" || !datenschutz) {
     $("#contactError").text("Bitte geben Sie alle Informationen an");
     $("#contactError").removeClass("text-success")
   } else {
@@ -533,6 +573,7 @@ function SendMessage() {
     $.ajax({
       type: "POST",
       url: '../../backend/contactForm.php',
+      async: false,
       data: {
 
         //Seite
@@ -541,6 +582,7 @@ function SendMessage() {
         //Kontaktdaten
         'name': name,
         'email': email,
+        'unternehmen' : unternehmen,
         'token': token,
 
         //Nachricht

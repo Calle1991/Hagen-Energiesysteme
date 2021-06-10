@@ -79,8 +79,8 @@ if(isset($_POST['token'])){
                 // Create a message
                 $message = (new Swift_Message('Angebotsanfrage - Ladestation'))
                   ->setFrom(['info@hagen-energiesysteme.de' => 'Hagen Energiesysteme'])
-                  //->setTo(['info@hagen-energiesysteme.de', 'i6jmmaojxx+chuxr+j33ue@in.meistertask.com' => 'Angebot'])
-                  ->setTo(['p.tobinski@hagengmbh.de' => 'Angebot'])
+                  ->setTo(['info@hagen-energiesysteme.de', 'i6jmmaojxx+chuxr+j33ue@in.meistertask.com' => 'Angebot'])
+                  //->setTo(['p.tobinski@hagengmbh.de' => 'Angebot'])
                   ->setBody('  
             <html>
             <head>
@@ -257,8 +257,8 @@ if(isset($_POST['token'])){
 
                 //Hinzufügen der PE-mobil E-Mail Adresse
                 if($pemobil == true){
-                    //$message->addTo('e-ladebox@stadtwerke-peine.de');
-                    $message->addTo('pascal.tobinski@gmx.de');
+                    $message->addTo('e-ladebox@stadtwerke-peine.de');
+                    //$message->addTo('pascal.tobinski@gmx.de');
                 }else{
                     //nothing
                 }

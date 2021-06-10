@@ -19,6 +19,7 @@ $instanz = $_POST['instanz'];
 //Kontaktdaten
 $name = $_POST['name'];
 $email = $_POST['email'];
+$unternehmen = $_POST['unternehmen'];
 
 
 //Informationen
@@ -68,6 +69,14 @@ if(isset($_POST['token'])){
                           </td>
                           <td>
                           '. $email .'
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                          Unternehmen:
+                          </td>
+                          <td>
+                          '. $unternehmen .'
                           </td>
                       </tr>
                       <tr>

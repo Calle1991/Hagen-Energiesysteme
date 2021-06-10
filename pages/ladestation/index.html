@@ -13,12 +13,6 @@
   <!-- Scripts ================================================== -->
   <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
 
-
-
-
-
-
-
   <!-- Favicons================================================== -->
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -35,9 +29,10 @@
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
 
-  <!-- Stylesheet
-    ================================================== -->
+  <!-- Stylesheet================================================== -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
@@ -71,7 +66,6 @@
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#navBarTop" data-bs-offset="100" tabindex="0">
-
   <nav id="navBarTop" class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="../../index.html">
@@ -114,7 +108,7 @@
           <h1 id="headertext">Hagen Energiesysteme</h1>
           <p id="headerSubtext">Ihr Ansprechpartner für Ladestationen</p>
           <br>
-          <p id="headerpara">Sichern Sie sich Ihre eigene Ladestation und erhalten Sie 900€ <br> als staatliche
+          <p id="headerpara">Sichern Sie sich Ihre eigene Ladestation und erhalten Sie 900 € <br> als staatliche
             Förderung*</p>
           <p id="headerSubpara">*Voraussetzung ist die Erfüllung der Anforderungen der <a
               href="https://www.kfw.de/inlandsfoerderung/Privatpersonen/Bestehende-Immobilie/F%C3%B6rderprodukte/Ladestationen-f%C3%BCr-Elektroautos-Wohngeb%C3%A4ude-(440)/">KfW</a>
@@ -139,7 +133,7 @@
           data-aos-delay="200">
           <div class="about-text">
             <h2>Über Uns</h2>
-            <p>Herzlich Willkommen auf der Seite der Hagen Energiesysteme!</p>
+            <p>Herzlich willkommen auf der Seite der Hagen Energiesysteme!</p>
             <p>
               Als Geschäftsbereich der <a href="https://www.hagengmbh.de">Hagen GmbH</a> kümmern wir uns um Ihre Belange
               bezüglich Elektromobilität und
@@ -294,10 +288,8 @@
             </div>
             <div class="panel-body">
               <br>
-              <p>Sie haben Interesse an Ladestationen für Ihr Gewerbe?<br><br>Füllen Sie das Kontaktformular aus und
-                wir
-                setzen uns
-                mit Ihnen in Verbindung.</p>
+              <p>Sie sind an einer Ladestation für Ihr Gewerbe interessiert?<br><br>Füllen Sie das Kontaktformular aus und
+                wir setzen uns mit Ihnen in Verbindung.</p>
             </div>
           </div>
         </label>
@@ -960,7 +952,8 @@
             <div class="row">
               <div class="col-12">
                 <span class="input-group-text">Name</span>
-                <input type="text" name="name" class="form-control">
+                <input type="text" name="name" class="form-control" required>
+                <p style="display: none;">Bitte tragen Sie einen Namen ein</p>
               </div>
             </div>
             <br>
@@ -968,8 +961,8 @@
             <div class="row">
               <div class="col-12">
                 <span class="input-group-text">E-Mail</span>
-                <input type="email" name="email" class="form-control">
-                <p class="errormessage">Bitte geben Sie eine Gültige E-Mail ein</p>
+                <input type="email" name="email" class="form-control" required>
+                <p style="display: none;">Bitte geben Sie eine Gültige E-Mail ein</p>
               </div>
             </div>
             <br>
@@ -977,7 +970,8 @@
             <div class="row">
               <div class="col-12">
                 <span class="input-group-text">Telefon</span>
-                <input type="tel" name="tel" class="form-control">
+                <input type="tel" name="tel" class="form-control" required>
+                <p style="display: none;">Bitte geben Sie eine Gültige Telefonnummer ein</p>
               </div>
             </div>
             <br>
@@ -985,7 +979,8 @@
             <div class="row">
               <div class="col-12">
                 <span class="input-group-text">Straße</span>
-                <input type="text" name="strasse" class="form-control">
+                <input type="text" name="strasse" class="form-control" required>
+                <p style="display: none;">Bitte geben Sie eine Straße an</p>
               </div>
             </div>
             <br>
@@ -993,7 +988,8 @@
             <div class="row">
               <div class="col-12">
                 <span class="input-group-text">Ort</span>
-                <input type="text" name="ort" class="form-control">
+                <input type="text" name="ort" class="form-control" required>
+                <p style="display: none;">Bitte geben Sie einen Ort an</p>
               </div>
             </div>
             <div class="Platzhalter"></div>
@@ -1002,7 +998,7 @@
               <br>
               <div class="col-12 d-flex">
                 <div class="col-1">
-                  <input class="form-check-input" type="checkbox" name="datenschutz" value="Ja" id="checkDatenschutz">
+                  <input class="form-check-input" type="checkbox" name="datenschutz" value="Ja" id="checkDatenschutz" required>
                 </div>
 
                 <div class="col-11">
@@ -1082,9 +1078,11 @@
             <div class="form-group">
               <textarea name="message" id="messageContact" class="form-control" rows="4" placeholder="Nachricht*"
                 required></textarea>
+                <p>Pflichtfelder sind mit einem * gekennzeichnet.</p>
+                <br>
               <p id="contactError" class="help-block text-danger" style="text-align: center;"></p>
             </div>
-            <p>Pflichtfelder sind mit einem * gekennzeichnet.</p>
+            
 
 
             <div id="success"></div>
@@ -1174,13 +1172,15 @@
     <div class="container text-center">
       <p>&copy; 2021 Hagen GmbH</p>
     </div>
+
+    
   </div>
 
 
   <!-- ToolTips-->
   <div id="tooltip1" style="display: none; border: 1px solid black;">
     <div class="normalText" style="color: #777; font-weight: bold;">Referenzbild:</div>
-    <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Unterverteilung.jpg" alt="">
+    <img width="200px" src="./img/imgs/Stromverteiler.jpg" alt="">
   </div>
 
   <!-- Tipps JS-->
@@ -1193,6 +1193,18 @@
   </script>
 
 
+
+<div id="cookiesettings">
+  <div class="cookiesettings__Content ccb__edit">
+    <div><i class="fas fa-cookie-bite"></i></div>
+    <div><span>Cookie Einstellungen</span> </div>
+  </div>
+</div>
+
+
+  <!-- CookieConsent -->
+  <script src="./js/cookieconsent/cookieconsent.js"></script>
+  <script src="./js/cookieconsent/cookie.js"></script>
 
 
   <!--Google ReCAPTCHA-->
@@ -1207,33 +1219,14 @@
 
   <!--Javascript Libarys-->
   <script type="text/javascript" src="js/jquery.js"></script>
-
-
-  <!--CookieBanner-->
-  <!-- Glow Cookies v3.0.1 -->
-  <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.1/src/glowCookies.min.js"></script>
-  <script>
-    glowCookies.start('de', {
-      style: 1,
-      analytics: 'G-FH87DE17XF',
-      facebookPixel: '990955817632355',
-      policyLink: '../datenschutz.html',
-      bannerBackground: "#3399cc",
-      bannerColor: "white",
-      border: '#339999'
-    });
-  </script>
-
-  <!--
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-  <script type="text/javascript" src="js/contact_me.js"></script>
-  -->
   <script type="text/javascript" src="js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+
+
 </body>
 
 </html>
