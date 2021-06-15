@@ -671,3 +671,12 @@ function uploadFile() {
     });
   }
 }
+
+//Cookie Releoad
+$('body').delegate("#ccm__footer__consent-modal-submit", 'click',function(event){
+  location.reload();
+});
+
+$('body').delegate(".consent-give", 'click',function(event){
+  location.reload();
+});

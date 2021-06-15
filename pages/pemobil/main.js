@@ -231,3 +231,9 @@ function validateForm(n) {
         //STEP 2
     }
 }
+
+
+//Cookie Releoad
+$("#ccm__footer__consent-modal-submit").on("click",function(){
+alert("TEST");
+});

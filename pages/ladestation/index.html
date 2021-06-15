@@ -32,7 +32,7 @@
   <!-- Stylesheet================================================== -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!-- Google Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
@@ -61,6 +61,17 @@
   <!-- Production -->
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
+
+
+
+  <!-- Google Analytics Cookie-->
+  <script type="text/plain" data-consent="googleanalytics" async src="https://www.googletagmanager.com/gtag/js?id=G-VCJ0L5L848"></script>
+  <script type="text/plain" data-consent="googleanalytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-VCJ0L5L848');
+  </script>
 
 
 </head>
@@ -288,7 +299,8 @@
             </div>
             <div class="panel-body">
               <br>
-              <p>Sie sind an einer Ladestation für Ihr Gewerbe interessiert?<br><br>Füllen Sie das Kontaktformular aus und
+              <p>Sie sind an einer Ladestation für Ihr Gewerbe interessiert?<br><br>Füllen Sie das Kontaktformular aus
+                und
                 wir setzen uns mit Ihnen in Verbindung.</p>
             </div>
           </div>
@@ -998,7 +1010,8 @@
               <br>
               <div class="col-12 d-flex">
                 <div class="col-1">
-                  <input class="form-check-input" type="checkbox" name="datenschutz" value="Ja" id="checkDatenschutz" required>
+                  <input class="form-check-input" type="checkbox" name="datenschutz" value="Ja" id="checkDatenschutz"
+                    required>
                 </div>
 
                 <div class="col-11">
@@ -1078,11 +1091,11 @@
             <div class="form-group">
               <textarea name="message" id="messageContact" class="form-control" rows="4" placeholder="Nachricht*"
                 required></textarea>
-                <p>Pflichtfelder sind mit einem * gekennzeichnet.</p>
-                <br>
+              <p>Pflichtfelder sind mit einem * gekennzeichnet.</p>
+              <br>
               <p id="contactError" class="help-block text-danger" style="text-align: center;"></p>
             </div>
-            
+
 
 
             <div id="success"></div>
@@ -1172,9 +1185,15 @@
     <div class="container text-center">
       <p>&copy; 2021 Hagen GmbH</p>
     </div>
-
-    
   </div>
+
+  <div id="cookiesettings">
+    <div class="cookiesettings__Content ccb__edit">
+      <div><i class="fas fa-cookie-bite"></i></div>
+      <div><span>Cookie Einstellungen</span> </div>
+    </div>
+  </div>
+
 
 
   <!-- ToolTips-->
@@ -1191,21 +1210,6 @@
       theme: 'tooltip'
     });
   </script>
-
-
-
-<div id="cookiesettings">
-  <div class="cookiesettings__Content ccb__edit">
-    <div><i class="fas fa-cookie-bite"></i></div>
-    <div><span>Cookie Einstellungen</span> </div>
-  </div>
-</div>
-
-
-  <!-- CookieConsent -->
-  <script src="./js/cookieconsent/cookieconsent.js"></script>
-  <script src="./js/cookieconsent/cookie.js"></script>
-
 
   <!--Google ReCAPTCHA-->
   <script src="https://www.google.com/recaptcha/api.js?render=6LfdOkEaAAAAAF9m1OXnIny-NJwVD0jfT3BjG8Vv"></script>
@@ -1224,6 +1228,10 @@
   <script>
     AOS.init();
   </script>
+
+   <!-- CookieConsent -->
+ <script src="./js/cookieconsent/cookieconsent.js"></script>
+ <script src="./js/cookieconsent/cookie.js"></script>
 
 
 

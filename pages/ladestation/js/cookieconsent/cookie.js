@@ -25,7 +25,7 @@ window.CookieConsent.init({
         modalMainText: 'Cookies sind kleine Textdateien, die auf Computern oder Smartphones, in der Regel im Ordner des jeweiligen Browsers, abgespeichert werden. Mit ihnen lässt sich nachverfolgen, welche Webseiten der Nutzer besucht hat. Dies hat zum Ziel, passende Werbung im Netz zu schalten oder per Google Analytics den Traffic auf eine Webseite zu analysieren.',
         modalBtnSave: 'Einstellungen speichern',
         modalBtnAcceptAll: 'Alle Cookies anzeptieren und schließen',
-        modalAffectedSolutions: 'Affected solutions:',
+        modalAffectedSolutions: 'Betroffene Lösungen:',
         learnMore: 'Learn More',
         on: 'On',
         off: 'Off',
@@ -42,7 +42,20 @@ window.CookieConsent.init({
         locale: {
           de: {
             name: 'Funktionale Cookies',
-            description: 'Dienen zur konfortablen Website-Funktionen',
+            description: 'Funktionale Cookies sind solche, die zwingend erforderlich sind, um wesentliche Funktionen der Website zu gewährleisten. Sie gewähren das Einhalten von erhöhten Sicherheitsanforderungen.',
+          }
+        }
+      }
+    },
+    analytic: {
+      needed: false,
+      wanted: false,
+      checked: false,
+      language: {
+        locale: {
+          de: {
+            name: 'Analyse Cookies',
+            description: 'Analyse Cookies sind ein einfaches Tool, mit dem wir messen können, wie Nutzer mit Website-Inhalten interagieren. Wir verwenden es für die Verbesserung unserer Website.',
           }
         }
       }
@@ -59,18 +72,54 @@ window.CookieConsent.init({
           // Known cookie name.
           name: '_GRECAPTCHA',
           // Expected cookie domain.
-          domain: 'google.com'
+          domain: '.google.com'
         },
         {
           // Regex matching cookie name.
           name: /^_GRECAPTCHA/,
-          domain: 'google.com'
+          domain: '.google.com'
         }
       ],
       language: {
         locale: {
           de: {
             name: 'Google reCaptcha',
+          },
+        }
+      }
+    },
+    googleanalytics: {
+      category: 'analytic',
+      type: 'script-tag',
+      search: 'googleanalytics',
+      cookies: [
+        {
+          // Known cookie name.
+          name: '_ga',
+          // Expected cookie domain.
+          domain: '.hagen-energiesysteme.de'
+        },
+        {
+          // Regex matching cookie name.
+          name: /^_ga/,
+          domain: '.hagen-energiesysteme.de'
+        },
+        {
+          // Known cookie name.
+          name: '_ga_VCJ0L5L848',
+          // Expected cookie domain.
+          domain: '.hagen-energiesysteme.de'
+        },
+        {
+          // Regex matching cookie name.
+          name: /^_ga/,
+          domain: '.hagen-energiesysteme.de'
+        }
+      ],
+      language: {
+        locale: {
+          de: {
+            name: 'Google Analytics',
           },
         }
       }
