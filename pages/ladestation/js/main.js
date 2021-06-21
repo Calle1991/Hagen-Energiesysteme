@@ -520,11 +520,9 @@ function validateForm(n) {
 
 
 
-
-
 ////###################### Validation - Telefon ########################
 function validateTelefon(x) {
-  var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+  var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,13}$/im;
   if (re.test(x)) {
     return true;
   } else {
@@ -595,6 +593,11 @@ function SendMessage() {
         $("#contactError").addClass("text-success")
         $("#contactError").text("Vielen Dank für Ihre Anfrage!");
         //löschen des SessionS
+
+        gtag('event', 'Kontaktanfrage', {
+          'event_category' : 'Kontakt',
+          'event_label' : 'Ladestation'
+        });
       },
       error: function (xhr, status, error) {
         console.error(xhr);

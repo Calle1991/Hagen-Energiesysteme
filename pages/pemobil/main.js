@@ -232,8 +232,3 @@ function validateForm(n) {
     }
 }
 
-
-//Cookie Releoad
-$("#ccm__footer__consent-modal-submit").on("click",function(){
-alert("TEST");
-});
