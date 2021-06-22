@@ -147,6 +147,7 @@ function SendData() {
     $.ajax({
         type: "POST",
         url: '../../backend/sendMail.php',
+        async: false,
         data: {
 
             //Instanz
