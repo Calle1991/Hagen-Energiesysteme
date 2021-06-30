@@ -599,7 +599,7 @@ function SendMessage() {
         $("#contactError").text("Vielen Dank für Ihre Anfrage!");
         //löschen des SessionS
 
-        gtag('event', 'Kontaktanfrage', {
+        gtag('event', 'Kontaktanfrage - Ladestation', {
           'event_category' : 'Kontakt',
           'event_label' : 'Ladestation'
         });
