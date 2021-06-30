@@ -330,6 +330,11 @@ function SendData() {
     },
     success: function (data) {
       console.log(data);
+
+      gtag('event', 'Fragebogen', {
+        'event_category' : 'Fragebogen',
+        'event_label' : 'Ladestation'
+      });
     },
     error: function (xhr, status, error) {
       console.error(xhr);
