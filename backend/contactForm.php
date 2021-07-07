@@ -12,6 +12,10 @@ header("Access-Control-Allow-Origin: *");
 //if(isset($_POST['sendmail'])){
 
 
+//Logging Setting
+$DateAndTime = date('m-d-Y h:i:s a', time());  
+$file = './logs/log_'.$DateAndTime.'.txt';
+
 
 //Kontaktdaten
 $instanz = $_POST['instanz'];
@@ -224,12 +228,15 @@ if(isset($_POST['token'])){
                          
                         } catch (Exception $e){
                             echo $e->getMessage();
+                            file_put_contents($file, $e->getMessage(), FILE_APPEND | LOCK_EX);
+
                         } 
             
             
              
             } catch (Exception $e){
                 echo $e->getMessage();
+                file_put_contents($file, $e->getMessage(), FILE_APPEND | LOCK_EX);
             } 
             
          }

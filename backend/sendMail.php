@@ -9,6 +9,13 @@ header("Access-Control-Allow-Origin: *");
 //$rest_json = file_get_contents("php://input");
 //$_POST = json_decode($rest_json, true);
 
+
+//Logging Setting
+$DateAndTime = date('m-d-Y h:i:s a', time());  
+$file = './logs/log_'.$DateAndTime.'.txt';
+
+
+
 //if(isset($_POST['sendmail'])){
 
 
@@ -393,18 +400,15 @@ if(isset($_POST['token'])){
                               </html>', 'text/html');
                             // Send the message
                             $result = $mailer->send($message);
-                        
-                        
-                                    //Sende Bestätigung
-                        
-                        
-                         
+
                         } catch (Exception $e){
                             echo $e->getMessage();
+                            file_put_contents($file, $e->getMessage(), FILE_APPEND | LOCK_EX);
                         } 
             
             } catch (Exception $e){
                 echo $e->getMessage();
+                file_put_contents($file, $e->getMessage(), FILE_APPEND | LOCK_EX);
             } 
             
          }
