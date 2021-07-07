@@ -11,8 +11,8 @@ header("Access-Control-Allow-Origin: *");
 
 
 //Logging Setting
-$DateAndTime = date('m-d-Y h:i:s a', time());  
-$file = './logs/log_'.$DateAndTime.'.txt';
+$DateAndTime = date('m-d-Y', time());  
+$file = 'logs/log_'.$DateAndTime.'.txt';
 
 
 
@@ -75,6 +75,7 @@ if(isset($_POST['token'])){
       if($request->success == true){
          if($request->score >= 0.6){
             try {
+                file_put_contents($file,'Fragegebogen eingegangen am:' . $DateAndTime . "\n", FILE_APPEND | LOCK_EX);
                 // Create the Transport
                 $transport = (new Swift_SmtpTransport('smtps.udag.de', 587, 'tls'))
                   ->setUsername('hagen-energiesysteme-de-0001')
@@ -403,12 +404,12 @@ if(isset($_POST['token'])){
 
                         } catch (Exception $e){
                             echo $e->getMessage();
-                            file_put_contents($file, $e->getMessage(), FILE_APPEND | LOCK_EX);
+                            file_put_contents($file, $e->getMessage() ."\n", FILE_APPEND | LOCK_EX);
                         } 
             
             } catch (Exception $e){
                 echo $e->getMessage();
-                file_put_contents($file, $e->getMessage(), FILE_APPEND | LOCK_EX);
+                file_put_contents($file, $e->getMessage() ."\n", FILE_APPEND | LOCK_EX);
             } 
             
          }
